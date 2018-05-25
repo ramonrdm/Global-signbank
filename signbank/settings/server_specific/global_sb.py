@@ -12,9 +12,9 @@ WRITABLE_FOLDER = ROOT+'writable/'
 DATABASES = {'default':
                 {
                     'ENGINE': 'django.db.backends.mysql',
-                    "NAME":"SEU BANCO DE DADOS",
-                    "USER":"SEU USUARIO",
-                    "PASSWORD":"SUA SENHA",
+                    "NAME":"signbank",
+                    "USER":"root",
+                    "PASSWORD":"SenhaBoaMilGrau@@007",
                     "HOST":"127.0.0.1",
                     "PORT":"3306"
                 }
