@@ -16,7 +16,7 @@ html {
  #header {
 		background-image: url(../../images/global/black_02.gif); 
         padding:0;
-        background:#BB2F2C;
+        background:#2196F3;
         height:110px;
         clear:both;
         position:relative;
@@ -159,5 +159,4 @@ legend
     min-height: 30px;
     border-left-width: 0px;
     border-right-width: 0px;
-    margin-top: 0px;
 }

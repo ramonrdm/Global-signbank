@@ -1,7 +1,7 @@
 import socket
 hostname = socket.gethostname()
 
-ROOT = '/scratch2/www/signbank/'
+ROOT = '/var/www/signbank/'
 
 BASE_DIR = ROOT+'repo/'
 WRITABLE_FOLDER = ROOT+'writable/'
@@ -11,15 +11,16 @@ WRITABLE_FOLDER = ROOT+'writable/'
 
 DATABASES = {'default':
                 {
-                    'ENGINE': 'django.db.backends.sqlite3',
-                    'NAME': WRITABLE_FOLDER+'database/signbank.db',
-                    'TEST': {
-                        'NAME': WRITABLE_FOLDER+'database/test-signbank.db',
-                    }
+                    'ENGINE': 'django.db.backends.mysql',
+                    "NAME":"SEU BANCO DE DADOS",
+                    "USER":"SEU USUARIO",
+                    "PASSWORD":"SUA SENHA",
+                    "HOST":"127.0.0.1",
+                    "PORT":"3306"
                 }
             }
 
-ADMINS = (('Wessel Stoop', 'w.stoop@let.ru.nl'))
+ADMINS = (('Admin', 'Admin@admin.com'))
 
 # what do we call this signbank?
 LANGUAGE_NAME = "Global"
@@ -27,8 +28,8 @@ COUNTRY_NAME = "Netherlands"
 
 #Influences which template and css folder are used
 SIGNBANK_VERSION_CODE = 'global'
-URL = 'https://signbank.science.ru.nl/'
-ALLOWED_HOSTS = ['signbank.science.ru.nl']
+URL = ''
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 gettext = lambda s: s
 LANGUAGES = (
