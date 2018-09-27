@@ -1618,7 +1618,7 @@ def protected_media(request, filename, document_root=WRITABLE_FOLDER, show_index
     if not exists:
         raise Http404("File does not exist.")
 
-    USE_NEW_X_SENDFILE_APPROACH = True
+    USE_NEW_X_SENDFILE_APPROACH = False
 
     if USE_NEW_X_SENDFILE_APPROACH:
 

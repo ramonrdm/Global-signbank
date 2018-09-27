@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
+-- version 4.5.4.1deb2ubuntu2.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 25-Maio-2018 às 12:22
--- Versão do servidor: 5.7.22-0ubuntu0.16.04.1
--- PHP Version: 7.0.30-0ubuntu0.16.04.1
+-- Generation Time: 27-Set-2018 às 14:29
+-- Versão do servidor: 5.7.23-0ubuntu0.16.04.1
+-- PHP Version: 7.0.32-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -416,10 +416,12 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`, `username`) VALUES
-(1, 'pbkdf2_sha256$36000$VuBQLiuq5NSS$YxUzn2PjwVgciakw7ENIpMbz7ZplK7s75lYBv4xcNag=', '2018-05-18 17:23:43.585198', 1, '', '', 'gustavo.borgesfr@gmail.com', 1, 1, '2018-03-29 20:53:30', 'admin'),
-(2, 'pbkdf2_sha256$36000$VhWojxZovNIl$2cRe9j4IcrK4qHK/1PkcU1VeVppHoa0taHM0o5Hu2Js=', '2018-05-18 17:35:31.004552', 0, '', '', '', 0, 1, '2018-04-02 20:25:46', 'teste'),
+(1, 'pbkdf2_sha256$36000$VuBQLiuq5NSS$YxUzn2PjwVgciakw7ENIpMbz7ZplK7s75lYBv4xcNag=', '2018-09-24 20:49:19.440042', 1, '', '', 'gustavo.borgesfr@gmail.com', 1, 1, '2018-03-29 20:53:30', 'admin'),
+(2, 'pbkdf2_sha256$36000$VhWojxZovNIl$2cRe9j4IcrK4qHK/1PkcU1VeVppHoa0taHM0o5Hu2Js=', '2018-09-24 20:51:49.257310', 0, '', '', '', 0, 1, '2018-04-02 20:25:46', 'teste'),
 (3, '!bJ3IcEqEcYqN9ofMxK4zPnCtxneK6WjaITZPX4be', NULL, 0, '', '', '', 0, 1, '2018-04-02 20:52:03', 'AnonymousUser'),
-(4, 'pbkdf2_sha256$36000$9YWA3zegvMxH$8XnYbXwrDuwaKXHg/oKO1ZdVXHP08G+vmYLXc19QfOo=', '2018-05-02 18:28:48.939000', 1, '', '', '', 1, 1, '2018-05-02 18:28:20', 'tester');
+(4, 'pbkdf2_sha256$36000$9YWA3zegvMxH$8XnYbXwrDuwaKXHg/oKO1ZdVXHP08G+vmYLXc19QfOo=', '2018-09-24 20:50:06.421464', 1, '', '', '', 1, 1, '2018-05-02 18:28:20', 'tester'),
+(5, 'pbkdf2_sha256$36000$0vsLQVQpDUSL$JE+wbCCAMYdunO+IEeNfy93K55/aq4/ybfYM4WE0o7E=', '2018-08-23 18:04:57.748145', 1, '', '', '', 1, 1, '2018-08-23 18:03:35', 'gstvob'),
+(6, 'pbkdf2_sha256$36000$d7Y7zxe95VUi$d54zngD2Eispq6czOTckn0bIUdoO3du5vZhTb+S100Y=', '2018-09-24 20:53:56.802714', 1, '', '', 'adm@adm.com', 1, 1, '2018-09-24 16:55:14', 'adm');
 
 -- --------------------------------------------------------
 
@@ -931,11 +933,8 @@ CREATE TABLE `dictionary_annotationidglosstranslation` (
 --
 
 INSERT INTO `dictionary_annotationidglosstranslation` (`id`, `text`, `gloss_id`, `language_id`) VALUES
-(1, 'AA', 2, 1),
-(2, 'A', 3, 1),
-(3, 'UNICO', 4, 1),
-(4, 'mem', 5, 1),
-(5, 'Testand', 6, 1);
+(5, 'teste', 6, 1),
+(6, 'asdas', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -973,7 +972,7 @@ CREATE TABLE `dictionary_dataset` (
 
 INSERT INTO `dictionary_dataset` (`id`, `name`, `is_public`, `description`, `signlanguage_id`, `acronym`, `conditions_of_use`, `copyright`) VALUES
 (1, 'Libras', 1, 'TOP', 1, '', '', ''),
-(2, 'AA', 1, 'ADASDSA', 1, '', '', '');
+(3, 'Teste', 0, 'Teste dataset', 1, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -993,7 +992,15 @@ CREATE TABLE `dictionary_dataset_owners` (
 
 INSERT INTO `dictionary_dataset_owners` (`id`, `dataset_id`, `user_id`) VALUES
 (1, 1, 1),
-(2, 2, 1);
+(3, 1, 2),
+(4, 1, 3),
+(5, 1, 4),
+(6, 1, 5),
+(7, 3, 1),
+(8, 3, 2),
+(9, 3, 3),
+(10, 3, 4),
+(11, 3, 5);
 
 -- --------------------------------------------------------
 
@@ -1013,7 +1020,7 @@ CREATE TABLE `dictionary_dataset_translation_languages` (
 
 INSERT INTO `dictionary_dataset_translation_languages` (`id`, `dataset_id`, `language_id`) VALUES
 (1, 1, 1),
-(2, 2, 1);
+(3, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -1051,7 +1058,12 @@ CREATE TABLE `dictionary_deletedglossormedia` (
 --
 
 INSERT INTO `dictionary_deletedglossormedia` (`id`, `item_type`, `idgloss`, `old_pk`, `filename`, `deletion_date`, `annotation_idgloss`) VALUES
-(1, 'video', 'Testing', 6, 'glossvideo/Te/Testing-6.mp4', '2018-05-18', 'Testando');
+(1, 'video', 'Testing', 6, 'glossvideo/Te/Testing-6.mp4', '2018-05-18', 'Testando'),
+(2, 'gloss', 'Bombeamento', 1, '', '2018-08-23', ''),
+(3, 'gloss', 'AA', 2, '', '2018-08-23', 'AA'),
+(4, 'gloss', 'A', 3, '', '2018-08-23', 'A'),
+(5, 'gloss', 'A', 4, '', '2018-08-23', 'UNICO'),
+(6, 'gloss', 'Bombeamento', 5, '', '2018-08-23', 'mem');
 
 -- --------------------------------------------------------
 
@@ -1209,12 +1221,8 @@ CREATE TABLE `dictionary_gloss` (
 --
 
 INSERT INTO `dictionary_gloss` (`id`, `idgloss`, `bsltf`, `asltf`, `aslgloss`, `asloantf`, `bslgloss`, `bslloantf`, `useInstr`, `rmrks`, `blend`, `blendtf`, `compound`, `comptf`, `handedness`, `domhndsh`, `subhndsh`, `final_domhndsh`, `final_subhndsh`, `locprim`, `final_loc`, `locVirtObj`, `locsecond`, `initial_secondary_loc`, `final_secondary_loc`, `initial_palm_orientation`, `final_palm_orientation`, `initial_relative_orientation`, `final_relative_orientation`, `domSF`, `domFlex`, `oriChAbd`, `oriChFlex`, `inWeb`, `isNew`, `inittext`, `morph`, `sedefinetf`, `segloss`, `sense`, `sn`, `StemSN`, `relatArtic`, `absOriPalm`, `absOriFing`, `relOriMov`, `relOriLoc`, `oriCh`, `handCh`, `repeat`, `altern`, `movSh`, `movDir`, `movMan`, `contType`, `phonOth`, `mouthG`, `mouthing`, `phonetVar`, `locPrimLH`, `locFocSite`, `locFocSiteLH`, `initArtOri`, `finArtOri`, `initArtOriLH`, `finArtOriLH`, `iconImg`, `iconType`, `namEnt`, `semField`, `wordClass`, `derivHist`, `lexCatNotes`, `valence`, `tokNo`, `tokNoSgnr`, `tokNoA`, `tokNoV`, `tokNoR`, `tokNoGe`, `tokNoGr`, `tokNoO`, `tokNoSgnrA`, `tokNoSgnrV`, `tokNoSgnrR`, `tokNoSgnrGe`, `tokNoSgnrGr`, `tokNoSgnrO`, `creationDate`, `lastUpdated`, `alternative_id`, `excludeFromEcv`, `dataset_id`, `domhndsh_letter`, `domhndsh_number`, `subhndsh_letter`, `subhndsh_number`, `weakdrop`, `weakprop`, `wordClass2`) VALUES
-(1, 'Bombeamento', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '1', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-04-04', '2018-04-04 18:22:21', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'AA', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-02', '2018-05-02 18:15:50', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'A', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-02', '2018-05-02 18:34:30', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'A', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-16', '2018-05-16 18:25:27', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 'Bombeamento', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-16', '2018-05-16 18:25:49', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, 'Testing', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-18', '2018-05-18 18:02:28', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(6, 'Teste2', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-05-18', '2018-08-23 18:12:56', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'asda', NULL, NULL, '', NULL, '', NULL, '', '', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-09-24', '2018-09-24 20:51:56', NULL, 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1233,12 +1241,8 @@ CREATE TABLE `dictionary_gloss_creator` (
 --
 
 INSERT INTO `dictionary_gloss_creator` (`id`, `gloss_id`, `user_id`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(3, 3, 4),
-(4, 4, 2),
-(5, 5, 2),
-(6, 6, 2);
+(6, 6, 2),
+(7, 7, 2);
 
 -- --------------------------------------------------------
 
@@ -1251,13 +1255,6 @@ CREATE TABLE `dictionary_gloss_dialect` (
   `gloss_id` int(11) NOT NULL,
   `dialect_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `dictionary_gloss_dialect`
---
-
-INSERT INTO `dictionary_gloss_dialect` (`id`, `gloss_id`, `dialect_id`) VALUES
-(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1282,13 +1279,6 @@ CREATE TABLE `dictionary_gloss_signlanguage` (
   `gloss_id` int(11) NOT NULL,
   `signlanguage_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `dictionary_gloss_signlanguage`
---
-
-INSERT INTO `dictionary_gloss_signlanguage` (`id`, `gloss_id`, `signlanguage_id`) VALUES
-(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1327,6 +1317,13 @@ CREATE TABLE `dictionary_handshape` (
   `machine_value` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Extraindo dados da tabela `dictionary_handshape`
+--
+
+INSERT INTO `dictionary_handshape` (`english_name`, `dutch_name`, `chinese_name`, `hsNumSel`, `hsFingSel`, `hsFingSel2`, `hsFingConf`, `hsFingConf2`, `hsAperture`, `hsThumb`, `hsSpread`, `hsFingUnsel`, `fsT`, `fsI`, `fsM`, `fsR`, `fsP`, `fs2T`, `fs2I`, `fs2M`, `fs2R`, `fs2P`, `ufT`, `ufI`, `ufM`, `ufR`, `ufP`, `machine_value`) VALUES
+('Testee', 'etet', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -1359,16 +1356,18 @@ CREATE TABLE `dictionary_language` (
   `name_zh_hans` varchar(50) COLLATE utf8_bin DEFAULT NULL,
   `language_code_2char` varchar(7) COLLATE utf8_bin NOT NULL,
   `language_code_3char` varchar(3) COLLATE utf8_bin NOT NULL,
-  `description` text COLLATE utf8_bin
+  `description` text COLLATE utf8_bin,
+  `name_pt` varchar(50) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Extraindo dados da tabela `dictionary_language`
 --
 
-INSERT INTO `dictionary_language` (`id`, `name`, `name_en`, `name_nl`, `name_zh_hans`, `language_code_2char`, `language_code_3char`, `description`) VALUES
-(1, 'English', 'English', NULL, NULL, 'en', 'eng', ''),
-(2, 'Dutch', 'Dutch', NULL, NULL, 'nl', 'nld', '');
+INSERT INTO `dictionary_language` (`id`, `name`, `name_en`, `name_nl`, `name_zh_hans`, `language_code_2char`, `language_code_3char`, `description`, `name_pt`) VALUES
+(1, 'English', 'English', NULL, NULL, 'en', 'eng', '', NULL),
+(2, 'Dutch', 'Dutch', NULL, NULL, 'nl', 'nld', '', NULL),
+(3, 'Portuguese', 'Portuguese', 'Portuguese', 'Portuguese', 'pt', 'ptb', 'Brazilian portuguese', NULL);
 
 -- --------------------------------------------------------
 
@@ -1380,14 +1379,6 @@ CREATE TABLE `dictionary_morpheme` (
   `gloss_ptr_id` int(11) NOT NULL,
   `mrpType` varchar(5) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `dictionary_morpheme`
---
-
-INSERT INTO `dictionary_morpheme` (`gloss_ptr_id`, `mrpType`) VALUES
-(2, NULL),
-(3, NULL);
 
 -- --------------------------------------------------------
 
@@ -1509,10 +1500,12 @@ CREATE TABLE `dictionary_userprofile` (
 --
 
 INSERT INTO `dictionary_userprofile` (`id`, `expiry_date`, `number_of_logins`, `comments`, `user_id`, `last_used_language`) VALUES
-(1, NULL, 14, NULL, 1, 'en'),
-(2, NULL, 4, NULL, 2, 'cn'),
+(1, NULL, 22, NULL, 1, 'en'),
+(2, NULL, 6, NULL, 2, 'cn'),
 (3, NULL, 0, NULL, 3, 'en'),
-(4, NULL, 0, NULL, 4, 'en');
+(4, NULL, 5, NULL, 4, 'en'),
+(5, NULL, 2, NULL, 5, 'en'),
+(6, NULL, 1, NULL, 6, 'en');
 
 -- --------------------------------------------------------
 
@@ -1531,12 +1524,10 @@ CREATE TABLE `dictionary_userprofile_selected_datasets` (
 --
 
 INSERT INTO `dictionary_userprofile_selected_datasets` (`id`, `userprofile_id`, `dataset_id`) VALUES
-(1, 1, 1),
-(2, 1, 2),
 (3, 2, 1),
-(4, 2, 2),
-(5, 4, 1),
-(6, 4, 2);
+(15, 1, 3),
+(16, 4, 3),
+(17, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -1604,7 +1595,31 @@ INSERT INTO `django_admin_log` (`id`, `object_id`, `object_repr`, `action_flag`,
 (42, '15', '/datasets/select/ -- Select datasets', 1, '[{"added": {}}]', 29, 1, '2018-05-16 18:20:55'),
 (43, '16', '/datasets/manager/ -- Manage datasets', 1, '[{"added": {}}]', 29, 1, '2018-05-16 18:21:30'),
 (44, '2', 'teste', 2, '[{"changed": {"fields": ["selected_datasets"], "object": "Profile for teste", "name": "user profile"}}]', 3, 1, '2018-05-16 18:24:37'),
-(45, '2', 'Handedness: X, X (2)', 1, '[{"added": {}}]', 15, 1, '2018-05-18 17:31:11');
+(45, '2', 'Handedness: X, X (2)', 1, '[{"added": {}}]', 15, 1, '2018-05-18 17:31:11'),
+(46, '1', '/ -- Home', 2, '[{"changed": {"fields": ["content"]}}]', 29, 4, '2018-08-22 18:08:28'),
+(47, '2', '/about/ -- Sobre', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:09:29'),
+(48, '5', '/about/guidelines/ -- Orientações para sinais novos', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:09:51'),
+(49, '14', '/datasets/available/ -- Ver datasets disponíveis', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:10:22'),
+(50, '16', '/datasets/manager/ -- Gerenciar datasets', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:10:34'),
+(51, '15', '/datasets/select/ -- Selecionar dataset', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:04'),
+(52, '12', '/feedback/missing/ -- Reportar ausência de um sinal', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:33'),
+(53, '11', '/feedback/site/ -- Feedback do site', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:42'),
+(54, '7', '/signs/ -- Sinais', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:48'),
+(55, '8', '/signs/search/ -- Bsucar', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:53'),
+(56, '8', '/signs/search/ -- Buscar', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:16:58'),
+(57, '9', '/signs/show_all/ -- Mostrar Todos', 2, '[{"changed": {"fields": ["title"]}}]', 29, 4, '2018-08-22 18:17:04'),
+(58, '2', 'AA', 3, '', 41, 4, '2018-08-23 17:05:24'),
+(59, '4', 'A', 3, '', 16, 4, '2018-08-23 17:05:41'),
+(60, '3', 'A', 3, '', 16, 4, '2018-08-23 17:05:41'),
+(61, '2', 'AA', 3, '', 16, 4, '2018-08-23 17:05:41'),
+(62, '5', 'Bombeamento', 3, '', 16, 4, '2018-08-23 17:05:41'),
+(63, '1', 'Bombeamento', 3, '', 16, 4, '2018-08-23 17:05:41'),
+(64, '5', 'gstvob', 1, '[{"added": {}}, {"added": {"object": "Profile for gstvob", "name": "user profile"}}]', 3, 1, '2018-08-23 18:03:35'),
+(65, '1', 'Libras', 2, '[]', 41, 1, '2018-08-23 18:03:44'),
+(66, '5', 'gstvob', 2, '[{"changed": {"fields": ["is_staff", "is_superuser"]}}]', 3, 1, '2018-08-23 18:04:31'),
+(67, '3', 'Teste', 1, '[{"added": {}}]', 41, 5, '2018-08-23 18:06:13'),
+(68, '3', 'Teste', 2, '[{"changed": {"fields": ["is_public"]}}]', 41, 4, '2018-08-23 18:10:16'),
+(69, '1', 'Handshape object', 1, '[{"added": {}}]', 39, 6, '2018-09-24 20:28:07');
 
 -- --------------------------------------------------------
 
@@ -1769,7 +1784,14 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('4vq09r2h2wadhebomcja3r74f1uqw5kq', 'MzU3MWM0MzM2MDdjMTg4Yzk3Njc4NDI4OWFiMDEwMzYxYzJmMzhjYjp7InRlc3Rjb29raWUiOiJ3b3JrZWQifQ==', '2018-05-09 18:06:07'),
 ('9nrkxnewmbcaq0p7uy3u791ts2tz0mut', 'MDYzODNiY2ZiZDAwNDMzY2Q1ZmEyMWNiYzExZjJmODM0NDVjZDFiMzp7InRlc3Rjb29raWUiOiJ3b3JrZWQiLCJfbGFuZ3VhZ2UiOiJlbiIsIl9hdXRoX3VzZXJfaGFzaCI6ImM2MzcwODk5YTlkOTIzNTZlN2E4NDlmZWFjYTY1YjAwYThjMDYwNzkiLCJzZWFyY2hfdHlwZSI6InNpZ24iLCJzZWFyY2hfcmVzdWx0cyI6W3siZ2xvc3MiOiJCb21iZWFtZW50byIsImlkIjoxfV0sIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2018-05-16 14:52:21'),
 ('t3zuqmr7bzv0o7bg79ugcg0s56xe6fog', 'YzhmYWU2NmFkOGIxMzY2NmZiM2VlMzJmZjc0Yjc0YTJhMzI4MjI2MDp7Il9hdXRoX3VzZXJfaGFzaCI6ImIwY2JiNTljOThkMGIxMjljNWY5NjkyY2E0Nzk3ZjI4NzczMDI0ZWUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsImRhdGFzZXRpZCI6MSwic2VhcmNoX3R5cGUiOiJzaWduIiwiX2F1dGhfdXNlcl9pZCI6IjQiLCJzZWFyY2hfcmVzdWx0cyI6W3siaWQiOjMsImdsb3NzIjoiQSJ9LHsiaWQiOjIsImdsb3NzIjoiQUEifV19', '2018-05-17 16:25:00'),
-('medyar9nev8wbk6gsoy8nyzh9bd9rm7j', 'Y2FlYTIyODcxY2MxMGNmNThlMTdkOGZjNzA3ZjMxMTIxNzQ3ZDExZDp7InNlYXJjaF9yZXN1bHRzIjpbXSwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJkYXRhc2V0aWQiOjEsIl9hdXRoX3VzZXJfaWQiOiIyIiwic2VhcmNoX3R5cGUiOiJzaWduIiwiX2F1dGhfdXNlcl9oYXNoIjoiZjY0ZTJhMTJjNDJmOTE2MjVlMjE2NmVhZmQ3ZDBkOWM0YjQxMjZmNSJ9', '2018-06-01 18:11:16');
+('opjmr6btyyq9ukpjgmw8piplq5n11vi0', 'N2JmZTQyY2Y4NjY1ODgxNzY4M2Q0ODIwODJlMzZiZTBiM2E2Y2QyZTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiYzYzNzA4OTlhOWQ5MjM1NmU3YTg0OWZlYWNhNjViMDBhOGMwNjA3OSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZGF0YXNldGlkIjoxfQ==', '2018-06-08 15:53:26'),
+('j8f2u9vbkgu3be2iln2ktlva8nk0olgx', 'Y2IyNWM1OTZlMjY4MDQ5ZmU0NDZlYWYwOTkxMzY5ZWJiMzgzNTczNjp7ImRhdGFzZXRpZCI6MSwiX2F1dGhfdXNlcl9oYXNoIjoiYzYzNzA4OTlhOWQ5MjM1NmU3YTg0OWZlYWNhNjViMDBhOGMwNjA3OSIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2018-06-08 17:14:31'),
+('6yt4ao1hkybzt3pm347qk34m6gp7oiee', 'MWZlODRhNDg0NDllYjZmOTQzNmM1NGQ2Njk1NjQ1ODQ4NzFlYzRjOTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZGF0YXNldGlkIjoxLCJfYXV0aF91c2VyX2hhc2giOiJjNjM3MDg5OWE5ZDkyMzU2ZTdhODQ5ZmVhY2E2NWIwMGE4YzA2MDc5IiwiX2F1dGhfdXNlcl9pZCI6IjEifQ==', '2018-06-08 16:55:04'),
+('66v4e70s3j61rtrnqpv02a8fkws2g99e', 'Nzc1NTQ5ZGI2ZmMxZjgyMWQ4ZjEwZWUwMWM1OTJhMmUxYzRkNjVhZjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmNjRlMmExMmM0MmY5MTYyNWUyMTY2ZWFmZDdkMGQ5YzRiNDEyNmY1Iiwic2VhcmNoX3Jlc3VsdHMiOltdLCJzZWFyY2hfdHlwZSI6InNpZ24ifQ==', '2018-07-23 18:55:14'),
+('o5ru6rnad93aycatdf0lxl3ofe41t59z', 'NTc2OTYxNTg0ZTNkNjM0YTA2MzY5NjUxNjg4OGM4ZjdhNjU3MDE0OTp7Il9hdXRoX3VzZXJfaGFzaCI6ImM2MzcwODk5YTlkOTIzNTZlN2E4NDlmZWFjYTY1YjAwYThjMDYwNzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=', '2018-09-06 18:46:52'),
+('h3xriceetqbwgg0tzzkvxb5k7ir3r7lj', 'ZDRkMjBkNzExNjhmMjc5MzMwNzUyNGZhZTA5NjIwZDUyOWU1NGFjNjp7Il9hdXRoX3VzZXJfaGFzaCI6ImM2MzcwODk5YTlkOTIzNTZlN2E4NDlmZWFjYTY1YjAwYThjMDYwNzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIiwiZGF0YXNldGlkIjoxfQ==', '2018-09-26 17:46:35'),
+('ahh20kfb0rckhvewwgzpz42d4d8opnro', 'ZDlkZjRlMGMyNTc0OTE4MjFhNjA1Y2ZkYWYyYTEyMDU3NWE3MDFjMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZiYTFmYzAyOGM5ZmU3NDRlZGNiNjQyZTZhYmYzYjg0Y2U1MThlZjMiLCJzZWFyY2hfcmVzdWx0cyI6W10sIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjYiLCJzZWFyY2hfdHlwZSI6InNpZ25faGFuZHNoYXBlIn0=', '2018-10-08 16:59:05'),
+('cl2n8x9yff9377wf3vglm3uecauuoqvj', 'YzQ5Y2Q1ZDQwNzY1N2MwNmEyZWJmMWY5MjU5MWU1ZmRlYWUxMGZhZjp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwic2VhcmNoX3R5cGUiOiJzaWduIiwic2VhcmNoX3Jlc3VsdHMiOltdLCJfYXV0aF91c2VyX2lkIjoiNiIsIl9hdXRoX3VzZXJfaGFzaCI6ImZiYTFmYzAyOGM5ZmU3NDRlZGNiNjQyZTZhYmYzYjg0Y2U1MThlZjMifQ==', '2018-10-09 19:07:04');
 
 -- --------------------------------------------------------
 
@@ -1943,22 +1965,22 @@ CREATE TABLE `pages_page` (
 --
 
 INSERT INTO `pages_page` (`id`, `url`, `title`, `title_dutch`, `content`, `content_dutch`, `content_chinese`, `template_name`, `publish`, `index`, `title_chinese`, `parent_id`) VALUES
-(1, '/', 'Home', 'Home', '<div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;"><b>Welcome to Global Signbank.</b><div role="main" id="maincontent" style="background:white;"><div class="row"><div class="col-md-10 col-md-offset-1"><p>Global Signbank is a \r\nlexical database for sign languages. It is the successor to the NGT \r\nSignbank, the lexical database of the annotated NGT corpora at Radboud \r\nUniversity, which include the following:</p><ul><li><a href="http://hdl.handle.net/1839/00-0000-0000-0001-49C8-8@view" target="_blank">ECHO corpus</a>&nbsp;(2004)</li><li><a href="http://hdl.handle.net/1839/00-0000-0000-0004-DF8E-6@view" target="_blank">Corpus NGT</a>&nbsp;(2006–present)</li><li><a href="http://www.ru.nl/sign-lang/projects/handy-connections/" target="_blank">Handy Signs</a> (signs for experiments, 2012-2016)</li></ul><p>The\r\n lexical database does not presently serve as a dictionary. For each \r\ndata set, specific conditions apply as to (open or restricted) access. \r\nBy default, datasets are not accessible to the general public.</p><p>Global Signbank is open to host new datasets under certain strict conditions:</p><ul><li>Lemmatisation guidelines and phonological description of signs follows the conventions laid out in the manual</li><li>Data\r\n become accessible for research use by Radboud University and preferably\r\n any non-commercial research (open access). In exchange, the NGT dataset\r\n will become fully accessible to depositors of a new dataset.</li><li>A \r\ncontribution in kind and/or in cash is made to further software \r\ndevelopment and/or data hosting, depending on the size of the dataset \r\nand the expected and actual use</li></ul><p>Go directly to:</p><ul><li><a href="http://signbank.science.ru.nl/signs/search" target="">Search</a>&nbsp;(login required)</li></ul>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p>', '<p><br></p><div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;"><b>Welcome to Global Signbank.</b><div role="main" id="maincontent" style="background:white;"><div class="row"><div class="col-md-10 col-md-offset-1"><p>Global Signbank is a \r\nlexical database for sign languages. It is the successor to the NGT \r\nSignbank, the lexical database of the annotated NGT corpora at Radboud \r\nUniversity, which include the following:</p><ul><li><a href="http://hdl.handle.net/1839/00-0000-0000-0001-49C8-8@view" target="_blank">ECHO corpus</a>&nbsp;(2004)</li><li><a href="http://hdl.handle.net/1839/00-0000-0000-0004-DF8E-6@view" target="_blank">Corpus NGT</a>&nbsp;(2006–present)</li><li><a href="http://www.ru.nl/sign-lang/projects/handy-connections/" target="_blank">Handy Signs</a> (signs for experiments, 2012-2016)</li></ul><p>The\r\n lexical database does not presently serve as a dictionary. For each \r\ndata set, specific conditions apply as to (open or restricted) access. \r\nBy default, datasets are not accessible to the general public.</p><p>Global Signbank is open to host new datasets under certain strict conditions:</p><ul><li>Lemmatisation guidelines and phonological description of signs follows the conventions laid out in the manual</li><li>Data\r\n become accessible for research use by Radboud University and preferably\r\n any non-commercial research (open access). In exchange, the NGT dataset\r\n will become fully accessible to depositors of a new dataset.</li><li>A \r\ncontribution in kind and/or in cash is made to further software \r\ndevelopment and/or data hosting, depending on the size of the dataset \r\nand the expected and actual use</li></ul><p>Go directly to:</p><ul><li><a href="http://signbank.science.ru.nl/signs/search" target="">Search</a>&nbsp;(login required)</li></ul>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p><p><br></p><p><br></p>', '', '', 1, 1, 'Home', NULL),
-(2, '/about/', 'About', 'About', '', '', '', '', 1, 2, '', NULL),
+(1, '/', 'Home', 'Home', '<div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;"><b>Bem vindo ao Banco de Sinais - Libras<br></b><div role="main" id="maincontent" style="background:white;"><div class="row"><div class="col-md-10 col-md-offset-1"><p>Libras Signbank é um banco de dados léxico para a língua brasileira de sinais. <br></p><ul><li><a href="http://corpuslibras.ufsc.br" target="_blank">Corpus Libras</a><br></li></ul>Ir para:<ul><li><a href="http://signbank.science.ru.nl/signs/search" target="">Busca</a> (login necessário)</li></ul>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p>', '<p><br></p><div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;"><b>Welcome to Global Signbank.</b><div role="main" id="maincontent" style="background:white;"><div class="row"><div class="col-md-10 col-md-offset-1"><p>Global Signbank is a \r\nlexical database for sign languages. It is the successor to the NGT \r\nSignbank, the lexical database of the annotated NGT corpora at Radboud \r\nUniversity, which include the following:</p><ul><li><a href="http://hdl.handle.net/1839/00-0000-0000-0001-49C8-8@view" target="_blank">ECHO corpus</a>&nbsp;(2004)</li><li><a href="http://hdl.handle.net/1839/00-0000-0000-0004-DF8E-6@view" target="_blank">Corpus NGT</a>&nbsp;(2006–present)</li><li><a href="http://www.ru.nl/sign-lang/projects/handy-connections/" target="_blank">Handy Signs</a> (signs for experiments, 2012-2016)</li></ul><p>The\r\n lexical database does not presently serve as a dictionary. For each \r\ndata set, specific conditions apply as to (open or restricted) access. \r\nBy default, datasets are not accessible to the general public.</p><p>Global Signbank is open to host new datasets under certain strict conditions:</p><ul><li>Lemmatisation guidelines and phonological description of signs follows the conventions laid out in the manual</li><li>Data\r\n become accessible for research use by Radboud University and preferably\r\n any non-commercial research (open access). In exchange, the NGT dataset\r\n will become fully accessible to depositors of a new dataset.</li><li>A \r\ncontribution in kind and/or in cash is made to further software \r\ndevelopment and/or data hosting, depending on the size of the dataset \r\nand the expected and actual use</li></ul><p>Go directly to:</p><ul><li><a href="http://signbank.science.ru.nl/signs/search" target="">Search</a>&nbsp;(login required)</li></ul>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p><p><br></p><p><br></p>', '', '', 1, 1, 'Home', NULL),
+(2, '/about/', 'Sobre', 'About', '', '', '', '', 1, 2, '', NULL),
 (3, '/about/copyright/', 'Copyright', 'Copyright', '<p><span style="font-size: 36px;">Copyright</span></p><p><span style="font-size: 36px;"><br></span><b>Content of the different datasets</b></p><p><b><br></b>Different licenses apply to access to each dataset in Global Signbank (<a href="https://signbank.science.ru.nl//datasets/available">select a dataset to see the details</a>).</p><p><b style="font-size: 14px;">Site design &amp; development</b></p><p><b style="font-size: 14px;"><br></b>The&nbsp;<a href="https://github.com/signbank/ngt-signbank" target="_blank">NGT Signbank source code</a>&nbsp;is <a href="https://github.com/Signbank/NGT-signbank/blob/master/LICENCE.txt">licensed under a&nbsp;BSD 3-clause "New" or "Revised" License</a>.&nbsp;<span style="line-height: 1.42857143;">&nbsp;Onno\r\n Crasborn, Richard Bank, Wessel Stoop, Erwin Komen, Micha Hulsbosch \r\n&amp; Susan Even (2018, Radboud University, Nijmegen, the Netherlands)</span></p><p><span style="line-height: 1.42857143;"><br></span>NGT Signbank is based on the <a href="https://github.com/Signbank/Auslan-signbank" target="_blank">Auslan Signbank source code</a>&nbsp;by&nbsp;Trevor Johnston &amp; Steve Cassidy (Macquairie University, Sydney, Australia) for the <a href="http://auslan.org.au" target="_blank">Auslan Signbank</a>.<div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;"><div role="main" id="maincontent" style="background:white;"><div class="row"><div class="col-md-10 col-md-offset-1"><p><br></p>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p></p>', '', '', '', 1, 0, '', 2),
 (4, '/about/manual/', 'Manual', 'Manual', '<p><br></p><p>A first version of the manual is now available. It describes primarily the phonological description of signs in Global Signbank.</p><p><br></p><p>Onno Crasborn, Inge Zwitserlood, Els van der Kooij &amp; Anique Schüller (<span style="font-size: 14px;">April 2018)&nbsp;</span><a href="https://www.researchgate.net/publication/324808574_Global_SignBank_manual" target="_blank">Global Signbank Manual</a>, version 1. Radboud University, Centre for Language Studies.</p><p><br></p>', '', '', '', 1, 0, '', 2),
-(5, '/about/guidelines/', 'Guidelines for new signs', 'Guidelines for new signs', '<p><br></p><div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;">\r\n\r\n        \r\n\r\n\r\n\r\n        <div role="main" id="maincontent" style="background:white;">\r\n        \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class="row">\r\n        <div class="col-md-10 col-md-offset-1">\r\n   <h2 style="font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);">Before creating new signs</h2>\r\n\r\n<p>Before adding a new sign to the lexicon, first make sure you are not adding the same sign form twice under different glosses by:</p>\r\n\r\n<ol><li>Checking the already existing <i>glosses</i>;</li><li>Checking the field&nbsp;<i>Translation variants</i>&nbsp;to see whether the sign is glossed under a different Dutch translation of the sign.</li><li>If the sign can be translated in multiple ways, but you can’t find the word you have in mind in the&nbsp;<i>Gloss&nbsp;</i>field or the&nbsp;<i>Translation variants&nbsp;</i>field,\r\n you can check by selecting the phonological features of the sign and \r\nsee whether your sign is already in the lexicon but under a different \r\ntranslation (if so, make sure you add your meaning in the&nbsp;<i>Translation variants&nbsp;</i>field).</li></ol>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p>', '', '', '', 1, 0, '', 2),
+(5, '/about/guidelines/', 'Orientações para sinais novos', 'Guidelines for new signs', '<p><br></p><div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;">\r\n\r\n        \r\n\r\n\r\n\r\n        <div role="main" id="maincontent" style="background:white;">\r\n        \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class="row">\r\n        <div class="col-md-10 col-md-offset-1">\r\n   <h2 style="font-family: \'Helvetica Neue\', Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);">Before creating new signs</h2>\r\n\r\n<p>Before adding a new sign to the lexicon, first make sure you are not adding the same sign form twice under different glosses by:</p>\r\n\r\n<ol><li>Checking the already existing <i>glosses</i>;</li><li>Checking the field&nbsp;<i>Translation variants</i>&nbsp;to see whether the sign is glossed under a different Dutch translation of the sign.</li><li>If the sign can be translated in multiple ways, but you can’t find the word you have in mind in the&nbsp;<i>Gloss&nbsp;</i>field or the&nbsp;<i>Translation variants&nbsp;</i>field,\r\n you can check by selecting the phonological features of the sign and \r\nsee whether your sign is already in the lexicon but under a different \r\ntranslation (if so, make sure you add your meaning in the&nbsp;<i>Translation variants&nbsp;</i>field).</li></ol>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p>', '', '', '', 1, 0, '', 2),
 (6, '/about/release/', 'Release notes', 'Release notes', '<p><br></p><div id="wrap" class="container-fluid" style="box-sizing: content-box; background: white none repeat scroll 0% 0%; padding-top: 204px;">\r\n\r\n        \r\n\r\n\r\n\r\n        <div role="main" id="maincontent" style="background:white;">\r\n        \r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class="row">\r\n        <div class="col-md-10 col-md-offset-1">\r\n   <p>Development including all bug fixes can be tracked on the <a href="https://github.com/Signbank/Global-signbank">Github repository for Global Signbank</a>. New features implemented from 2018 onwards are summarised below.</p><p><b>February 8, 2018</b></p><ul><li>A\r\n logo designed by the deaf Chinese designer Sun Qian has been added to \r\nthe header, and serves as a button to go to the home page.</li><li>A <a href="https://signbank.science.ru.nl//signs/search_handshape/" style="font-style: italic;">Handshape list</a>&nbsp;has\r\n been added, including both photos and a description in terms of \r\ndistinctive features. The search form allow for searching for handshapes\r\n and for searching for signs based on handshape features.</li><li>ECVs can be exported for each dataset from the page <i><a href="https://signbank.science.ru.nl//datasets/available">View available datasets</a></i>.</li><li>Selected\r\n datasets are listed in the header next to the user name. When no \r\ndatasets are selected, all of them are listed here (and serve as the \r\nscope for searches).</li><li>Datasets can be configured as \'read only\' \r\nor \'read and write\'. Searches for both signs and morphemes respect \r\ndataset permissions.</li><li>The panel&nbsp;<i>Language &amp; Dialect</i> in the detail view has been removed. The <i>Language</i> field is now part of the Dataset value in the Publication Status panel. <i>Dialect </i>is displayed at the top above the glosses when specified.</li></ul>\r\n        </div>\r\n   </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n        \r\n    </div><p><br></p>', '', '', '', 1, 0, '', 2),
-(7, '/signs/', 'Signs', 'Signs', '', '', '', '', 1, 3, '', NULL),
-(8, '/signs/search/', 'Search', 'Search', '', '', '', '', 1, 0, '', 7),
-(9, '/signs/show_all/', 'Show All', 'Show all', '', '', '', '', 1, 0, '', 7),
+(7, '/signs/', 'Sinais', 'Signs', '', '', '', '', 1, 3, '', NULL),
+(8, '/signs/search/', 'Buscar', 'Search', '', '', '', '', 1, 0, '', 7),
+(9, '/signs/show_all/', 'Mostrar Todos', 'Show all', '', '', '', '', 1, 0, '', 7),
 (10, '/feedback/', 'Feedback', 'Feedback', '', '', '', '', 1, 4, '', NULL),
-(11, '/feedback/site/', 'Site feedback', 'Site feedback', '', '', '', '', 1, 0, '', 10),
-(12, '/feedback/missing/', 'Report a missing sign', 'Report a missing sign', '', '', '', '', 1, 0, '', 10),
+(11, '/feedback/site/', 'Feedback do site', 'Site feedback', '', '', '', '', 1, 0, '', 10),
+(12, '/feedback/missing/', 'Reportar ausência de um sinal', 'Report a missing sign', '', '', '', '', 1, 0, '', 10),
 (13, '/datasets/', 'Datasets', 'Datasets', '', '', '', '', 1, 5, '', NULL),
-(14, '/datasets/available/', 'View available datasets', 'View available datasets', '', '', '', '', 1, 0, '', 13),
-(15, '/datasets/select/', 'Select datasets', 'Select datasets', '', '', '', '', 1, 0, '', 13),
-(16, '/datasets/manager/', 'Manage datasets', 'Manage datasets', '', '', '', '', 1, 0, '', 13);
+(14, '/datasets/available/', 'Ver datasets disponíveis', 'View available datasets', '', '', '', '', 1, 0, '', 13),
+(15, '/datasets/select/', 'Selecionar dataset', 'Select datasets', '', '', '', '', 1, 0, '', 13),
+(16, '/datasets/manager/', 'Gerenciar datasets', 'Manage datasets', '', '', '', '', 1, 0, '', 13);
 
 -- --------------------------------------------------------
 
@@ -2047,7 +2069,11 @@ INSERT INTO `reversion_revision` (`id`, `comment`, `user_id`, `date_created`) VA
 (8, '', 2, '2018-05-16 18:25:49'),
 (9, 'Added.', 1, '2018-05-18 17:31:11'),
 (10, '', 2, '2018-05-18 17:35:45'),
-(11, '', 2, '2018-05-18 18:02:28');
+(11, '', 2, '2018-05-18 18:02:28'),
+(12, '', 1, '2018-08-23 18:12:53'),
+(13, '', 1, '2018-08-23 18:12:56'),
+(14, 'Adicionado.', 6, '2018-09-24 20:28:06'),
+(15, '', 2, '2018-09-24 20:51:56');
 
 -- --------------------------------------------------------
 
@@ -2083,7 +2109,11 @@ INSERT INTO `reversion_version` (`id`, `object_id`, `format`, `serialized_data`,
 (10, '5', 'json', '[{"model": "dictionary.gloss", "pk": 5, "fields": {"dataset": 1, "idgloss": "Bombeamento", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-16T20:25:48.563", "lastUpdated": "2018-05-16T18:25:48.564Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Bombeamento', 16, 8, 'default'),
 (11, '2', 'json', '[{"model": "dictionary.fieldchoice", "pk": 2, "fields": {"field": "Handedness", "english_name": "X", "dutch_name": "X", "chinese_name": "", "machine_value": 2}}]', 'Handedness: X, X (2)', 15, 9, 'default'),
 (12, '6', 'json', '[{"model": "dictionary.gloss", "pk": 6, "fields": {"dataset": 1, "idgloss": "Testing", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-18T19:35:45.187", "lastUpdated": "2018-05-18T17:35:45.189Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Testing', 16, 10, 'default'),
-(13, '6', 'json', '[{"model": "dictionary.gloss", "pk": 6, "fields": {"dataset": 1, "idgloss": "Testing", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-18", "lastUpdated": "2018-05-18T18:02:27.913Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Testing', 16, 11, 'default');
+(13, '6', 'json', '[{"model": "dictionary.gloss", "pk": 6, "fields": {"dataset": 1, "idgloss": "Testing", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-18", "lastUpdated": "2018-05-18T18:02:27.913Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Testing', 16, 11, 'default'),
+(14, '6', 'json', '[{"model": "dictionary.gloss", "pk": 6, "fields": {"dataset": 1, "idgloss": "Teste2", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-18", "lastUpdated": "2018-08-23T18:12:52.879Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Teste2', 16, 12, 'default'),
+(15, '6', 'json', '[{"model": "dictionary.gloss", "pk": 6, "fields": {"dataset": 1, "idgloss": "Teste2", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-05-18", "lastUpdated": "2018-08-23T18:12:55.647Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'Teste2', 16, 13, 'default'),
+(16, '1', 'json', '[{"model": "dictionary.handshape", "pk": 1, "fields": {"english_name": "Testee", "dutch_name": "etet", "chinese_name": "", "hsNumSel": null, "hsFingSel": null, "hsFingSel2": null, "hsFingConf": null, "hsFingConf2": null, "hsAperture": null, "hsThumb": null, "hsSpread": null, "hsFingUnsel": null, "fsT": false, "fsI": false, "fsM": false, "fsR": false, "fsP": false, "fs2T": false, "fs2I": false, "fs2M": false, "fs2R": false, "fs2P": false, "ufT": false, "ufI": false, "ufM": false, "ufR": false, "ufP": false}}]', 'Handshape object', 39, 14, 'default'),
+(17, '7', 'json', '[{"model": "dictionary.gloss", "pk": 7, "fields": {"dataset": 1, "idgloss": "asda", "bsltf": null, "asltf": null, "aslgloss": "", "asloantf": null, "bslgloss": "", "bslloantf": null, "useInstr": "", "rmrks": "", "blend": null, "blendtf": null, "compound": "", "comptf": null, "handedness": null, "weakdrop": null, "weakprop": null, "domhndsh": null, "subhndsh": null, "domhndsh_number": null, "domhndsh_letter": null, "subhndsh_number": null, "subhndsh_letter": null, "final_domhndsh": null, "final_subhndsh": null, "locprim": null, "final_loc": null, "locVirtObj": null, "locsecond": null, "initial_secondary_loc": null, "final_secondary_loc": null, "initial_palm_orientation": null, "final_palm_orientation": null, "initial_relative_orientation": null, "final_relative_orientation": null, "domSF": null, "domFlex": null, "oriChAbd": null, "oriChFlex": null, "inWeb": false, "isNew": false, "excludeFromEcv": false, "inittext": "", "morph": "", "sedefinetf": null, "segloss": null, "sense": null, "sn": null, "StemSN": null, "relatArtic": null, "absOriPalm": null, "absOriFing": null, "relOriMov": null, "relOriLoc": null, "oriCh": null, "handCh": null, "repeat": false, "altern": false, "movSh": null, "movDir": null, "movMan": null, "contType": null, "phonOth": null, "mouthG": "", "mouthing": "", "phonetVar": "", "locPrimLH": null, "locFocSite": null, "locFocSiteLH": null, "initArtOri": null, "finArtOri": null, "initArtOriLH": null, "finArtOriLH": null, "iconImg": "", "iconType": null, "namEnt": null, "semField": null, "wordClass": null, "wordClass2": null, "derivHist": "", "lexCatNotes": null, "valence": null, "tokNo": null, "tokNoSgnr": null, "tokNoA": null, "tokNoV": null, "tokNoR": null, "tokNoGe": null, "tokNoGr": null, "tokNoO": null, "tokNoSgnrA": null, "tokNoSgnrV": null, "tokNoSgnrR": null, "tokNoSgnrGe": null, "tokNoSgnrGr": null, "tokNoSgnrO": null, "creationDate": "2018-09-24T22:51:55.887", "lastUpdated": "2018-09-24T20:51:55.888Z", "alternative_id": null, "signlanguage": [], "dialect": [], "morphemePart": [], "creator": [2]}}]', 'asda', 16, 15, 'default');
 
 -- --------------------------------------------------------
 
@@ -2564,7 +2594,7 @@ ALTER TABLE `auth_permission`
 -- AUTO_INCREMENT for table `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `auth_user_groups`
 --
@@ -2579,7 +2609,7 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `dictionary_annotationidglosstranslation`
 --
 ALTER TABLE `dictionary_annotationidglosstranslation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `dictionary_blendmorphology`
 --
@@ -2589,17 +2619,17 @@ ALTER TABLE `dictionary_blendmorphology`
 -- AUTO_INCREMENT for table `dictionary_dataset`
 --
 ALTER TABLE `dictionary_dataset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `dictionary_dataset_owners`
 --
 ALTER TABLE `dictionary_dataset_owners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `dictionary_dataset_translation_languages`
 --
 ALTER TABLE `dictionary_dataset_translation_languages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `dictionary_definition`
 --
@@ -2609,7 +2639,7 @@ ALTER TABLE `dictionary_definition`
 -- AUTO_INCREMENT for table `dictionary_deletedglossormedia`
 --
 ALTER TABLE `dictionary_deletedglossormedia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `dictionary_dialect`
 --
@@ -2624,17 +2654,17 @@ ALTER TABLE `dictionary_fieldchoice`
 -- AUTO_INCREMENT for table `dictionary_gloss`
 --
 ALTER TABLE `dictionary_gloss`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `dictionary_gloss_creator`
 --
 ALTER TABLE `dictionary_gloss_creator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `dictionary_gloss_dialect`
 --
 ALTER TABLE `dictionary_gloss_dialect`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `dictionary_gloss_morphemePart`
 --
@@ -2644,12 +2674,12 @@ ALTER TABLE `dictionary_gloss_morphemePart`
 -- AUTO_INCREMENT for table `dictionary_gloss_signlanguage`
 --
 ALTER TABLE `dictionary_gloss_signlanguage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `dictionary_handshape`
 --
 ALTER TABLE `dictionary_handshape`
-  MODIFY `machine_value` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `machine_value` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `dictionary_keyword`
 --
@@ -2659,12 +2689,12 @@ ALTER TABLE `dictionary_keyword`
 -- AUTO_INCREMENT for table `dictionary_language`
 --
 ALTER TABLE `dictionary_language`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `dictionary_morpheme`
 --
 ALTER TABLE `dictionary_morpheme`
-  MODIFY `gloss_ptr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `gloss_ptr_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `dictionary_morphologydefinition`
 --
@@ -2704,17 +2734,17 @@ ALTER TABLE `dictionary_translation`
 -- AUTO_INCREMENT for table `dictionary_userprofile`
 --
 ALTER TABLE `dictionary_userprofile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `dictionary_userprofile_selected_datasets`
 --
 ALTER TABLE `dictionary_userprofile_selected_datasets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `django_content_type`
 --
@@ -2794,12 +2824,12 @@ ALTER TABLE `registration_userprofile`
 -- AUTO_INCREMENT for table `reversion_revision`
 --
 ALTER TABLE `reversion_revision`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `reversion_version`
 --
 ALTER TABLE `reversion_version`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `tagging_tag`
 --

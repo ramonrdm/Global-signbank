@@ -13,35 +13,36 @@ DATABASES = {'default':
                 {
                     'ENGINE': 'django.db.backends.mysql',
                     "NAME":"signbank",
-                    "USER":"root",
-                    "PASSWORD":"SenhaBoaMilGrau@@007",
-                    "HOST":"127.0.0.1",
-                    "PORT":"3306"
+                    "USER":"corpulibras",
+                    "PASSWORD":"jesuscristo",
+                    "HOST": "150.162.49.194",
+                    "PORT": "3306"
                 }
             }
 
 ADMINS = (('Admin', 'Admin@admin.com'))
 
 # what do we call this signbank?
-LANGUAGE_NAME = "Global"
-COUNTRY_NAME = "Netherlands"
+LANGUAGE_NAME = "Portuguese"
+COUNTRY_NAME = "Brazil"
 
 #Influences which template and css folder are used
 SIGNBANK_VERSION_CODE = 'global'
 URL = ''
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br"]
 
 gettext = lambda s: s
 LANGUAGES = (
   ('en', gettext('English')),
   ('nl', gettext('Dutch')),
-  ('zh-hans', gettext('Chinese'))
+  ('zh-hans', gettext('Chinese')),
+  ('pt', gettext('Portuguese'))
 )
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "pt"
 
 SEPARATE_ENGLISH_IDGLOSS_FIELD = True
 
-DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'en'}
+DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'pt'}
 
 FIELDS = {}
 
@@ -71,6 +72,16 @@ ECV_SETTINGS = {
     # The order of languages matters as the first will
     # be treated as default by ELAN
     'languages': [
+        {
+          'id':'ptb',
+          'description':"Os arquivos CV das glosas para o CNGT (RU)",
+          'annottation_idgloss_fieldname': 'annotationidglosstranslation_pt',
+          'attributes': {
+            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013504-001",
+            "LANG_ID":'ptb',
+            "LANG_LABEL":"Portuguese (pt)"
+          }
+        },
         {
             'id': 'nld',
             'description': 'De glossen-CV voor het CNGT (RU)',
@@ -107,7 +118,7 @@ SIGNBANK_PACKAGES_FOLDER = WRITABLE_FOLDER+'packages/'
 
 SHOW_MORPHEME_SEARCH = True
 SHOW_DATASET_INTERFACE_OPTIONS = True
-DEFAULT_DATASET = 'NGT'
+DEFAULT_DATASET = ''
 
 CNGT_EAF_FILES_LOCATION = WRITABLE_FOLDER+'corpus-ngt/eaf/'
 CNGT_METADATA_LOCATION = ROOT+'CNGT_MetadataEnglish_OtherResearchers.csv'
@@ -123,6 +134,7 @@ API_FIELDS = [
 # This needs more complete solution (perhaps a library),
 # but then the code cn for Chinese should changed to zh.
 LANGUAGE_CODE_MAP = [
+    {2:'pt', 3:'ptb'},
     {2:'nl',3:'nld'},
     {2:'en',3:'eng'},
     {2:'zh-hans',3:'chi'}

@@ -1,0 +1,9 @@
+version: '3'
+services:
+    web:
+        image: gstvob/signbank:latest
+        command: python3 repo/bin/develop.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/repo
+        ports:
+            - 8000:8000
