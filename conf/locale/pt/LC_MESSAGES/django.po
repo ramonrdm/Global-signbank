@@ -1854,7 +1854,7 @@ msgid ""
 "can search for a sign using a translation in the search box above, or browse "
 "words starting with any letter below."
 msgstr ""
-"Bem vindo à seção de busca de sinais do Libras signbank. Aqui você pode "
+"Bem vindo à seção de busca de sinais do %(language)s signbank. Aqui você pode "
 "buscar por um sinal usando a caixa de busca por tradução acima, ou navegar "
 "palavras começando com qualquer letra abaixo."
 
@@ -1985,7 +1985,7 @@ msgid ""
 " There really is no %(language)s sign in the database for which that word is "
 "a good translation "
 msgstr ""
-"Não existe nenhum sinal no banco de dados para o qual essa palavra seja uma "
+"Não existe nenhum sinal %(language)s no banco de dados para o qual essa palavra seja uma "
 "boa tradução"
 
 #: signbank/dictionary/templates/dictionary/search_result.html:35
