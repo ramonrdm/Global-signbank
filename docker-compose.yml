@@ -2,7 +2,5 @@ version: '3'
 services:
     web:
         image: gstvob/signbank:latest
-        volumes:
-            - .:/repo
         ports:
-            - 8000:8000
+            - 40120:8000
