@@ -18,7 +18,7 @@ class UserSignSearchForm(forms.Form):
     glossQuery = forms.CharField(label=_(u'Glosses containing'), max_length=100, required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
     query = forms.CharField(label=_(u'Translations containing'), max_length=100, required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
     category = forms.ChoiceField(label=_(u'Search'), choices=CATEGORY_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control'}))
-        
+
 
 class GlossModelForm(forms.ModelForm):
     class Meta:
@@ -144,7 +144,7 @@ class VideoUpdateForm(forms.Form):
 class TagUpdateForm(forms.Form):
     """Form to add a new tag to a gloss"""
 
-    tag = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), 
+    tag = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}),
                             choices=[(tag.name, tag.name.replace('_',' ')) for tag in Tag.objects.all()])
     delete = forms.BooleanField(required=False, widget=forms.HiddenInput)
 
@@ -184,7 +184,7 @@ class GlossSearchForm(forms.ModelForm):
     keyword = forms.CharField(label=_(u'Translations'))
     hasvideo = forms.ChoiceField(label=_(u'Has Video'), choices=YESNOCHOICES)
     defspublished = forms.ChoiceField(label=_("All Definitions Published"), choices=YESNOCHOICES)
-    
+
     defsearch = forms.CharField(label=_(u'Search Definition/Notes'))
 
     relation = forms.CharField(label=_(u'Search for gloss of related signs'),widget=forms.TextInput(attrs=ATTRS_FOR_FORMS))
@@ -234,7 +234,7 @@ class GlossSearchForm(forms.ModelForm):
                    'sn', 'StemSN', 'comptf', 'compound', 'signlanguage', 'dialect',
                    'inWeb', 'isNew',
                    'initial_relative_orientation', 'final_relative_orientation',
-                   'initial_palm_orientation', 'final_palm_orientation', 
+                   'initial_palm_orientation', 'final_palm_orientation',
                    'initial_secondary_loc', 'final_secondary_loc',
                    'domhndsh', 'subhndsh', 'locprim', 'locVirtObj', 'locsecond',
                    'final_domhndsh', 'final_subhndsh', 'final_loc',
@@ -364,12 +364,12 @@ class DefinitionForm(forms.ModelForm):
     class Meta:
         model = Definition
         fields = ('published','count', 'role', 'text')
-        
+
 class RelationForm(forms.ModelForm):
-    
+
     sourceid = forms.CharField(label=_(u'Source Gloss'))
     targetid = forms.CharField(label=_(u'Target Gloss'))
-    
+
     class Meta:
         model = Relation
         fields = ['role']
@@ -383,13 +383,13 @@ class VariantsForm(forms.Form):
 
     class Meta:
         model = Relation
-        
+
 class RelationToForeignSignForm(forms.ModelForm):
 
     sourceid = forms.CharField(label=_(u'Source Gloss'))
     other_lang = forms.CharField(label=_(u'Related Language'))
     other_lang_gloss = forms.CharField(label=_(u'Gloss in Related Language'), required=False)
-    
+
     class Meta:
         model = RelationToForeignSign
         fields = ['loan','other_lang','other_lang_gloss']

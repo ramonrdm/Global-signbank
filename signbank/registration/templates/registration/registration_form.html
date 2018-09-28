@@ -4,12 +4,12 @@
 
 {% block content %}
 <form class='form-horizontal' method="post" action="">
-      
+
     {% csrf_token %}
-    <div id='registrationform'  class="col-md-6 col-md-offset-3"> 
-    
+    <div id='registrationform'  class="col-md-6 col-md-offset-3">
+
         {% bootstrap_form form %}
-        
+
         {% buttons %}
         <button type="submit" class="btn btn-primary">
             {% bootstrap_icon "star" %} Submit
@@ -17,6 +17,4 @@
         {% endbuttons %}
     </div>
   </form>
-{% endblock %}							
-
-
+{% endblock %}
