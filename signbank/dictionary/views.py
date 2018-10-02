@@ -334,11 +334,11 @@ def import_media(request,video):
     2. In each folder with a dataset name all folders with name equal to a three letter language code of the dataset
     at hand are opened.
     3 In the folders with a three letter language code as name all media file are imported.
-    
+
     E.g. view the following folder structure:
      <import folder>/ASL/eng/HOUSE.mp4
-     
-     where 'ASL' is the name of a dataset and 'eng' is the three letter language code of English which is one of the 
+
+     where 'ASL' is the name of a dataset and 'eng' is the three letter language code of English which is one of the
      dataset languages of the dataset 'ASL'.
     """
     out = '<p>Imported</p><ul>'
@@ -1189,7 +1189,6 @@ def add_handshape_image(request):
             # deal with any existing image for this sign
             goal_path =  settings.WRITABLE_FOLDER+settings.HANDSHAPE_IMAGE_DIRECTORY + '/' + str(handshape.machine_value) + '/'
             goal_location = goal_path + 'handshape_' + str(handshape.machine_value) + extension
-
             #First make the dir if needed
             try:
                 os.mkdir(goal_path)
@@ -1197,9 +1196,9 @@ def add_handshape_image(request):
                 pass
 
             #Remove previous video
+            
             if handshape.get_image_path():
                 os.remove(settings.WRITABLE_FOLDER+handshape.get_image_path())
-
             with open(goal_location, 'wb+') as destination:
                 for chunk in imagefile.chunks():
                     destination.write(chunk)
