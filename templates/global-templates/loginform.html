@@ -5,11 +5,11 @@
 {% if not user.is_authenticated %}
  <div class='row'>
   <div id="loginforms" class="col-md-6 col-md-offset-3">
-  
+
   <form styleclass='form-horizontal' id="loginform" name="login" method="post" action="{{ URL }}/accounts/login/?next={{ next|urlencode }}">
     {% csrf_token %}
     <fieldset id='signin'>
-    <legend>{% trans "Sign In" %}</legend>
+    <legend>{% trans "Entrar" %}</legend>
         <div class='form-group col-xs-10'>
             <input class="form-control" type="text" name="email" placeholder="{% trans "User name" %}">
             {% if form.email.errors %}
@@ -24,11 +24,13 @@
         </div>
 
         <div class="form-group col-xs-10">
-            <button type="submit" class="form-control btn btn-primary">{% trans "Sign in" %}</button>
+            <button type="submit" class="btn btn-primary">{% trans "Entrar" %}</button>
+            <a style="float:right" class='btn btn-default' href="/accounts/register/">{% trans "Registrar" %}</a>
+
         </div>
 
     </fieldset>
-    
+
     <input type="hidden" name="next" value="{{ next }}" >
 
   </form>
@@ -36,30 +38,18 @@
 {% if error_message %}
 <div class='alert alert-danger'>{{error_message}}</div>
 {% endif %}
-
-
-{% if allow_registration %}
-  <fieldset id='register'>
-     <legend>{% trans "Register" %}</legend>
-     
-    <p>{% trans "Register for free to provide feedback on the Signbank." %}
-        <a class='btn btn-default' href="/accounts/register/">{% trans "Register" %}</a>
-    </p>
-    </fieldset>
-{% endif %}
-
     <fieldset id='lostpw'>
-      <legend>{% trans "Lost Password" %}</legend>
-      <p class="col-xs-10">{% trans "If you've lost or forgotten your password, enter your email address here and we'll reset it and send you a reminder." %}</p>
+      <legend>{% trans "Esqueci a senha" %}</legend>
+      <p class="col-xs-10">{% trans "Se você esqueceu ou perdeu sua senha, digite seu endereço de email aqui e enviaremos uma senha nova." %}</p>
 
       <form class='' id="passwordresetform" action="{{ URL }}/accounts/password/reset/" method="POST">
           {% csrf_token %}
             <div class='form-group col-xs-10'>
                 <input class="form-control" type="text" name="email" placeholder="{% trans "Email" %}">
             </div>
-              
+
             <div class="form-group col-xs-10">
-               <button type="submit" class="btn btn-default form-control">{% trans "Request Password" %}</button>
+               <button type="submit" class="btn btn-default form-control">{% trans "Solicitar Senha" %}</button>
             </div>
       </form>
 
