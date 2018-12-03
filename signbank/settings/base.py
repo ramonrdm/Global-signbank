@@ -95,7 +95,6 @@ TEMPLATES = [
 
 # add the Email backend to allow logins using email as username
 AUTHENTICATION_BACKENDS = (
-    "signbank.registration.EmailBackend",
     "django.contrib.auth.backends.ModelBackend",
     'guardian.backends.ObjectPermissionBackend',
 )
@@ -123,7 +122,6 @@ INSTALLED_APPS = (
     'django_summernote',
     'signbank.dictionary',
     'signbank.feedback',
-    #'signbank.registration',
     'signbank.pages',
     'signbank.attachments',
     'signbank.video',
@@ -215,16 +213,17 @@ ATTACHMENT_LOCATION = 'attachments'
 QUICK_UPDATE_GLOSS_FIELDS = ['signlanguage', 'dialect']
 
 # should we always require a login for viewing dictionary content
-ALWAYS_REQUIRE_LOGIN = True
+ALWAYS_REQUIRE_LOGIN = False
 
 # name of the primary css file, relative to the media directory
 PRIMARY_CSS = "bootstrap_css/test-server.css"
 
 
 # do we allow people to register for the site
-ALLOW_REGISTRATION = False
 
 ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_OPEN = True
+
 
 
 

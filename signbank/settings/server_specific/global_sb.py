@@ -8,25 +8,23 @@ WRITABLE_FOLDER = ROOT+'writable/'
 
 # Added test database, to run unit tests using this copy of the database, use -k argument to keep test database
 #      python bin/develop.py test -k
-'''
+
 DATABASES = {'default':
                 {
                     'ENGINE': 'django.db.backends.mysql',
                     "NAME":"signbank",
                     "USER":"corpuslibras",
-                    "PASSWORD":"...",
-                    "HOST": "150.162.49.194",
+                    "PASSWORD":"saijai4t",
+                    "HOST": "localhost",
                     "PORT": "3306"
                 }
             }
-
-'''
-DATABASES = {'default':
-                {
-                    'ENGINE': 'django.db.backends.sqlite3',
-                    'NAME': WRITABLE_FOLDER+'database/signbank.db',
-                }
-            }
+# DATABASES = {'default':
+#                 {
+#                     'ENGINE': 'django.db.backends.sqlite3',
+#                     'NAME': WRITABLE_FOLDER+'database/signbank.db',
+#                 }
+#             }
 
 
 ADMINS = (('Admin', 'Admin@admin.com'))

@@ -1,7 +1,6 @@
 from django.conf.urls import *
 from django.conf import settings
 from django.contrib.auth.decorators import login_required, permission_required
-import signbank.registration.forms
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 
@@ -13,7 +12,6 @@ import signbank.feedback.views
 import signbank.attachments.urls
 import signbank.video.urls
 import signbank.video.views
-import signbank.registration.urls
 import django.contrib.auth.views
 import django.contrib.admindocs.urls
 import django_summernote.urls
@@ -21,6 +19,7 @@ import django_summernote.urls
 from signbank.dictionary.adminviews import GlossListView, MorphemeListView, DatasetListView, HandshapeListView, HomonymListView, DatasetManagerView, DatasetDetailView
 from signbank.dictionary.views import add_image, delete_image, add_new_morpheme, add_handshape_image
 
+from registration.backends.simple.views import RegistrationView
 from django.contrib import admin
 admin.autodiscover()
 
@@ -45,7 +44,6 @@ urlpatterns = [
     url(r'^handshapeimage/upload/', add_handshape_image),
     url(r'^image/delete/(?P<pk>[0-9]+)$', delete_image),
 
-    #(r'^register.html', 'signbank.views.index'),
     url(r'^logout.html', django.contrib.auth.views.logout,
                        {'next_page': settings.URL}, "logout"),
 
@@ -75,15 +73,14 @@ urlpatterns = [
     # compatibility with old links - intercept and return 401
     url(r'^index.cfm', TemplateView.as_view(template_name='compat.html')),
 
-   # (r'^accounts/login/', 'django.contrib.auth.views.login'),
+    url(r'^accounts/', include("registration.backends.simple.urls")),
+    url(r'^accounts/register/$', RegistrationView.as_view()),
 
-    url(r'^accounts/', include(signbank.registration.urls,namespace="registration")),
     url(r'^admin/doc/', include(django.contrib.admindocs.urls)),
     url(r'^admin/', include(admin.site.urls)),
 
     # special admin sub site
     url(r'^publisher/', include(publisher_admin.urls)),
-
 
     url(r'^summernote/', include(django_summernote.urls)),
 
@@ -101,4 +98,3 @@ urlpatterns = [
     url(r'^__debug__/', include(debug_toolbar.urls))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
