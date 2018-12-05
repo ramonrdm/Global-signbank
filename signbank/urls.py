@@ -7,6 +7,7 @@ from django.views.generic import TemplateView
 #These are needed for the urls below
 import signbank.pages.views
 import signbank.dictionary.urls
+import signbank.registration.urls
 import signbank.feedback.urls
 import signbank.feedback.views
 import signbank.attachments.urls
@@ -73,9 +74,7 @@ urlpatterns = [
     # compatibility with old links - intercept and return 401
     url(r'^index.cfm', TemplateView.as_view(template_name='compat.html')),
 
-    url(r'^accounts/', include("registration.backends.simple.urls")),
-    url(r'^accounts/register/$', RegistrationView.as_view()),
-
+    url(r'^accounts/', include(signbank.registration.urls)),
     url(r'^admin/doc/', include(django.contrib.admindocs.urls)),
     url(r'^admin/', include(admin.site.urls)),
 

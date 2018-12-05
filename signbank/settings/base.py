@@ -220,6 +220,7 @@ PRIMARY_CSS = "bootstrap_css/test-server.css"
 
 
 # do we allow people to register for the site
+ALLOW_REGISTRATION = True
 
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_OPEN = True
@@ -231,7 +232,7 @@ REGISTRATION_OPEN = True
 SHOW_NUMBERSIGNS = True
 
 LOGIN_URL = URL+'/accounts/login/'
-LOGIN_REDIRECT_URL = URL+'/signs/recently_added/'
+LOGIN_REDIRECT_URL = "/"
 
 
 # location of ffmpeg, used to convert uploaded videos
