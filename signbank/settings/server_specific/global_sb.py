@@ -13,8 +13,8 @@ DATABASES = {'default':
                 {
                     'ENGINE': 'django.db.backends.mysql',
                     "NAME":"signbank",
-                    "USER":"corpuslibras",
-                    "PASSWORD":"saijai4t",
+                    "USER":"root",
+                    "PASSWORD":"SenhaBoaMilGrau@@007",
                     "HOST": "localhost",
                     "PORT": "3306"
                 }

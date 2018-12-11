@@ -147,7 +147,11 @@ class GlossListView(ListView):
             self.view_type = self.request.GET['view_type']
             context['view_type'] = self.view_type
 
-        selected_datasets = get_selected_datasets_for_user(self.request.user)
+        if self.request.user.is_authenticated():
+            selected_datasets = get_selected_datasets_for_user(self.request.user)
+        else:
+            selected_datasets = Dataset.objects.all()
+
         context['selected_datasets'] = selected_datasets
         dataset_languages = Language.objects.filter(dataset__in=selected_datasets).distinct()
         context['dataset_languages'] = dataset_languages
@@ -472,13 +476,15 @@ class GlossListView(ListView):
 
         setattr(self.request, 'view_type', self.view_type)
 
-        selected_datasets = get_selected_datasets_for_user(self.request.user)
+        if self.request.user.is_authenticated():
+            selected_datasets = get_selected_datasets_for_user(self.request.user)
+        else:
+            selected_datasets = Dataset.objects.all()
 
         #Get the initial selection
         if len(get) > 0 or show_all:
             if self.search_type == 'sign':
                 # Get all the GLOSS items that are not member of the sub-class Morpheme
-
                 if SPEED_UP_RETRIEVING_ALL_SIGNS:
                     qs = Gloss.none_morpheme_objects().prefetch_related('parent_glosses').prefetch_related('simultaneous_morphology').prefetch_related('translation_set').filter(dataset__in=selected_datasets)
                 else:
@@ -489,12 +495,14 @@ class GlossListView(ListView):
                 else:
                     qs = Gloss.objects.all().filter(dataset__in=selected_datasets)
 
-        #No filters or 'show_all' specified? show nothing
+        #No filters or 'show_all' specified? show nothing 
         else:
             qs = Gloss.objects.none()
 
-        if not self.request.user.has_perm('dictionary.search_gloss'):
-            qs = qs.filter(inWeb__exact=True)
+
+        if self.request.user.is_authenticated():
+            if not self.request.user.has_perm('dictionary.search_gloss'):
+                qs = qs.filter(inWeb__exact=True)
 
         #If we wanted to get everything, we're done now
         if show_all:
@@ -816,17 +824,17 @@ class GlossDetailView(DetailView):
             # return render(request, 'dictionary/warning.html', status=404)
             raise Http404()
 
-        if request.user.is_authenticated():
-            if self.object.dataset not in get_objects_for_user(request.user, 'view_dataset', Dataset, accept_global_perms=False):
-                if self.object.inWeb:
-                    return HttpResponseRedirect(reverse('dictionary:public_gloss',kwargs={'idgloss':self.object.idgloss}))
-                else:
-                    return HttpResponse('')
-        else:
-            if self.object.inWeb:
-                return HttpResponseRedirect(reverse('dictionary:public_gloss', kwargs={'idgloss': self.object.idgloss}))
-            else:
-                return HttpResponseRedirect(reverse('registration:auth_login'))
+        # if request.user.is_authenticated():
+        #     if self.object.dataset not in get_objects_for_user(request.user, 'view_dataset', Dataset, accept_global_perms=True):
+        #         if self.object.inWeb:
+        #             return HttpResponseRedirect(reverse('dictionary:public_gloss',kwargs={'idgloss':self.object.idgloss}))
+        #         else:
+        #             return HttpResponse('')
+        # else:
+        #     if self.object.inWeb:
+        #         return HttpResponseRedirect(reverse('dictionary:public_gloss', kwargs={'idgloss': self.object.idgloss}))
+        #     else:
+        #         return HttpResponseRedirect(reverse('registration:auth_login'))
 
         context = self.get_context_data(object=self.object)
         return self.render_to_response(context)
@@ -1184,13 +1192,17 @@ class GlossDetailView(DetailView):
             context['dataset_choices'] = {}
             user = self.request.user
             if user.is_authenticated():
-                qs = get_objects_for_user(user, 'view_dataset', Dataset, accept_global_perms=False)
+                qs = get_objects_for_user(user, 'view_dataset', Dataset, accept_global_perms=True)
                 dataset_choices = {}
                 for dataset in qs:
                     dataset_choices[dataset.name] = dataset.name
                 context['dataset_choices'] = json.dumps(dataset_choices)
 
-        selected_datasets = get_selected_datasets_for_user(self.request.user)
+
+        if self.request.user.is_authenticated():
+            selected_datasets = get_selected_datasets_for_user(self.request.user)
+        else:
+            selected_datasets = Dataset.objects.all()
         context['selected_datasets'] = selected_datasets
         dataset_languages = Language.objects.filter(dataset__in=selected_datasets).distinct()
         context['dataset_languages'] = dataset_languages
@@ -1217,7 +1229,7 @@ class GlossRelationsDetailView(DetailView):
             return render(request, 'no_object.html', status=404)
 
         if request.user.is_authenticated():
-            if self.object.dataset not in get_objects_for_user(request.user, 'view_dataset', Dataset, accept_global_perms=False):
+            if self.object.dataset not in get_objects_for_user(request.user, 'view_dataset', Dataset, accept_global_perms=True):
                 if self.object.inWeb:
                     return HttpResponseRedirect(reverse('dictionary:public_gloss',kwargs={'idgloss':self.object.idgloss}))
                 else:
