@@ -191,14 +191,17 @@
     <a class='btn btn-default navbar-btn' href="{% url 'root_page' %}dictionary/gloss_relations/{{gloss.id}}">{% trans "Relations View" %}</a>
 
     <a class='btn btn-default navbar-btn' href="{% url 'root_page' %}dictionary/gloss/{{gloss.id}}.html">{% trans "Public View" %}</a>
-
+         {% if request.user.is_authenticated %}
          {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
          {% if "change_dataset" in dataset_perms %}
          <button id='delete_gloss_btn' class='btn btn-default navbar-btn' data-toggle='modal' data-target='#delete_gloss_modal'>{% trans "Delete Sign" %}</button>
 
         {% endif %}
+        {% endif %}
     </div>
 
+
+    {% if request.user.is_authenticated %}
     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
     {% if "change_dataset" in dataset_perms %}
     <div class='pull-right' style="margin-right:15px;margin-top:3px;">
@@ -210,6 +213,7 @@
          <button id='enable_edit' class='btn btn-default navbar-btn'>{% trans "Edit" %}</button>
 
     </div>
+    {% endif %}
     {% endif %}
 
 </div>
@@ -253,6 +257,7 @@
         </ul>
     </div>
 
+    {% if request.user.is_authenticated %}
     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
     {% if "change_dataset" in dataset_perms %}
     <div class='editform'>
@@ -278,7 +283,9 @@
 
     </div>
     {% endif %}
+    {% endif %}
 
+    {% if request.user.is_authenticated %}
     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
     {% if "change_dataset" in dataset_perms %}
     <div class='editform'>
@@ -299,9 +306,10 @@
             </form>
         </fieldset>
     </div>
-
+    {% endif %}
     {% endif %}
 
+    {% if request.user.is_authenticated %}
     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
     {% if "change_dataset" in dataset_perms %}
     <div class="editform">
@@ -320,7 +328,7 @@
          </fieldset>
     </div>
     {% endif %}
-
+    {% endif %}
 
 
 
@@ -386,6 +394,8 @@
 
         </table>
 
+
+        {% if request.user.is_authenticated %}
         {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
         {% if "change_dataset" in dataset_perms %}
         <div class="modal fade" id="delete_gloss_modal" tabindex="-1" role="dialog" aria-labelledby="#modalTitle" aria-hidden="true">
@@ -410,6 +420,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endif %}
 
    {% if perms.dictionary.view_advanced_properties %}
@@ -453,8 +464,9 @@
                    {% for morphdef, translated_role, sign_display in morphdefs %}
 
                    <tr>
-                       {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
-                       {% if "change_dataset" in dataset_perms %}
+                        {% if request.user.is_authenticated %}
+                        {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
+                        {% if "change_dataset" in dataset_perms %}
                          <td style='width:2em;'>
                             <span class='glyphicon glyphicon-trash morphology-definition-delete' data-toggle='modal' data-target='#delete_morphology-definition_modal_{{morphdef.id}}'></span>
 
@@ -481,10 +493,11 @@
                                     </div>
                                   </div>
                              </div>
-
                         </td>
+
                         {% else %}
                         <td></td>
+                        {% endif %}
                         {% endif %}
                         <td class='edit edit_morphology_role' id='morphology-definition-role_{{morphdef.id}}'>{{translated_role}}</td>
                         <td id='morphology-definition-morpheme_{{morphdef.id}}'><a href='{% url "dictionary:admin_gloss_view" pk=morphdef.morpheme.pk %}'>{{sign_display}}</a></td>
@@ -495,6 +508,7 @@
             {% endif %}
            </table>
 
+            {% if request.user.is_authenticated %}
             {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
             {% if "change_dataset" in dataset_perms %}
             <form name="add_morphologydefinition_form" id='add_morphologydefinition_form'
@@ -517,7 +531,7 @@
                </table>
             </form>
             {% endif %}
-
+            {% endif %}
             <table class='table table-condensed'>
                 <tr>
                     <th colspan="4">{% trans "Simultaneous Morphology" %}</th>
@@ -545,6 +559,7 @@
                 {% for morpheme, morph_display, morpheme_type in simultaneous_morphology %}
                 <tr>
                     <!-- Facility to delete this morpheme -->
+                    {% if request.user.is_authenticated %}
                     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                     {% if "change_dataset" in dataset_perms %}
                      <td>
@@ -578,6 +593,7 @@
                     {% else %}
                     <td></td>
                     {% endif %}
+                    {% endif %}
                     <td id='morpheme-definition_{{morpheme.pk}}'>
                         <a href='{% url "dictionary:admin_morpheme_view" pk=morpheme.morpheme.pk %}'>{{morph_display}} ({{morpheme_type}})</a></td>
                     <td class='edit edit_text' id='morpheme-definition-meaning_{{morpheme.pk}}'>{{morpheme.role}}</td>
@@ -586,6 +602,7 @@
             </table>
 
             <!-- Facilitate adding and deleting morphemes that are used in this sign -->
+            {% if request.user.is_authenticated %}
             {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
             {% if "change_dataset" in dataset_perms %}
             {% if count_morphemes_in_dataset %}
@@ -612,6 +629,7 @@
              </form>
             {% endif %}
             {% endif %}
+            {% endif %}
 
             <table class='table table-condensed'>
                 <tr>
@@ -625,6 +643,7 @@
                 {% for blend, blend_display in blend_morphology %}
                 <tr>
                     <!-- Facility to delete this blend -->
+                    {% if request.user.is_authenticated %}
                     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                     {% if "change_dataset" in dataset_perms %}
                      <td>
@@ -659,6 +678,7 @@
                     {% else %}
                     <td></td>
                     {% endif %}
+                    {% endif %}
                     <td id='blend-definition_{{blend.pk}}'><a href='{% url "dictionary:admin_gloss_view" pk=blend.glosses.pk %}'>{{blend_display}}</a></td>
                     <td class='edit edit_text' id='blend-definition-role_{{blend.pk}}'>{{blend.role}}</td>
                </tr>
@@ -666,6 +686,7 @@
             </table>
 
             <!-- Facilitate adding and deleting blends that are used in this sign -->
+            {% if request.user.is_authenticated %}
             {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
             {% if "change_dataset" in dataset_perms %}
             <form name='add_blenddefinition_form' id='add_blenddefinition_form'
@@ -689,6 +710,7 @@
                {# spacing div to allow room for typeahead dropdown #}
                <div style='height: 10em'></div>
             </form>
+            {% endif %}
             {% endif %}
 
         </div>
@@ -952,11 +974,13 @@
                <table class='table table-condensed'>
                    {% for rel, target_display in otherrelations %}
                     <tr id='row_{{rel.id}}'>
+                        {% if request.user.is_authenticated %}
                         {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                         {% if "change_dataset" in dataset_perms %}
                         <td class='edit edit_relation_delete' id='relationdelete_{{rel.id}}'><span class='glyphicon glyphicon-trash relation_delete'></span></td>
                         {% else %}
                         <td></td>
+                        {% endif %}
                         {% endif %}
                         <td class='edit edit_relation_role' id='relationrole_{{rel.id}}'>{{rel.get_role_display}}</td>
                         <td id='relationtarget_{{rel.id}}'>
@@ -965,7 +989,7 @@
                     </tr>
                    {% endfor %}
                </table>
-               
+               {% if request.user.is_authenticated %}
                {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                {% if "change_dataset" in dataset_perms %}
                <form name='add_relation_form' id='add_relation_form'
@@ -988,6 +1012,7 @@
                    {# spacing div to allow room for typeahead dropdown #}
                    <div style='height: 10em'></div>
                 </form>
+                {% endif %}
                 {% endif %}
 
         </div>
@@ -1016,11 +1041,13 @@
 		            </tr>
                    {% for rel in gloss.relationtoforeignsign_set.all %}
                     <tr id='foreign_{{rel.id}}'>
+                        {% if request.user.is_authenticated %}
                         {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                         {% if "change_dataset" in dataset_perms %}
                         <td class='edit edit_foreign_delete' id='relationforeign-delete_{{rel.id}}'><span class='glyphicon glyphicon-trash relationtoforeignsign_delete'></span></td>
                         {% else %}
                         <td></td>
+                        {% endif %}
                         {% endif %}
                         <td class='edit edit_check' id='relationforeign-loan_{{rel.id}}'>{{rel.loan}}</td>
                         <td class='edit edit_text' id='relationforeign-other-lang_{{rel.id}}'>{{rel.other_lang}}</td>
@@ -1029,6 +1056,7 @@
                    {% endfor %}
                </table>
 
+               {% if request.user.is_authenticated %}
                {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
                {% if "change_dataset" in dataset_perms %}
                <form id='add_relationtoforeignsign_form' method='post' action='{% url "dictionary:add_relationtoforeignsign" %}'>
@@ -1045,6 +1073,7 @@
                    {# spacing div to allow room for typeahead dropdown #}
                    <div style='height: 10em'></div>
                </form>
+               {% endif %}
                {% endif %}
 
         </div>
@@ -1173,9 +1202,9 @@
               {% for def in note_list %}
               <tr>
                 <td>
-
-                   {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
-                   {% if "change_dataset" in dataset_perms %}
+                    {% if request.user.is_authenticated %}
+                    {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
+                    {% if "change_dataset" in dataset_perms %}
                     {% if not def.published and perms.dictionary.can_delete_unpublished or def.published and perms.dictionary.can_delete_published %}
                     <span class='glyphicon glyphicon-trash definition_delete' data-toggle='modal' data-target='#delete_definition_modal_{{def.id}}'></span>
 
@@ -1204,6 +1233,7 @@
                      </div>
                     {% endif %}
                     {% endif %}
+                    {% endif %}
                 </td>
                 <td {% if perms.dictionary.can_publish %}class='edit edit_check'{% endif %} id='definitionpub_{{def.id}}'>
                     {% if def.published %}
@@ -1222,9 +1252,9 @@
             {% endfor %}
             </table>
 
-
-           {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
-           {% if "change_dataset" in dataset_perms %}
+            {% if request.user.is_authenticated %}
+            {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
+            {% if "change_dataset" in dataset_perms %}
             <form id='add_definition' action='{% url "dictionary:add_definition" gloss.id %}' method="POST">
                 <fieldset>
                 {% csrf_token %}
@@ -1247,6 +1277,7 @@
             </fieldset>
 
             </form>
+            {% endif %}
             {% endif %}
 
 
@@ -1279,8 +1310,9 @@
 
                {% for pk,path,file_type,type,alternative_gloss,file_name in other_media %}
                <tr>
-                   {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
-                   {% if "change_dataset" in dataset_perms %}
+                    {% if request.user.is_authenticated %}
+                    {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
+                    {% if "change_dataset" in dataset_perms %}
                      <td>
                         <span class='glyphicon glyphicon-trash other-video-delete' data-toggle='modal' data-target='#delete_other_media_{{pk}}'></span>
 
@@ -1312,6 +1344,7 @@
                     {% else %}
                     <td></td>
                     {% endif %}
+                    {% endif %}
                     <td><a download="{{ file_name }}" href="{{ path }}">Download</a></td>
                     <td id='other-media-file-type_{{ pk }}'>{{ file_type }}</td>
                     <td class='edit edit_list' id='other-media-type_{{ pk }}'>{{ type }}</td>
@@ -1321,6 +1354,7 @@
 
            </table>
 
+           {% if request.user.is_authenticated %}
            {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
            {% if "change_dataset" in dataset_perms %}
             <form id='add_other_media' action='{% url "dictionary:add_othermedia" %}' method="POST" enctype="multipart/form-data">
@@ -1345,7 +1379,7 @@
 
             </form>
             {% endif %}
-
+            {% endif %}
         </div>
     </div>
 

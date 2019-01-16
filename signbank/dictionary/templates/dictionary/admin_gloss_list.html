@@ -171,7 +171,6 @@ function do_toggle_groups(el) {
 {% block content %}
 {% url 'dictionary:protected_media' '' as protected_media_url %}
 
-{% if perms.dictionary.search_gloss %}
 <form name='adminsearch' id='adminsearch' method='get' action='{{URL}}/signs/search'>
 <div class="panel panel-default">
     <div class="panel-heading" data-toggle="collapse" data-target="#query-area">{% trans "Form your query" %}
@@ -563,11 +562,11 @@ function do_toggle_groups(el) {
         {% endif %}
     </div>
 </form>
-{% endif %}
+
 
 <div></div>
 
-{% if perms.dictionary.add_gloss %}
+
 <div  class="panel panel-default">
   <div class="panel-heading" data-toggle="collapse"  data-target='#add_gloss_form'>{% trans "Add New Sign" %}</div>
 
@@ -605,7 +604,7 @@ function do_toggle_groups(el) {
          </form>
      </div>
   </div>
-  {% endif %}
+
 
 
 

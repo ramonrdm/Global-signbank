@@ -396,7 +396,6 @@ class GlossListView(ListView):
                 sim_morphs.append(':'.join(m))
             simultaneous_morphemes = ', '.join(sim_morphs)
             row.append(simultaneous_morphemes)
-
             # Blend Morphology
             ble_morphemes = [(str(m.glosses.id), m.role) for m in gloss.blend_morphology.all()]
             ble_morphs = []
@@ -1203,6 +1202,7 @@ class GlossDetailView(DetailView):
             selected_datasets = get_selected_datasets_for_user(self.request.user)
         else:
             selected_datasets = Dataset.objects.all()
+            
         context['selected_datasets'] = selected_datasets
         dataset_languages = Language.objects.filter(dataset__in=selected_datasets).distinct()
         context['dataset_languages'] = dataset_languages
