@@ -25,6 +25,14 @@ def build_choice_list(field):
 
     choice_list = []
 
+    if field == "Handshape" :
+        handshapes = Handshape.objects.all()
+        
+        for hndshp in handshapes:       
+            choice_list.append((str(hndshp.machine_value),hndshp.english_name))
+
+        return [('0','-'),('1','N/A')] + choice_list
+
     # Get choices for a certain field in FieldChoices, append machine_value and english_name
     try:
         for choice in FieldChoice.objects.filter(field__iexact=field):
@@ -337,6 +345,20 @@ class Handshape(models.Model):
             count_selected_fingers += 1
         return count_selected_fingers
 
+
+
+LOCALIZACAO_CHOICES = (
+    ("testa","Testa"),
+    ("ohos_nariz","Olhos e Nariz"),
+    ("boca_queixo","Boca e Queixo"),
+    ("pescoco","Pescoço"),
+    ("ombro", "Ombro"),
+    ("bracos", "Braços"),
+    ("pernas", "Pernas"),
+    ("espaco_neutro","Espaço Neutro"),
+    ("tronco", "Tronco"),
+)
+
 class Gloss(models.Model):
     
     class Meta:
@@ -378,6 +400,12 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     # languages that this gloss is part of
     signlanguage = models.ManyToManyField(SignLanguage)
+
+    # localization field equivalent to idsinais's localization field
+    localizacao = models.CharField(_("Localização"), max_length=15 ,null=True, choices=LOCALIZACAO_CHOICES)
+
+
+    # Hand configuration field
 
     # these language fields are subsumed by the language field above
     bsltf = models.NullBooleanField(_("BSL sign"), null=True, blank=True)
@@ -1425,6 +1453,8 @@ def fieldname_to_category(fieldname):
         field_category = 'Thumb'
     elif fieldname == 'hsSpread':
         field_category = 'Spreading'
+    elif fieldname == "localization":
+        field_category = "Localization"
     else:
         field_category = fieldname
 

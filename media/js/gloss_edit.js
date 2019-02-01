@@ -320,6 +320,11 @@ function configure_edit() {
          data      : dialects,
 		 callback : update_view_and_remember_original_value
      });
+     $('.edit_localizacao').editable(edit_post_url, {
+         type      : "select",
+         data      : localizacao_choices,
+         callback  : update_view_and_remember_original_value
+     });
      $('.edit_dataset').editable(edit_post_url, {
          type      : 'select',
          data      : dataset_choices,
@@ -391,6 +396,11 @@ function configure_edit() {
          type      : 'select',
          data      : choice_lists['morphology_role'],
 	 	 callback : update_view_and_remember_original_value
+     });
+     $('.edit_domhndsh').editable(edit_post_url, {
+        type       : "select",
+        data       : handshape,
+        callback   : update_view_and_remember_original_value,
      });
      $('.edit_list').click(function() 
 	 {

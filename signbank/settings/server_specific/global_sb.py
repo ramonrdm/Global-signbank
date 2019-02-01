@@ -13,8 +13,8 @@ DATABASES = {'default':
                 {
                     'ENGINE': 'django.db.backends.mysql',
                     "NAME":"signbank",
-                    "USER":"",
-                    "PASSWORD":"",
+                    "USER":"root",
+                    "PASSWORD":"SenhaBoaMilGrau@@007",
                     "HOST": "localhost",
                     "PORT": "3306"
                 }
@@ -43,13 +43,14 @@ LANGUAGES = (
   ('en', gettext('English')),
   ('nl', gettext('Dutch')),
   ('zh-hans', gettext('Chinese')),
-  ('pt', gettext('Portuguese'))
+  ('pt-br', gettext('Brazilian Portuguese'))
 )
-LANGUAGE_CODE = "pt"
+
+LANGUAGE_CODE = "pt-br"
 
 SEPARATE_ENGLISH_IDGLOSS_FIELD = True
 
-DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'pt'}
+DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'pt-br'}
 
 FIELDS = {}
 
@@ -141,7 +142,7 @@ API_FIELDS = [
 # This needs more complete solution (perhaps a library),
 # but then the code cn for Chinese should changed to zh.
 LANGUAGE_CODE_MAP = [
-    {2:'pt', 3:'ptb'},
+    {2:'pt-br', 3:'ptb'},
     {2:'nl',3:'nld'},
     {2:'en',3:'eng'},
     {2:'zh-hans',3:'chi'}
