@@ -170,6 +170,18 @@ DEFN_ROLE_CHOICES = [('','---------'),('all','All')] + build_choice_list('NoteTy
 COMPONENT_ROLE_CHOICES = [('','---------')] + build_choice_list('MorphologyType')
 MORPHEME_ROLE_CHOICES = [('','---------')] + build_choice_list('MorphemeType')
 ATTRS_FOR_FORMS = {'class':'form-control'}
+LOCALIZACAO_CHOICES = (
+    ("testa","Testa"),
+    ("olhos_nariz","Olhos e Nariz"),
+    ("boca_queixo","Boca e Queixo"),
+    ("pescoco","Pescoço"),
+    ("ombro", "Ombro"),
+    ("bracos", "Braços"),
+    ("pernas", "Pernas"),
+    ("espaco_neutro","Espaço Neutro"),
+    ("tronco", "Tronco"),
+)
+
 
 class GlossSearchForm(forms.ModelForm):
 
@@ -185,6 +197,7 @@ class GlossSearchForm(forms.ModelForm):
     hasvideo = forms.ChoiceField(label=_(u'Has Video'), choices=YESNOCHOICES)
     defspublished = forms.ChoiceField(label=_("All Definitions Published"), choices=YESNOCHOICES)
 
+    localizacao = forms.ChoiceField(label=_("Localização"), choices=LOCALIZACAO_CHOICES)
     defsearch = forms.CharField(label=_(u'Search Definition/Notes'))
 
     relation = forms.CharField(label=_(u'Search for gloss of related signs'),widget=forms.TextInput(attrs=ATTRS_FOR_FORMS))
@@ -230,7 +243,7 @@ class GlossSearchForm(forms.ModelForm):
         ATTRS_FOR_FORMS = {'class':'form-control'}
 
         model = Gloss
-        fields = ('idgloss', 'morph', 'sense',
+        fields = ('idgloss', 'morph', 'sense', 'localizacao',
                    'sn', 'StemSN', 'comptf', 'compound', 'signlanguage', 'dialect',
                    'inWeb', 'isNew',
                    'initial_relative_orientation', 'final_relative_orientation',

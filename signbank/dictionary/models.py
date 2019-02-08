@@ -349,7 +349,7 @@ class Handshape(models.Model):
 
 LOCALIZACAO_CHOICES = (
     ("testa","Testa"),
-    ("ohos_nariz","Olhos e Nariz"),
+    ("olhos_nariz","Olhos e Nariz"),
     ("boca_queixo","Boca e Queixo"),
     ("pescoco","Pescoço"),
     ("ombro", "Ombro"),
@@ -398,15 +398,15 @@ class Gloss(models.Model):
 database. No two Sign Entry Names can be exactly the same, but a "Sign
 Entry Name" can be (and often is) the same as the Annotation Idgloss.""")    
 
+    # nome_sinal = models.CharField(_("Nome"), max_length=50, null=True)
+
     # languages that this gloss is part of
     signlanguage = models.ManyToManyField(SignLanguage)
 
     # localization field equivalent to idsinais's localization field
     localizacao = models.CharField(_("Localização"), max_length=15 ,null=True, choices=LOCALIZACAO_CHOICES)
 
-
-    # Hand configuration field
-
+    # traducao_ingles = models.CharField(_("Tradução Inglês"), max_length=50, null=True)
     # these language fields are subsumed by the language field above
     bsltf = models.NullBooleanField(_("BSL sign"), null=True, blank=True)
     asltf = models.NullBooleanField(_("ASL sign"), null=True, blank=True)
@@ -422,8 +422,6 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     useInstr = models.CharField(_("Annotation instructions"), max_length=50, blank=True)
     rmrks = models.CharField(_("Remarks"), max_length=50, blank=True)
 
-    ########
-    
     # one or more regional dialects that this gloss is used in
     dialect = models.ManyToManyField(Dialect)
     

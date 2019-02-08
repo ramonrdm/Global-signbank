@@ -331,10 +331,7 @@
     {% endif %}
     {% endif %}
 
-
-
 </div>
-
 
     <div class='panel-group' id="definition" style="z-index: 0;opacity:.99; position: relative; background-color: white;">
 
@@ -380,6 +377,19 @@
             </tr>
             {% endfor %}
 
+
+           <!--  <tr>
+                <th>{% trans "Nome do Sinal" %}</th>
+                <td class="edit edit_text" id="nome_sinal">{{gloss.nome_sinal}}</td>
+            </tr>
+
+
+            <tr>
+                <th>{% trans "Tradução Inglês" %}</th>
+                <td class="edit edit_text" id="traducao_ingles">{{gloss.traducao_ingles}}</td>
+            </tr>
+ -->
+
             {% for lang, translations in translations_per_language.items %}
             <tr>
                 <th>
@@ -390,27 +400,84 @@
             {% endfor %}
 
             {% for value,name,label,kind in main_fields %}
-                <tr><th>{{label}}</th><td class="edit edit_{{kind}}" id='{{name}}'>{% if kind == "check" and value %}{% trans "Yes" %}{% elif kind == "check" %}{% trans "No" %}{% else %}{% value value %}{% endif %}</td></tr>
+
+                {% if name == 'domhndsh' %}
+                    <tr class="empty_row">
+                        <th/><th/><th>letter</th><th>number</th>
+                    </tr>
+                    {% if value == '-' or value == ' ' or value == '' or value == None %}
+                    <tr value="{{value}}" class="empty_row">
+                        <th>Configuração da mão direita</th>
+                        <td class="edit edit_domhndsh" id='{{name}}'>{% value value %}</td>
+                        {% for value,name,label,kind in etymology_fields_dom %}
+                            {% if name == 'domhndsh_letter' %}
+                            <td class="edit edit_letter" id='{{name}}'
+                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
+                            {% else %}
+                            <td class="edit edit_number" id='{{name}}'
+                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% else %}
+                    <tr value="{{value}}">
+                        <th>Configuração da mão direita</th>
+                        <td class="edit edit_domhndsh" id='{{name}}'>
+                            <a id="strong_hand_link" style="color: inherit; display: visible;" href="{{ URL }}/dictionary/handshape/{{StrongHand}}/"><img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{value}}/handshape_{{value}}.jpg"/></a>
+                        </td>
+                        {% for value,name,label,kind in etymology_fields_dom %}
+                            {% if name == 'domhndsh_letter' %}
+                            <td class="edit edit_letter" id='{{name}}'
+                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
+                            {% else %}
+                            <td class="edit edit_number" id='{{name}}'
+                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endif %}
+                {% elif name == 'subhndsh' %}
+                    <tr class="empty_row">
+                        <th/><th/><th>letter</th><th>number</th>
+                    </tr>
+                    {% if value == '-' or value == ' ' or value == '' or value == None %}
+                    <tr value="{{value}}" class="empty_row">
+                        <th>Configuração da mão esquerda</th>
+                        <td class="edit edit_domhndsh" id='{{name}}'>{% value value %}</td>
+                        {% for value,name,label,kind in etymology_fields_sub %}
+                            {% if name == 'subhndsh_letter' %}
+                            <td class="edit edit_letter" id='{{name}}'
+                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
+                            {% else %}
+                            <td class="edit edit_number" id='{{name}}'
+                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% else %}
+                    <tr value="{{value}}">
+                        <th>Configuração da mão esquerda</th>
+                        <td class="edit edit_domhndsh" id='{{name}}'>
+                            <a id="weak_hand_link" style="color: inherit; display: visible;" href="/dictionary/handshape/{{WeakHand}}/"><img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{value}}/handshape_{{value}}.jpg"/></a>
+                        </td>
+                        {% for value,name,label,kind in etymology_fields_sub %}
+                            {% if name == 'subhndsh_letter' %}
+                            <td class="edit edit_letter" id='{{name}}'
+                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
+                            {% else %}
+                            <td class="edit edit_number" id='{{name}}'
+                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endif %}
+                {% elif name == "localizacao" %}
+                    <tr><th>{% trans "Localização" %}</th><td class="edit edit_localizacao" id="localizacao">{{value}}{% for loc in localizacao_choices %}{% if not forloop.last %}{% endif %}{% endfor %}</td></tr>
+                {% else %}
+                    <tr><th>{{label}}</th><td class="edit edit_{{kind}}" id='{{name}}'>{% if kind == "check" and value %}{% trans "Yes" %}{% elif kind == "check" %}{% trans "No" %}{% else %}{% value value %}{% endif %}</td></tr>
+                {% endif %}
             {% endfor %}
 
-            <tr><th>{% trans "Localização" %}</th><td class="edit edit_localizacao" id="localizacao_choices">{% for loc in localizacao_choices %}{% if not forloop.last %}{% endif %}{% endfor %}</td></tr>
-
-            <tr class="">
-                    <th/><th/><th>Letra</th><th>Número</th>
-                </tr>
-                <tr value="" class="">
-                    <th>Configuração da mão direita</th>
-                    <td class="edit edit_domhndsh" id='domhndsh'></td>
-                    {% for value,name,label,kind in etymology_fields_dom %}
-                        {% if name == 'domhndsh_letter' %}
-                        <td class="edit edit_letter" id='{{name}}'
-                            value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
-                        {% else %}
-                        <td class="edit edit_number" id='{{name}}'
-                            value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
-                        {% endif %}
-                    {% endfor %}
-                </tr>
 
         </table>
 
@@ -785,76 +852,7 @@
                         {% endfor %}
                     </tr>
                     {% endif %}
-                {% elif name == 'domhndsh' %}
-                    <tr class="empty_row">
-                        <th/><th/><th>letter</th><th>number</th>
-                    </tr>
-                    {% if value == '-' or value == ' ' or value == '' or value == None %}
-                    <tr value="{{value}}" class="empty_row">
-                        <th>{{label}}</th>
-                        <td class="edit edit_{% if 'domhndsh' == name %}domhndsh{% else %}list{% endif %}" id='{{name}}'>{% value value %}</td>
-                        {% for value,name,label,kind in etymology_fields_dom %}
-                            {% if name == 'domhndsh_letter' %}
-                            <td class="edit edit_letter" id='{{name}}'
-                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
-                            {% else %}
-                            <td class="edit edit_number" id='{{name}}'
-                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
-                            {% endif %}
-		                {% endfor %}
-                    </tr>
-                    {% else %}
-                    <tr value="{{value}}">
-                        <th>{{label}}</th>
-                        <td class="edit edit_list" id='{{name}}'>
-                            <a id="strong_hand_link" style="color: inherit; display: visible;" href="{{ URL }}/dictionary/handshape/{{StrongHand}}/">{{value}}</a>
-                        </td>
-                        {% for value,name,label,kind in etymology_fields_dom %}
-                            {% if name == 'domhndsh_letter' %}
-                            <td class="edit edit_letter" id='{{name}}'
-                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
-                            {% else %}
-                            <td class="edit edit_number" id='{{name}}'
-                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                    {% endif %}
-                {% elif name == 'subhndsh' %}
-                    <tr class="empty_row">
-                        <th/><th/><th>letter</th><th>number</th>
-                    </tr>
-                    {% if value == '-' or value == ' ' or value == '' or value == None %}
-                    <tr value="{{value}}" class="empty_row">
-                        <th>{{label}}</th>
-                        <td class="edit edit_list" id='{{name}}'>{% value value %}</td>
-                        {% for value,name,label,kind in etymology_fields_sub %}
-                            {% if name == 'subhndsh_letter' %}
-                            <td class="edit edit_letter" id='{{name}}'
-                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
-                            {% else %}
-                            <td class="edit edit_number" id='{{name}}'
-                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
-                            {% endif %}
-		                {% endfor %}
-                    </tr>
-                    {% else %}
-                    <tr value="{{value}}">
-                        <th>{{label}}</th>
-                        <td class="edit edit_list" id='{{name}}'>
-                            <a id="weak_hand_link" style="color: inherit; display: visible;" href="{{ URL }}/dictionary/handshape/{{WeakHand}}/">{{value}}</a>
-                        </td>
-                        {% for value,name,label,kind in etymology_fields_sub %}
-                            {% if name == 'subhndsh_letter' %}
-                            <td class="edit edit_letter" id='{{name}}'
-                                value="{{value}}">{% if value %}letter{% else %}&nbsp;{% endif %}</td>
-                            {% else %}
-                            <td class="edit edit_number" id='{{name}}'
-                                value="{{value}}">{% if value %}number{% else %}&nbsp;{% endif %}</td>
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                    {% endif %}
+                
                 {% else %}
                 <tr value="{{value}}" id="{{field}}"{% if value == '-' or value == ' ' or value == '' or value == None or value == False %} class="empty_row"{% endif %}>
                     <th>{{label}}</th>

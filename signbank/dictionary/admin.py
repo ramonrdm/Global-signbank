@@ -89,7 +89,7 @@ class GlossAdmin(VersionAdmin):
 
     idgloss_fields = ['idgloss']
 
-    fieldsets = ((None, {'fields': tuple(idgloss_fields)+tuple(FIELDS['main'])+('dataset', 'signlanguage', 'dialect', 'localizacao')}, ),
+    fieldsets = ((None, {'fields': tuple(idgloss_fields)+tuple(FIELDS['main'])+('dataset','signlanguage', 'dialect')}, ),
                  ('Publication Status', {'fields': ('inWeb',  'isNew', 'creator','creationDate','alternative_id'),
                                        'classes': ('collapse',)}, ),
                  ('Phonology', {'fields': FIELDS['phonology'], 'classes': ('collapse',)}, ),

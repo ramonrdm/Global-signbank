@@ -488,11 +488,11 @@ msgstr ""
 
 #: signbank/dictionary/models.py:430
 msgid "Strong Hand"
-msgstr ""
+msgstr "Configuração da mão direita"
 
 #: signbank/dictionary/models.py:431
 msgid "Weak Hand"
-msgstr ""
+msgstr "Configuração da mão esquerda"
 
 #: signbank/dictionary/models.py:434
 msgid "Strong hand number"

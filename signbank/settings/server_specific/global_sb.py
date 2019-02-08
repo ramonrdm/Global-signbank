@@ -30,7 +30,7 @@ DATABASES = {'default':
 ADMINS = (('Admin', 'Admin@admin.com'))
 
 # what do we call this signbank?
-LANGUAGE_NAME = "Portuguese"
+LANGUAGE_NAME = "Português Brasileiro"
 COUNTRY_NAME = "Brazil"
 
 #Influences which template and css folder are used
@@ -50,13 +50,13 @@ LANGUAGE_CODE = "pt-br"
 
 SEPARATE_ENGLISH_IDGLOSS_FIELD = True
 
-DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'pt-br'}
+DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'en'}
 
 FIELDS = {}
 
-FIELDS['main'] = ['useInstr','wordClass']
+FIELDS['main'] = ['useInstr','wordClass', 'localizacao', 'domhndsh','subhndsh']
 
-FIELDS['phonology'] = ['handedness','domhndsh','subhndsh','handCh','relatArtic','locprim','locVirtObj',
+FIELDS['phonology'] = ['handedness','handCh','relatArtic','locprim','locVirtObj',
           'relOriMov','relOriLoc','oriCh','contType','movSh','movDir','repeat','altern','phonOth', 'mouthG',
           'mouthing', 'phonetVar','domhndsh_letter','domhndsh_number','subhndsh_letter','subhndsh_number','weakdrop','weakprop']
 

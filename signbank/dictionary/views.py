@@ -1598,18 +1598,18 @@ def info(request):
 
 def protected_media(request, filename, document_root=WRITABLE_FOLDER, show_indexes=False):
 
-    if not request.user.is_authenticated():
+    # if not request.user.is_authenticated():
 
-        # If we are not logged in, try to find if this maybe belongs to a gloss that is free to see for everbody?
-        gloss_string = filename.split('/')[-1].split('-')[0]
+    #     # If we are not logged in, try to find if this maybe belongs to a gloss that is free to see for everbody?
+    #     gloss_string = filename.split('/')[-1].split('-')[0]
 
-        try:
-            if not Gloss.objects.get(idgloss=gloss_string).inWeb:
-                return HttpResponse(status=401)
-        except Gloss.DoesNotExist:
-            return HttpResponse(status=401)
+    #     try:
+    #         if not Gloss.objects.get(idgloss=gloss_string).inWeb:
+    #             return HttpResponse(status=401)
+    #     except Gloss.DoesNotExist:
+    #         return HttpResponse(status=401)
 
-        #If we got here, the gloss was found and in the web dictionary, so we can continue
+    #If we got here, the gloss was found and in the web dictionary, so we can continue
 
     path = WRITABLE_FOLDER + filename
     exists = os.path.exists(path)

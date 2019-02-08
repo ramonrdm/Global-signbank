@@ -88,7 +88,7 @@ def update_gloss(request, glossid):
     We are sent one field and value at a time, return the new value
     once we've updated it."""
 
-    if not request.user.has_perm('dictionary.change_gloss') or not request.user.is_super_user:
+    if not request.user.has_perm('dictionary.change_gloss') or not request.user.is_superuser:
         return HttpResponseForbidden("Gloss Update Not Allowed")
 
     if request.method == "POST":
@@ -199,7 +199,19 @@ def update_gloss(request, glossid):
             newvalue = original_value
             return HttpResponse(str(newvalue), {'content-type': 'text/plain'})
 
+        elif field == "localizacao":
+            newvalue = value
+            setattr(gloss, field, newvalue)
+            gloss.save()
+            return HttpResponse(str(newvalue), {"content-type":"text/plain"})
+
+        elif field =="nome_sinal":
+            setattr(gloss, field, value)
+            gloss.save()
+            return HttpResponse(str(value), {"content-type":"text/plain"})
+            
         elif field == "sn":
+
             # sign number must be unique, return error message if this SN is
             # already taken
 
@@ -263,7 +275,7 @@ def update_gloss(request, glossid):
 
 
             if not field in [f.name for f in Gloss._meta.get_fields()]:
-                return HttpResponseBadRequest("Unknown field", {'content-type': 'text/plain'})
+                return HttpResponseBadRequest("Unknown field"+field+", "+value, {'content-type': 'text/plain'})
 
             whitespace = tuple(' \n\r\t')
             if value.startswith(whitespace) or value.endswith(whitespace):
