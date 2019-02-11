@@ -406,6 +406,8 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     # localization field equivalent to idsinais's localization field
     localizacao = models.CharField(_("Localização"), max_length=15 ,null=True, choices=LOCALIZACAO_CHOICES)
 
+    imagem = models.FileField(max_length=200, null=True, blank=True)
+
     # traducao_ingles = models.CharField(_("Tradução Inglês"), max_length=50, null=True)
     # these language fields are subsumed by the language field above
     bsltf = models.NullBooleanField(_("BSL sign"), null=True, blank=True)

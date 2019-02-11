@@ -3,22 +3,42 @@ hostname = socket.gethostname()
 
 ROOT = '/var/www/signbank/'
 
+def get_secret(secret_name):
+  try:
+    with open('/run/secrets/{0}'.format(secret_name), 'r') as secret_file:
+        return secret_file.read()
+  except IOError:
+    return None
+
 BASE_DIR = ROOT+'repo/'
 WRITABLE_FOLDER = ROOT+'writable/'
 
 # Added test database, to run unit tests using this copy of the database, use -k argument to keep test database
 #      python bin/develop.py test -k
 
-DATABASES = {'default':
-                {
-                    'ENGINE': 'django.db.backends.mysql',
-                    "NAME":"signbank",
-                    "USER":"root",
-                    "PASSWORD":"SenhaBoaMilGrau@@007",
-                    "HOST": "localhost",
-                    "PORT": "3306"
-                }
-            }
+if get_secret('signbank_user_db'):
+  DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.mysql',
+          'NAME': get_secret('signbank_user_db'),
+          'USER': get_secret('signbank_user_db'),
+          'PASSWORD': get_secret('signbank_password_db'),
+          'HOST': get_secret("signbank_host_db"),
+          'PORT': '3306',
+      }
+  }
+else:  
+  DATABASES = {'default':
+                  {
+                      'ENGINE': 'django.db.backends.mysql',
+                      "NAME":"signbank",
+                      "USER":"root",
+                      "PASSWORD":"SenhaBoaMilGrau@@007",
+                      "HOST": "localhost",
+                      "PORT": "3306"
+                  }
+              }
+
 # DATABASES = {'default':
 #                 {
 #                     'ENGINE': 'django.db.backends.sqlite3',
@@ -27,7 +47,7 @@ DATABASES = {'default':
 #             }
 
 
-ADMINS = (('Admin', 'Admin@admin.com'))
+ADMINS = (('Admin', 'gustavo.borgesfr@gmail.com'))
 
 # what do we call this signbank?
 LANGUAGE_NAME = "Português Brasileiro"
@@ -35,7 +55,9 @@ COUNTRY_NAME = "Brazil"
 
 #Influences which template and css folder are used
 SIGNBANK_VERSION_CODE = 'global'
+
 URL = ''
+
 ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br"]
 
 gettext = lambda s: s
