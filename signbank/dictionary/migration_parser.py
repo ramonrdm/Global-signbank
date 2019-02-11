@@ -29,13 +29,13 @@ for sinal in data1["dictionary_gloss"]:
 		gloss.domhndsh = handshape.machine_value
 		
 		loc = ["testa", "olhos_nariz", "boca_queixo", "pescoco", "ombro", "bracos", "pernas", "espaco_neutro", "tronco"]
-		gloss.localizacao = loc[int(sinal["localizacao"])]	
+		gloss.localizacao = loc[int(sinal["localizacao"])-1]	
 		gloss.inWeb = 1
 		try:
 			os.mkdir("/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/")
 		except FileExistsError:
 			print("jatem")
-			
+
 		urllib.request.urlretrieve("http://idsinais.libras.ufsc.br/dados/fotosDeSinais/"+sinal["id"]+".jpg", "/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/"+sinal["idgloss"]+"-"+sinal["id"]+".jpg")
 
 		gloss.save()
