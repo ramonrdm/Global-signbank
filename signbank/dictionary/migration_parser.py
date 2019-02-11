@@ -7,9 +7,9 @@ import json
 json_data = open("/var/www/signbank/repo/signbank/dictionary/migracao1.json")
 data1 = json.load(json_data)
 
-dataset = Dataset.objects.get(pk=4)
-portugues = Language.objects.get(pk = 3)
-ingles = Language.objects.get(pk=1)
+dataset = Dataset.objects.get(name="Libras")
+portugues = Language.objects.get(name="Brazilian Portuguese")
+ingles = Language.objects.get(name="English")
 
 
 for sinal in data1["dictionary_gloss"]:
