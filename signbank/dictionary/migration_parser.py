@@ -1,7 +1,7 @@
 from django.db import *
 from signbank.dictionary.models import *
 import os
-import urllib.request
+import requests
 import json
 
 json_data = open("/var/www/signbank/repo/signbank/dictionary/migracao1.json", encoding="utf-8")
@@ -31,12 +31,17 @@ for sinal in data1["dictionary_gloss"]:
 		loc = ["testa", "olhos_nariz", "boca_queixo", "pescoco", "ombro", "bracos", "pernas", "espaco_neutro", "tronco"]
 		gloss.localizacao = loc[int(sinal["localizacao"])-1]	
 		gloss.inWeb = 1
+		
 		try:
 			os.mkdir("/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/")
 		except FileExistsError:
 			print("jatem")
-
-		urllib.request.urlretrieve("http://idsinais.libras.ufsc.br/dados/fotosDeSinais/"+sinal["id"]+".jpg", "/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/"+sinal["idgloss"]+"-"+sinal["id"]+".jpg")
+		
+		req = requests.get("http://idsinais.libras.ufsc.br/dados/fotosDeSinais/"+sinal["id"]+".jpg")
+		to = "/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/"+sinal["idgloss"]+"-"+sinal["id"]+".jpg"
+		
+		with open(to, "wb") as file:
+			file.write(req.content)
 
 		gloss.save()
 		nome.text = sinal["nome_sinal"]
