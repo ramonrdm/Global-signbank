@@ -15,7 +15,6 @@ WRITABLE_FOLDER = ROOT+'writable/'
 
 # Added test database, to run unit tests using this copy of the database, use -k argument to keep test database
 #      python bin/develop.py test -k
-
 if get_secret('signbank_user_db'):
   DATABASES = {
       'default': {
@@ -31,7 +30,7 @@ else:
   DATABASES = {'default':
                   {
                       'ENGINE': 'django.db.backends.mysql',
-                      "NAME":"signbank",
+                      "NAME":"signbank_new",
                       "USER":"root",
                       "PASSWORD":"SenhaBoaMilGrau@@007",
                       "HOST": "localhost",

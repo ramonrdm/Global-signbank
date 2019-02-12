@@ -143,10 +143,15 @@ class VideoUpdateForm(forms.Form):
 
 class TagUpdateForm(forms.Form):
     """Form to add a new tag to a gloss"""
+    try:
 
-    tag = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}),
-                            choices=[(tag.name, tag.name.replace('_',' ')) for tag in Tag.objects.all()])
-    delete = forms.BooleanField(required=False, widget=forms.HiddenInput)
+        tag = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), 
+                                choices=[(tag.name, tag.name.replace('_',' ')) for tag in Tag.objects.all()])
+        delete = forms.BooleanField(required=False, widget=forms.HiddenInput)
+    except:
+        tag = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}), 
+                                choices=[])
+        delete = forms.BooleanField(required=False, widget=forms.HiddenInput)
 
 YESNOCHOICES = (("unspecified", "Unspecified" ), ('yes', 'Yes'), ('no', 'No'))
 NULLBOOLEANCHOICES = [(0,'---------'),(1,'Unknown'),(2,'True'),(3,'False')]
@@ -191,8 +196,13 @@ class GlossSearchForm(forms.ModelForm):
     sortOrder = forms.CharField(label=_("Sort Order"), initial="idgloss")       # Used in glosslistview to store user-selection
     englishGloss = forms.CharField(label=_("English Gloss"))
     lemmaGloss = forms.CharField(label=_("Lemma Gloss"))
-    tags = forms.MultipleChoiceField(choices=[(tag.name, tag.name.replace('_',' ')) for tag in Tag.objects.all()])
-    nottags = forms.MultipleChoiceField(choices=[(tag.name, tag.name) for tag in Tag.objects.all()])
+    try:
+        tags = forms.MultipleChoiceField(choices=[(tag.name, tag.name.replace('_',' ')) for tag in Tag.objects.all()])
+        nottags = forms.MultipleChoiceField(choices=[(tag.name, tag.name) for tag in Tag.objects.all()])
+    except:
+        tags = forms.MultipleChoiceField(choices=[])
+        nottags = forms.MultipleChoiceField(choices=[])
+
     keyword = forms.CharField(label=_(u'Translations'))
     hasvideo = forms.ChoiceField(label=_(u'Has Video'), choices=YESNOCHOICES)
     defspublished = forms.ChoiceField(label=_("All Definitions Published"), choices=YESNOCHOICES)
@@ -288,8 +298,15 @@ class MorphemeSearchForm(forms.ModelForm):
                                 initial="idgloss")  # Used in morphemelistview to store user-selection
     englishGloss = forms.CharField(label=_("English Gloss"))
     lemmaGloss = forms.CharField(label=_("Lemma Gloss"))
-    tags = forms.MultipleChoiceField(choices=[(tag.name, tag.name.replace('_', ' ')) for tag in Tag.objects.all()])
-    nottags = forms.MultipleChoiceField(choices=[(tag.name, tag.name) for tag in Tag.objects.all()])
+    
+    try:
+        tags = forms.MultipleChoiceField(choices=[(tag.name, tag.name.replace('_', ' ')) for tag in Tag.objects.all()])
+        nottags = forms.MultipleChoiceField(choices=[(tag.name, tag.name) for tag in Tag.objects.all()])
+    except:
+        tags = forms.MultipleChoiceField(choices=[])
+        nottags = forms.MultipleChoiceField(choices=[])
+
+
     keyword = forms.CharField(label=_(u'Translations'))
     hasvideo = forms.ChoiceField(label=_(u'Has Video'), choices=YESNOCHOICES)
     defspublished = forms.ChoiceField(label=_("All Definitions Published"), choices=YESNOCHOICES)

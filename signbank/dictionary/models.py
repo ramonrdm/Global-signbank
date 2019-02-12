@@ -26,11 +26,14 @@ def build_choice_list(field):
     choice_list = []
 
     if field == "Handshape" :
-        handshapes = Handshape.objects.all()
-        
-        for hndshp in handshapes:       
-            choice_list.append((str(hndshp.machine_value),hndshp.english_name))
 
+        try :
+            handshapes = Handshape.objects.all()    
+            for hndshp in handshapes:       
+                choice_list.append((str(hndshp.machine_value),hndshp.english_name))
+        except:
+            choice_list = []
+               
         return [('0','-'),('1','N/A')] + choice_list
 
     # Get choices for a certain field in FieldChoices, append machine_value and english_name
@@ -44,15 +47,17 @@ def build_choice_list(field):
 
     # Enter this exception if for example the db has no data yet (without this it is impossible to migrate)
     except:
-        pass
+        return []
 
 
 def get_default_language_id():
-    language = Language.objects.get(**DEFAULT_KEYWORDS_LANGUAGE)
-    if language is not None:
-        return language.id
-    return None
-
+    try :
+        language = Language.objects.get(**DEFAULT_KEYWORDS_LANGUAGE)
+        if language is not None:
+            return language.id
+        return None
+    except:
+        return 1
 
 class Translation(models.Model):
     """A spoken language translation of signs"""
