@@ -19,8 +19,13 @@ for sinal in data1["dictionary_gloss"]:
 		handshape = Handshape.objects.get(english_name=sinal["grupoSinal"]+"_"+sinal["domhndsh"])
 		nome = AnnotationIdglossTranslation()
 		traducao = Translation()
-		keyword.text = sinal["nomeIngles"]
-		keyword.save()
+
+		try:
+			keyword = Keyword.objects.get(text=sinal["nomeIngles"])
+		except ObjectDoesNotExist:
+			keyword.text = sinal["nomeIngles"]
+			keyword.save()
+			
 		gloss.id = sinal["id"]
 		gloss.idgloss = sinal["idgloss"]
 		gloss.dataset = dataset
