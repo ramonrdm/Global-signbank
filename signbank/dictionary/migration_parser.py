@@ -67,6 +67,8 @@ for sinal in data1["dictionary_gloss"]:
 					print(full_file_name)
 					if (os.path.isfile(full_file_name)):
 						shutil.copy(full_file_name, "/var/www/signbank/writable/glossimage/"+sinal["idgloss"][0]+sinal["idgloss"][1]+"/"+sinal["idgloss"]+"-"+sinal["id"]+".jpg")
+
+		gloss.signwriting = "sw"+sinal["id"]+".jpg"
 		gloss.save()
 
 		nome.text = sinal["idgloss"]

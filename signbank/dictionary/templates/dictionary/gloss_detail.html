@@ -169,17 +169,17 @@
 
 
 <div id="signinfo" class='navbar navbar-collapse' style="background-color:white;border:0; z-index: 50;">
-   
+
     <div class='btn-group'>
         {% if SIGN_NAVIGATION %}
-        
+
             {% if navigation.prev %}
             <a class='btn navbar-btn btn-default' href="{% url 'dictionary:admin_gloss_view' pk=navigation.prev.id %}">&laquo;{% trans "Previous Sign" %]
             </a>
             {% endif %}
-            
+
             <button class='btn navbar-btn'>{% blocktrans %}"Sign {{glossposn}} of {{glosscount}} in the dictionary" {% endblocktrans %}</button>
-            
+
             {% if navigation.next %}
             <a class="btn navbar-btn btn-default"
                href="{% url 'dictionary:admin_gloss_view' pk=navigation.next.id %}">{% trans "Next Sign &raquo;" %}</a>
@@ -238,7 +238,7 @@
      <!-- {{ gloss.get_video }} -->
     </div>
     {% endif %}
-    
+
     </div>
 
     <div>
@@ -310,6 +310,33 @@
     {% endif %}
     {% endif %}
 
+
+    {% if request.user.is_authenticated %}
+    {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
+    {% if "change_dataset" in dataset_perms %}
+    <div class='editform'>
+        <fieldset>
+            <legend>{% trans "Upload Imagem de Escrita de sinal" %}</legend>
+            <form action="/signwrite/upload/" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <input type='hidden' name='redirect' value='{{request.path}}?edit'>
+            <table id="staffops">
+              <tr>
+                  <td>{{imageform.imagefile}}</td>
+              </tr>
+              <tr>
+                  <td><input type='hidden' name='gloss_id' value='{{gloss.pk}}'>
+                      <input class='btn btn-primary' type='submit' value='Upload Imagem de Escrita de Sinal'/></td>
+              </tr>
+            </table>
+            </form>
+        </fieldset>
+    </div>
+    {% endif %}
+    {% endif %}
+
+
+
     {% if request.user.is_authenticated %}
     {% get_obj_perms request.user for gloss.dataset as "dataset_perms" %}
     {% if "change_dataset" in dataset_perms %}
@@ -377,7 +404,6 @@
             </tr>
             {% endfor %}
 
-
            <!--  <tr>
                 <th>{% trans "Nome do Sinal" %}</th>
                 <td class="edit edit_text" id="nome_sinal">{{gloss.nome_sinal}}</td>
@@ -398,6 +424,16 @@
                 <td class='edit edit_text' id='keywords_{{ lang.language_code_2char }}' colspan="2">{% for trn in translations %}{{ trn.translation.text|safe }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
             </tr>
             {% endfor %}
+
+
+            <tr>
+                <th>
+                    {% trans "SignWriting" %}
+                </th>
+                {% if gloss.signwriting %}
+                    <td class="" id="" colspan="2"><img src="{{protected_media_url}}{{gloss.get_signwrite_path}}"></td>
+                {% endif %}
+            <tr>
 
             {% for value,name,label,kind in main_fields %}
 
@@ -852,7 +888,7 @@
                         {% endfor %}
                     </tr>
                     {% endif %}
-                
+
                 {% else %}
                 <tr value="{{value}}" id="{{field}}"{% if value == '-' or value == ' ' or value == '' or value == None or value == False %} class="empty_row"{% endif %}>
                     <th>{{label}}</th>
@@ -970,7 +1006,7 @@
 		{% for value,name,label,kind in semantics_fields %}
 		    <tr><th>{{label}}</th><td class="edit edit_{{kind}}" id='{{name}}'>{% value value %}</td></tr>
 		{% endfor %}
-            
+
             </table>
         </div>
     </div>
@@ -1144,10 +1180,10 @@
                 <a data-toggle='collapse' href='#pubStatus'>{% trans "Publication Status" %}</a>
             </div>
         </div>
-        
-            
+
+
         <div id="pubStatus" class="panel-collapse collapse">
-        
+
             <table class='table table-condensed'>
                 <tr><th>{% trans "Creation Date" %}</th><td>{{gloss.creationDate}}</td></tr>
                 <tr><th>{% trans "Creator" %}</th>
@@ -1191,8 +1227,8 @@
             </table>
         </div>
     </div>
-    
-   
+
+
     <!-- Notes -->
     <div class="panel panel-default">
         <div class='panel-heading'>
@@ -1206,7 +1242,7 @@
             </div>
         </div>
         <div id='definitions' class='collapse'>
-            
+
             <table class='table'>
               <tr>
                   <th style='width:1em'></th>
@@ -1300,7 +1336,7 @@
 
 
         </div>
-    
+
     </div>
 
      <!-- Other media -->

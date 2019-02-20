@@ -117,7 +117,7 @@ class GlossVideoStorage(FileSystemStorage):
         first two digits in the filename to partition the videos"""
 
         (targetdir, basename) = os.path.split(name)
-        
+
         path = os.path.join(str(basename)[:2], str(basename))
 
         result = os.path.join(targetdir, path)
@@ -285,7 +285,7 @@ class GlossVideo(models.Model):
                 newname = newname + ".bak"
 
         # now do the renaming
-        
+
         os.rename(os.path.join(storage.location, self.videofile.name), os.path.join(storage.location, newname))
         # also remove the post image if present, it will be regenerated
         poster = self.poster_path(create=False)
@@ -297,7 +297,3 @@ class GlossVideo(models.Model):
 
     def __str__(self):
         return self.videofile.name
-
-
-
-

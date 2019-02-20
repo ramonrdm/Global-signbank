@@ -18,7 +18,7 @@ import django.contrib.admindocs.urls
 import django_summernote.urls
 
 from signbank.dictionary.adminviews import GlossListView, MorphemeListView, DatasetListView, HandshapeListView, HomonymListView, DatasetManagerView, DatasetDetailView
-from signbank.dictionary.views import add_image, delete_image, add_new_morpheme, add_handshape_image
+from signbank.dictionary.views import add_image, delete_image, add_new_morpheme, add_handshape_image, add_signwriting
 
 from registration.backends.simple.views import RegistrationView
 from django.contrib import admin
@@ -42,6 +42,7 @@ urlpatterns = [
     url(r'^video/', include(signbank.video.urls)),
 
     url(r'^image/upload/', add_image),
+    url(r'^signwrite/upload', add_signwriting),
     url(r'^handshapeimage/upload/', add_handshape_image),
     url(r'^image/delete/(?P<pk>[0-9]+)$', delete_image),
 

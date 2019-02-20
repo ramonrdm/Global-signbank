@@ -494,7 +494,7 @@ class GlossListView(ListView):
                 else:
                     qs = Gloss.objects.all().filter(dataset__in=selected_datasets)
 
-        #No filters or 'show_all' specified? show nothing 
+        #No filters or 'show_all' specified? show nothing
         else:
             qs = Gloss.objects.none()
 
@@ -933,7 +933,7 @@ class GlossDetailView(DetailView):
 
                 # the following check will be used when querying is added, at the moment these don't appear in the phonology list
                 if field not in ['weakprop', 'weakdrop', 'domhndsh_number', 'domhndsh_letter', 'subhndsh_number', 'subhndsh_letter', 'localization']:
-                    
+
                     #Get and save the choice list for this field
                     fieldchoice_category = fieldname_to_category(field)
                     choice_list = FieldChoice.objects.filter(field__iexact=fieldchoice_category)
@@ -1203,8 +1203,8 @@ class GlossDetailView(DetailView):
             selected_datasets = get_selected_datasets_for_user(self.request.user)
         else:
             selected_datasets = Dataset.objects.all()
-          
-        localizacao_choices = {}    
+
+        localizacao_choices = {}
         for key, value in LOCALIZACAO_CHOICES:
             localizacao_choices[key] = value
         context['localizacao_choices'] = json.dumps(localizacao_choices)
@@ -1212,7 +1212,7 @@ class GlossDetailView(DetailView):
         handshape_choices = {}
         handshapes = Handshape.objects.all()
 
-        for hndshp in handshapes:       
+        for hndshp in handshapes:
             handshape_choices[str(hndshp.machine_value)] = hndshp.english_name
 
         context['handshape'] = handshape_choices

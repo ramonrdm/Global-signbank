@@ -1,7 +1,7 @@
 from django.db.models import Q
 from django.db import models, OperationalError
 from django.conf import settings
-from django.http import Http404 
+from django.http import Http404
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save, pre_delete
@@ -28,12 +28,12 @@ def build_choice_list(field):
     if field == "Handshape" :
 
         try :
-            handshapes = Handshape.objects.all()    
-            for hndshp in handshapes:       
+            handshapes = Handshape.objects.all()
+            for hndshp in handshapes:
                 choice_list.append((str(hndshp.machine_value),hndshp.english_name))
         except:
             choice_list = []
-               
+
         return [('0','-'),('1','N/A')] + choice_list
 
     # Get choices for a certain field in FieldChoices, append machine_value and english_name
@@ -66,13 +66,13 @@ class Translation(models.Model):
     language = models.ForeignKey("Language", default=get_default_language_id)
     translation = models.ForeignKey("Keyword")
     index = models.IntegerField("Index")
-    
+
     def __str__(self):
         return self.gloss.idgloss + '-' + self.translation.text
 
     def get_absolute_url(self):
         """Return a URL for a view of this translation."""
-        
+
         alltrans = self.translation.translation_set.all()
         idx = 0
         for tr in alltrans:
@@ -80,79 +80,79 @@ class Translation(models.Model):
                 return "/dictionary/words/"+str(self.translation)+"-"+str(idx+1)+".html"
             idx += 1
         return "/dictionary/"
-        
-    
+
+
     class Meta:
         unique_together = (("gloss", "language", "translation"),)
         ordering = ['gloss', 'index']
-        
+
     class Admin:
         list_display = ['gloss', 'translation']
         search_fields = ['gloss__idgloss']
-    
+
 class Keyword(models.Model):
     """A Dutch keyword that is a possible translation equivalent of a sign"""
-    
+
     def __str__(self):
         return self.text
-    
+
     text = models.CharField(max_length=100, unique=True)
-    
+
     def inWeb(self):
         """Return True if some gloss associated with this
         keyword is in the web version of the dictionary"""
-        
+
         return len(self.translation_set.filter(gloss__inWeb__exact=True)) != 0
-            
+
     class Meta:
         ordering = ['text']
-        
+
     class Admin:
         search_fields = ['text']
-        
-        
-        
+
+
+
     def match_request(self, request, n):
         """Find the translation matching a keyword request given an index 'n'
         response depends on login status
         Returns a tuple (translation, count) where count is the total number
         of matches."""
-        
+
         if request.user.has_perm('dictionary.search_gloss'):
             alltrans = self.translation_set.all()
         else:
             alltrans = self.translation_set.filter(gloss__inWeb__exact=True)
-        
+
         # remove crude signs for non-authenticated users if ANON_SAFE_SEARCH is on
         try:
             crudetag = tagging.models.Tag.objects.get(name='lexis:crude')
         except:
             crudetag = None
-            
+
         safe = (not request.user.is_authenticated()) and settings.ANON_SAFE_SEARCH
         if safe and crudetag:
             alltrans = [tr for tr in alltrans if not crudetag in tagging.models.Tag.objects.get_for_object(tr.gloss)]
-        
+
         # if there are no translations, generate a 404
         if len(alltrans) == 0:
             raise Http404
-        
+
         # take the nth translation if n is in range
         # otherwise take the last
         if n-1 < len(alltrans):
             trans = alltrans[n-1]
         else:
             trans = alltrans[len(alltrans)-1]
-        
+
         return (trans, len(alltrans))
 
 
 class Definition(models.Model):
     """An English text associated with a gloss. It's called a note in the web interface"""
-    
+
     def __str__(self):
         return str(self.gloss)+"/"+self.role
-        
+
     gloss = models.ForeignKey("Gloss")
     text = models.TextField()
     role = models.CharField("Type",max_length=20, choices=build_choice_list('NoteType'))
@@ -161,7 +161,7 @@ class Definition(models.Model):
 
     class Meta:
         ordering = ['gloss', 'role', 'count']
-        
+
     class Admin:
         list_display = ['gloss', 'role', 'count', 'text']
         list_filter = ['role']
@@ -170,43 +170,43 @@ class Definition(models.Model):
 
 class SignLanguage(models.Model):
     """A sign language name"""
-        
+
     class Meta:
         ordering = ['name']
-        
+
     name = models.CharField(max_length=20)
     description = models.TextField()
-    
+
     def __str__(self):
         return self.name
 
 class Dialect(models.Model):
     """A dialect name - a regional dialect of a given Language"""
-    
+
     class Meta:
         ordering = ['signlanguage', 'name']
-    
+
     signlanguage = models.ForeignKey(SignLanguage)
     name = models.CharField(max_length=20)
     description = models.TextField()
-    
+
     def __str__(self):
         return self.signlanguage.name + "/" + self.name
 
 class RelationToForeignSign(models.Model):
     """Defines a relationship to another sign in another language (often a loan)"""
-    
+
     def __str__(self):
         return str(self.gloss)+"/"+self.other_lang+','+self.other_lang_gloss
-        
+
     gloss = models.ForeignKey("Gloss")
     loan = models.BooleanField("Loan Sign",default=False)
-    other_lang = models.CharField("Related Language",max_length=20)  
+    other_lang = models.CharField("Related Language",max_length=20)
     other_lang_gloss = models.CharField("Gloss in related language",max_length=50)
 
     class Meta:
         ordering = ['gloss', 'loan', 'other_lang','other_lang_gloss']
-        
+
     class Admin:
         list_display = ['gloss', 'loan', 'other_lang','other_lang_gloss']
         list_filter = ['other_lang']
@@ -365,7 +365,7 @@ LOCALIZACAO_CHOICES = (
 )
 
 class Gloss(models.Model):
-    
+
     class Meta:
         verbose_name_plural = "Glosses"
         # ordering: for Lemma View in the Gloss List View, we need to have glosses in the same Lemma Group sorted
@@ -385,23 +385,23 @@ class Gloss(models.Model):
 
     def field_labels(self):
         """Return the dictionary of field labels for use in a template"""
-        
+
         d = dict()
         for f in self._meta.fields:
             try:
                 d[f.name] = _(self._meta.get_field(f.name).verbose_name)
             except:
                 pass
-            
+
         return d
 
     dataset = models.ForeignKey("Dataset", verbose_name=_("Dataset"),
                                 help_text=_("Dataset a gloss is part of"), null=True)
-    
+
     idgloss = models.CharField(_("Lemma ID Gloss"), max_length=50, help_text="""
     This is the unique identifying name of an entry of a sign form in the
 database. No two Sign Entry Names can be exactly the same, but a "Sign
-Entry Name" can be (and often is) the same as the Annotation Idgloss.""")    
+Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     # nome_sinal = models.CharField(_("Nome"), max_length=50, null=True)
 
@@ -411,7 +411,11 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     # localization field equivalent to idsinais's localization field
     localizacao = models.CharField(_("Localização"), max_length=15 ,null=True, choices=LOCALIZACAO_CHOICES)
 
+    #imagem do sinal
     imagem = models.FileField(max_length=200, null=True, blank=True)
+
+    #
+    signwriting = models.FileField(max_length=200, null=True, blank=True)
 
     # traducao_ingles = models.CharField(_("Tradução Inglês"), max_length=50, null=True)
     # these language fields are subsumed by the language field above
@@ -421,20 +425,20 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     # these fields should be reviewed - do we put them in another class too?
     aslgloss = models.CharField(_("ASL gloss"), blank=True, max_length=50) # American Sign Language gloss
     asloantf = models.NullBooleanField(_("ASL loan sign"), null=True, blank=True)
- 
+
     # loans from british sign language
     bslgloss = models.CharField(_("BSL gloss"), max_length=50, blank=True)
     bslloantf = models.NullBooleanField(_("BSL loan sign"), null=True, blank=True)
- 
+
     useInstr = models.CharField(_("Annotation instructions"), max_length=50, blank=True)
     rmrks = models.CharField(_("Remarks"), max_length=50, blank=True)
 
     # one or more regional dialects that this gloss is used in
     dialect = models.ManyToManyField(Dialect)
-    
+
     blend = models.CharField(_("Blend of"), max_length=100, null=True, blank=True) # This field type is a guess.
     blendtf = models.NullBooleanField(_("Blend"), null=True, blank=True)
-    
+
     compound = models.CharField(_("Compound of"), max_length=100, blank=True) # This field type is a guess.
     comptf = models.NullBooleanField(_("Compound"), null=True, blank=True)
 
@@ -454,19 +458,19 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     final_domhndsh = models.CharField(_("Final Dominant Handshape"), blank=True,  null=True, choices=build_choice_list("Handshape"), max_length=5)
     final_subhndsh = models.CharField(_("Final Subordinate Handshape"), null=True, choices=build_choice_list("Handshape"), blank=True, max_length=5)
- 
+
     locprim = models.CharField(_("Location"), choices=build_choice_list("Location"), null=True, blank=True,max_length=20)
     final_loc = models.IntegerField(_("Final Primary Location"), choices=build_choice_list("Location"), null=True, blank=True)
     locVirtObj = models.CharField(_("Virtual Object"), blank=True, null=True, max_length=50)
 
     locsecond = models.IntegerField(_("Secondary Location"), choices=build_choice_list("Location"), null=True, blank=True)
-    
+
     initial_secondary_loc = models.CharField(_("Initial Subordinate Location"), choices=build_choice_list("MinorLocation"), max_length=20, null=True, blank=True)
     final_secondary_loc = models.CharField(_("Final Subordinate Location"), choices=build_choice_list("MinorLocation"), max_length=20, null=True, blank=True)
-    
+
     initial_palm_orientation = models.CharField(_("Initial Palm Orientation"), max_length=20, null=True, blank=True)
     final_palm_orientation = models.CharField(_("Final Palm Orientation"), max_length=20, null=True, blank=True)
-  
+
     initial_relative_orientation = models.CharField(_("Initial Interacting Dominant Hand Part"), null=True, max_length=20, blank=True)
     final_relative_orientation = models.CharField(_("Final Interacting Dominant Hand Part"), null=True, max_length=20, blank=True)
 
@@ -478,7 +482,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     inWeb = models.NullBooleanField(_("In the Web dictionary"), default=False)
     isNew = models.NullBooleanField(_("Is this a proposed new sign?"), null=True, default=False)
     excludeFromEcv = models.NullBooleanField(_("Exclude from ECV"), default=False)
-    
+
     inittext = models.CharField(max_length=50, blank=True)
 
     morph = models.CharField(_("Morphemic Analysis"), max_length=50, blank=True)
@@ -496,8 +500,8 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
             # this is a sign number - was trying
             # to be a primary key, also defines a sequence - need to keep the sequence
             # and allow gaps between numbers for inserting later signs
-            
-    StemSN = models.IntegerField(null=True, blank=True) 
+
+    StemSN = models.IntegerField(null=True, blank=True)
 
     relatArtic = models.CharField(_("Relation between Articulators"), choices=build_choice_list("RelatArtic"), null=True, blank=True, max_length=5)
 
@@ -631,8 +635,8 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     def navigation(self, is_staff):
         """Return a gloss navigation structure that can be used to
         generate next/previous links from within a template page"""
-    
-        result = dict() 
+
+        result = dict()
         result['next'] = self.next_dictionary_gloss(is_staff)
         result['prev'] = self.prev_dictionary_gloss(is_staff)
         return result
@@ -645,18 +649,18 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     def is_morpheme(self):
         """Test if this instance is a Morpheme or (just) a Gloss"""
         return hasattr(self, 'morpheme')
-    
+
     def admin_next_gloss(self):
         """next gloss in the admin view, shortcut for next_dictionary_gloss with staff=True"""
 
         return self.next_dictionary_gloss(True)
-        
+
     def admin_prev_gloss(self):
         """previous gloss in the admin view, shortcut for prev_dictionary_gloss with staff=True"""
 
         return self.prev_dictionary_gloss(True)
 
-        
+
     def next_dictionary_gloss(self, staff=False):
         """Find the next gloss in dictionary order"""
 
@@ -679,7 +683,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
         else:
             return None
- 
+
     def prev_dictionary_gloss(self, staff=False):
         """DEPRICATED!!!! Find the previous gloss in dictionary order"""
 
@@ -701,10 +705,10 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
         glosses_with_same_lemma_group = Gloss.objects.filter(idgloss__iexact=self.idgloss).exclude(pk=self.pk)
 
         return glosses_with_same_lemma_group
-    
+
     def homophones(self):
         """Return the set of homophones for this gloss ordered by sense number"""
-        
+
         if self.sense == 1:
             relations = Relation.objects.filter(role="homophone", target__exact=self).order_by('source__sense')
             homophones = [rel.source for rel in relations]
@@ -713,7 +717,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
         elif self.sense > 1:
             # need to find the root and see how many senses it has
             homophones = self.relation_sources.filter(role='homophone', target__sense__exact=1)
-            if len(homophones) > 0:   
+            if len(homophones) > 0:
                 root = homophones[0].target
                 return root.homophones()
         return []
@@ -1199,6 +1203,8 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
         else:
             return settings.GLOSS_IMAGE_DIRECTORY+'/'+foldername+'/'+filename_without_extension
 
+    def get_signwrite_path(self, check_existance=True):
+        return "glossimage/sw"+str(self.pk)+".jpg"
 
     def get_video_path(self):
 
@@ -1218,7 +1224,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
         else:
             return ''
 
-        
+
     def count_videos(self):
         """Return a count of the number of videos as indicated in the database"""
 
@@ -1236,33 +1242,33 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     def has_video(self):
         """Test to see if the video for this sign is present"""
-        
+
         return self.get_video() != None
 
     def published_definitions(self):
         """Return a query set of just the published definitions for this gloss
         also filter out those fields not in DEFINITION_FIELDS"""
-        
+
 
         defs = self.definition_set.filter(published__exact=True)
-    
+
         return [d for d in defs if d.role in settings.DEFINITION_FIELDS]
-    
-    
+
+
     def definitions(self):
         """gather together the definitions for this gloss"""
-    
+
         defs = dict()
         for d in self.definition_set.all().order_by('count'):
             if not d.role in defs:
                 defs[d.role] = []
-            
+
             defs[d.role].append(d.text)
         return defs
-   
+
     def options_to_json(self, options):
         """Convert an options list to a json dict"""
-        
+
         result = []
         for k, v in options:
             result.append('"%s":"%s"' % (k, v))
@@ -1275,7 +1281,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     def relation_role_choices_json(self):
         """Return JSON for the relation role choice list"""
-        
+
         return self.options_to_json(RELATION_ROLE_CHOICES)
 
     def handedness_weak_choices_json(self):
@@ -1305,7 +1311,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     def signlanguage_choices(self):
         """Return JSON for langauge choices"""
-        
+
         d = dict()
         for l in SignLanguage.objects.all():
             d[l.name] = l.name
@@ -1314,7 +1320,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     def dialect_choices(self):
         """Return JSON for dialect choices"""
-        
+
         d = dict()
         for l in Dialect.objects.all():
             dialect_name = l.signlanguage.name + "/" + l.name
@@ -1344,7 +1350,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     def get_choice_lists(self):
         """Return JSON for the location choice list"""
- 
+
         choice_lists = {}
 
         #Start with your own choice lists
@@ -1467,15 +1473,15 @@ def fieldname_to_category(fieldname):
 
 class Relation(models.Model):
     """A relation between two glosses"""
-     
+
     source = models.ForeignKey(Gloss, related_name="relation_sources")
     target = models.ForeignKey(Gloss, related_name="relation_targets")
-    role = models.CharField(max_length=20, choices=RELATION_ROLE_CHOICES)  
+    role = models.CharField(max_length=20, choices=RELATION_ROLE_CHOICES)
 
     class Admin:
         list_display = [ 'source', 'role','target']
-        search_fields = ['source__idgloss', 'target__idgloss']        
-        
+        search_fields = ['source__idgloss', 'target__idgloss']
+
     class Meta:
         ordering = ['source']
 
@@ -1701,7 +1707,7 @@ class AnnotationIdglossTranslation(models.Model):
     def save(self, *args, **kwargs):
         """
         1. Before an item is saved the language is checked against the languages of the dataset the gloss is in.
-        2. The annotation idgloss translation text for a language must be unique within a dataset. 
+        2. The annotation idgloss translation text for a language must be unique within a dataset.
         Note that bulk updates will not use this method. Therefore, always iterate over a queryset when updating."""
         dataset = self.gloss.dataset
         if dataset:

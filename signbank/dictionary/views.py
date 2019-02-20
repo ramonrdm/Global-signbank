@@ -1060,6 +1060,73 @@ def add_params_to_url(url,params):
     url_parts[4] = urlencode(query)
     return urlparse.urlunparse(url_parts)
 
+
+def add_signwriting(request):
+
+    if 'HTTP_REFERER' in request.META:
+        url = request.META['HTTP_REFERER']
+    else:
+        url = '/'
+
+    if request.method == 'POST':
+
+        form = ImageUploadForGlossForm(request.POST, request.FILES)
+
+        if form.is_valid():
+
+            gloss_id = form.cleaned_data['gloss_id']
+            gloss = get_object_or_404(Gloss, pk=gloss_id)
+
+            imagefile = form.cleaned_data['imagefile']
+            extension = '.'+imagefile.name.split('.')[-1]
+
+            if extension not in settings.SUPPORTED_CITATION_IMAGE_EXTENSIONS:
+
+                params = {'warning':'File extension not supported! Please convert to png or jpg'}
+                return redirect(add_params_to_url(url,params))
+
+            elif imagefile._size > settings.MAXIMUM_UPLOAD_SIZE:
+
+                params = {'warning':'Uploaded file too large!'}
+                return redirect(add_params_to_url(url,params))
+
+            # construct a filename for the image, use sn
+            # if present, otherwise use idgloss+gloss id
+            if gloss.sn != None:
+                imagefile.name = "sw"+str(gloss.pk)+extension
+            else:
+                imagefile.name = "sw"+str(gloss.pk) + extension
+
+            redirect_url = form.cleaned_data['redirect']
+
+            # deal with any existing image for this sign
+            goal_path =  settings.WRITABLE_FOLDER+settings.GLOSS_SIGNWRITING_DIRECTORY + '/'
+            goal_location = goal_path + "sw" + str(gloss.pk) + extension
+
+            #First make the dir if needed
+            try:
+                os.mkdir(goal_path)
+            except OSError:
+                pass
+
+            #Remove previous video
+            if os.path.isfile(goal_location):
+                os.remove(goal_location)
+
+            with open(goal_location, 'wb+') as destination:
+                for chunk in imagefile.chunks():
+                    destination.write(chunk)
+
+            gloss.signwriting = "sw"+str(gloss.pk)+extension
+            gloss.save()
+            return redirect(redirect_url)
+
+    # if we can't process the form, just redirect back to the
+    # referring page, should just be the case of hitting
+    # Upload without choosing a file but could be
+    # a malicious request, if no referrer, go back to root
+    return redirect(url)
+
 def add_image(request):
 
     if 'HTTP_REFERER' in request.META:
@@ -1115,7 +1182,8 @@ def add_image(request):
             with open(goal_location, 'wb+') as destination:
                 for chunk in imagefile.chunks():
                     destination.write(chunk)
-
+            gloss.imagem = gloss.idgloss[:2]+"/"+gloss.idgloss+"-"+str(gloss.pk)+extension
+            gloss.save()
             return redirect(redirect_url)
 
     # if we can't process the form, just redirect back to the
@@ -1196,7 +1264,7 @@ def add_handshape_image(request):
                 pass
 
             #Remove previous video
-            
+
             if handshape.get_image_path():
                 os.remove(settings.WRITABLE_FOLDER+handshape.get_image_path())
             with open(goal_location, 'wb+') as destination:

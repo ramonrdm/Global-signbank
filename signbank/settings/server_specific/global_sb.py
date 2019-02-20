@@ -26,7 +26,7 @@ if get_secret('signbank_user_db'):
           'PORT': '3306',
       }
   }
-else:  
+else:
   DATABASES = {'default':
                   {
                       'ENGINE': 'django.db.backends.mysql',
@@ -57,7 +57,7 @@ SIGNBANK_VERSION_CODE = 'global'
 
 URL = ''
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br"]
+ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br", "150.162.49.195"]
 
 gettext = lambda s: s
 LANGUAGES = (
@@ -136,6 +136,7 @@ ECV_SETTINGS = {
 
 GLOSS_VIDEO_DIRECTORY = 'glossvideo'
 GLOSS_IMAGE_DIRECTORY = 'glossimage'
+GLOSS_SIGNWRITING_DIRECTORY = 'glossimage'
 CROP_GLOSS_IMAGES = True
 HANDSHAPE_IMAGE_DIRECTORY = 'handshapeimage'
 OTHER_MEDIA_DIRECTORY = WRITABLE_FOLDER+'othermedia/'
