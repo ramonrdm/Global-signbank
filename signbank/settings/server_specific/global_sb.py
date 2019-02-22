@@ -37,13 +37,13 @@ else:
                       "PORT": "3306"
                   }
               }
-
-# DATABASES = {'default':
-#                 {
-#                     'ENGINE': 'django.db.backends.sqlite3',
-#                     'NAME': WRITABLE_FOLDER+'database/signbank.db',
-#                 }
-#             }
+    #
+    # DATABASES = {'default':
+    #             {
+    #                 'ENGINE': 'django.db.backends.sqlite3',
+    #                 'NAME': WRITABLE_FOLDER+'database/signbank.db',
+    #             }
+    #         }
 
 
 ADMINS = (('Admin', 'gustavo.borgesfr@gmail.com'))

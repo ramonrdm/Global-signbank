@@ -15,7 +15,7 @@ ingles = Language.objects.get(name="English")
 
 
 for sinal in data1["dictionary_gloss"]:
-	if sinal["inWeb"] != 4:
+	if sinal["inWeb"] != "4":
 		keyword = Keyword()
 		keyword_ptBR = Keyword()
 		gloss = Gloss()
@@ -42,6 +42,8 @@ for sinal in data1["dictionary_gloss"]:
 			sinal["idgloss"] = input("Já existe um bagulho com esse nome:"+sinal["idgloss"])
 		if len(sinal["idgloss"]) < 2:
 			sinal["idgloss"] = sinal["idgloss"]+" "
+		if "/" in sinal["idgloss"]:
+			sinal["idgloss"] = sinal["idgloss"].replace("/", "-")
 
 		gloss.idgloss = sinal["idgloss"]
 		gloss.dataset = dataset
