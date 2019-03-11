@@ -29,7 +29,7 @@
     {# add in the top level menu items from pages #}
     {% for item in menu %}
 
-        {% if item.children %} 
+        {% if item.children %}
         <li class='dropdown'>
              <a href="{{ URL }}{{item.url}}"  class="dropdown-toggle" data-toggle="dropdown">
              	{% if WEBSITE_LANGUAGE == "nl" %}
@@ -51,8 +51,8 @@
                  {{subitem.title}}
              	{% endif %}
                 </a></li>
-             {% endfor %} 
-             </ul> 
+             {% endfor %}
+             </ul>
         </li>
       {% else %}
         <li><a style="padding-left: 0px;" href="{{ URL }}{{item.url}}">
@@ -69,7 +69,7 @@
 
     </ul>
     </nav>
-    <form class="navbar-form navbar-left" role="search" id="frmSearch" name="frmSearch" method="get" action="{{ URL }}signs/search">
+    <form class="navbar-form navbar-left" role="search" id="frmSearch" name="frmSearch" method="get" action="/signs/search">
             <input class='form-control' placeholder='{% trans "Search gloss" %}' type="Text" name="search" value="{{ glossQuery }}" maxlength="40" size="14">
             <input class='form-control' placeholder='{% trans "Search translation" %}' type="Text" name="keyword" value="{{ query }}" maxlength="40" size="16">
         <button class='form-control' type='submit' style="font-weight:bold;background-color:LightGrey"><img id='mag-glass' src='{{ STATIC_URL }}images/rightpointing_magnifying_glass.png' style="width:18px; height:auto; margin: 0px;"></button>

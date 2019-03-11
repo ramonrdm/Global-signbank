@@ -6,7 +6,7 @@ import os
 import shutil
 import json
 
-json_data = open("/var/www/signbank/repo/signbank/dictionary/migracao1.json", encoding="utf-8")
+json_data = open("/var/www/signbank/repo/signbank/dictionary/migracao.json", encoding="utf-8")
 data1 = json.load(json_data)
 
 dataset = Dataset.objects.get(name="Libras")
