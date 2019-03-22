@@ -228,7 +228,7 @@
      <!-- {{ gloss.get_video }} -->
 
         <div id="player">
-          <video id='videoplayer' src="http://idsinais.libras.ufsc.br/dados/videos/{{gloss.get_video}}" controls type="video/mp4"></video>
+          <video id='videoplayer' src="{{protected_media_url}}{{gloss.get_video}}" controls type="video/mp4"></video>
         </div>
         <div id="replay"></div>
 
@@ -243,7 +243,7 @@
 
     <div>
         {% if gloss.get_image_path %}
-            <img id="imageframe" src="http://idsinais.libras.ufsc.br/dados/fotosDeSinais/{{gloss.get_image_path}}" width="450px">
+            <img id="imageframe" src="{{protected_media_url}}{{gloss.get_image_path}}" width="450px">
         {% endif %}
     </div>
 
@@ -431,7 +431,7 @@
                     {% trans "SignWriting" %}
                 </th>
                 {% if gloss.signwriting %}
-                    <td class="" id="" colspan="2"><img src="http://idsinais.libras.ufsc.br/dados/fotosDeSinais/{{gloss.get_signwrite_path}}"></td>
+                    <td class="" id="" colspan="2"><img src="{{protected_media_url}}{{gloss.get_signwrite_path}}"></td>
                 {% endif %}
             <tr>
 

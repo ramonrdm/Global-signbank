@@ -1199,13 +1199,13 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
                         if filename_without_extension == existing_file_without_extension:
                             return settings.GLOSS_IMAGE_DIRECTORY+'/'+foldername+'/'+filename
             except OSError:
-                return foldername+filename_without_extension+".jpg"
+                return None
         else:
             return settings.GLOSS_IMAGE_DIRECTORY+'/'+foldername+'/'+filename_without_extension
 
     def get_signwrite_path(self, check_existance=True):
         #glossimage/
-        return "sw"+str(self.pk)+".jpg"
+        return "glossimage/sw"+str(self.pk)+".jpg"
 
     def get_video_path(self):
 
@@ -1223,7 +1223,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
         if os.path.isfile(settings.WRITABLE_FOLDER+'/'+video_path):
             return video_path
         else:
-            return video_path[11:]
+            return ''
 
 
     def count_videos(self):
