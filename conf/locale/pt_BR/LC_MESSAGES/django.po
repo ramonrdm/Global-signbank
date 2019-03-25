@@ -2314,7 +2314,7 @@ msgstr ""
 #: templates/global-templates/loginform.html:43
 #: templates/global-templates/loginform.html:46
 msgid "Register"
-msgstr ""
+msgstr "Registrar"
 
 #: templates/ASL-templates/loginform.html:40
 #: templates/global-templates/loginform.html:45
@@ -2324,7 +2324,7 @@ msgstr ""
 #: templates/ASL-templates/loginform.html:47
 #: templates/global-templates/loginform.html:52
 msgid "Lost Password"
-msgstr ""
+msgstr "Esqueci minha senha"
 
 #: templates/ASL-templates/loginform.html:48
 #: templates/global-templates/loginform.html:53
@@ -2332,6 +2332,8 @@ msgid ""
 "If you've lost or forgotten your password, enter your email address here and "
 "we'll reset it and send you a reminder."
 msgstr ""
+"Se você esqueceu ou perdeu sua senha, digite seu email aqui e iremos"
+"lhe enviar um email para redefini-la"
 
 #: templates/ASL-templates/loginform.html:53
 #: templates/global-templates/loginform.html:58
@@ -2341,7 +2343,7 @@ msgstr ""
 #: templates/ASL-templates/loginform.html:57
 #: templates/global-templates/loginform.html:62
 msgid "Request Password"
-msgstr ""
+msgstr "Solicitar Senha"
 
 #: templates/ASL-templates/menu.html:46 templates/global-templates/menu.html:73
 msgid "Search gloss"
