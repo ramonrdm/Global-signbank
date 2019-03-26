@@ -175,7 +175,7 @@ SPEED_UP_RETRIEVING_ALL_SIGNS =	True
 EMAIL_HOST="smtp.sistemas.ufsc.br"
 EMAIL_PORT=587
 EMAIL_HOST_USER=get_secret('email_libras_user')
-EMAIL_HOST_PASSWORD=get_secret('signbank_user_db')
+EMAIL_HOST_PASSWORD=get_secret("email_libras_password")
 EMAIL_USE_SSL=True
 
 import datetime
