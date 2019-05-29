@@ -312,7 +312,7 @@ class GlossListView(ListView):
         response['Content-Disposition'] = 'attachment; filename="dictionary-export.csv"'
 
 
-#        fields = [f.name for f in Gloss._meta.fields]
+        #fields = [f.name for f in Gloss._meta.fields]
         #We want to manually set which fields to export here
 
         fieldnames = ['idgloss', 'dataset']+FIELDS['main']+FIELDS['phonology']+FIELDS['semantics']+FIELDS['frequency']+['inWeb', 'isNew']
@@ -510,7 +510,7 @@ class GlossListView(ListView):
         #If not, we will go trhough a long list of filters
         if 'search' in get and get['search'] != '':
             val = get['search']
-            query = Q(annotationidglosstranslation__text__iregex=val)
+            query = Q(annotationidglosstranslation__text__iregex=val.lower()) | Q(annotationidglosstranslation__text__iregex=val.upper())
 
             if re.match('^\d+$', val):
                 query = query | Q(sn__exact=val)
@@ -522,20 +522,22 @@ class GlossListView(ListView):
             if get_key.startswith(GlossSearchForm.gloss_search_field_prefix) and get_value != '':
                 language_code_2char = get_key[len(GlossSearchForm.gloss_search_field_prefix):]
                 language = Language.objects.filter(language_code_2char=language_code_2char)
-                qs = qs.filter(annotationidglosstranslation__text__iregex=get_value,
+                qs = qs.filter(annotationidglosstranslation__text__iregex=get_value.lower(),
+                               annotationidglosstranslation__language=language) | qs.filter(annotationidglosstranslation__text__iregex=get_value.upper(),
                                annotationidglosstranslation__language=language)
             elif get_key.startswith(GlossSearchForm.keyword_search_field_prefix) and get_value != '':
                 language_code_2char = get_key[len(GlossSearchForm.keyword_search_field_prefix):]
                 language = Language.objects.filter(language_code_2char=language_code_2char)
-                qs = qs.filter(translation__translation__text__iregex=get_value,
+                qs = qs.filter(translation__translation__text__iregex=get_value.lower(),
+                               translation__language=language) | qs.filter(translation__translation__text__iregex=get_value,
                                translation__language=language)
         if 'lemmaGloss' in get and get['lemmaGloss'] != '':
             val = get['lemmaGloss']
-            qs = qs.filter(idgloss__iregex=val)
+            qs = qs.filter(idgloss__iregex=val.lower()) | qs.filter(idgloss__iregex=val.upper())
 
         if 'keyword' in get and get['keyword'] != '':
             val = get['keyword']
-            qs = qs.filter(translation__translation__text__iregex=val)
+            qs = qs.filter(translation__translation__text__iregex=val.lower()) | qs.filter(translation__translation__text__iregex=val.lower())
 
 
         if 'inWeb' in get and get['inWeb'] != '0':
