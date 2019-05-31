@@ -124,7 +124,7 @@ class GlossListView(ListView):
 
     model = Gloss
     template_name = 'dictionary/admin_gloss_list.html'
-    paginate_by = 500
+    paginate_by = 20
     only_export_ecv = False #Used to call the 'export ecv' functionality of this view without the need for an extra GET parameter
     search_type = 'sign'
     view_type = 'gloss_list'
@@ -1472,7 +1472,7 @@ class MorphemeListView(ListView):
 
     model = Morpheme
     template_name = 'dictionary/admin_morpheme_list.html'
-    paginate_by = 500
+    paginate_by = 20
 
 
     def get_context_data(self, **kwargs):
@@ -1521,7 +1521,7 @@ class MorphemeListView(ListView):
 
                     context['input_names_fields_and_labels'][topic].append((fieldname, field, label))
 
-        context['paginate_by'] = self.request.GET.get('paginate_by', self.paginate_by)
+        context['paginate_by'] = 20
 
         selected_datasets = get_selected_datasets_for_user(self.request.user)
         context['selected_datasets'] = selected_datasets
@@ -1540,7 +1540,7 @@ class MorphemeListView(ListView):
         """
         Paginate by specified value in querystring, or use default class property value.
         """
-        return self.request.GET.get('paginate_by', self.paginate_by)
+        return 20
 
 
     def get_queryset(self):

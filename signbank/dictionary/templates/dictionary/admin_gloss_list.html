@@ -8,6 +8,9 @@
 {% block extrahead %}
 {% endblock %}
 
+
+
+
 {% block extrajs %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/typeahead.bundle.min.js"></script>
 
@@ -169,6 +172,7 @@ function do_toggle_groups(el) {
 
 
 {% block content %}
+
 {% url 'dictionary:protected_media' '' as protected_media_url %}
 
 <form name='adminsearch' id='adminsearch' method='get' action='{{URL}}/signs/search'>
@@ -539,7 +543,7 @@ function do_toggle_groups(el) {
             <option {% if paginate_by == 500 %}selected{% endif %}>500</option>
             <option {% if paginate_by == 100 %}selected{% endif %}>100</option>
             <option {% if paginate_by == 50 %}selected{% endif %}>50</option>
-            <option {% if paginate_by == 25 %}selected{% endif %}>25</option>
+            <option {% if paginate_by == 20 %}selected{% endif %}>20</option>
             <option {% if paginate_by == 10 %}selected{% endif %}>10</option>
         </select>
     </div>
@@ -620,219 +624,6 @@ function do_toggle_groups(el) {
 {% if view_type == "gloss_list" %}
 
 {% if object_list %}
-<table class='table table-condensed'>
-    <thead>
-      <tr>
-          {% if SHOW_DATASET_INTERFACE_OPTIONS %}<th>{% trans "Dataset" %}</th>{% endif %}
-          <th></th>
-           {% for dataset_lang in dataset_languages %}
-          <th>{% trans "Annotation ID Gloss" %} ({{ dataset_lang.name }})</th>
-          {% endfor %}
-
-          <th>{% trans "Lemma ID gloss" %}</th>
-
-           <th>{% trans "Translation equivalents" %}</th>
-           <th>{% trans "Handedness" %}</th>
-           <th>{% trans "Strong hand" %}</th>
-           <th>{% trans "Weak hand" %}</th>
-           <th>{% trans "Location" %}</th>
-           <th style="width:255px;">{% trans "Tags" %}</th>
-      </tr>
-      <!-- EK: this second header row contains clickable sort-order buttons -->
-      <tr>
-          <th></th>
-          <th></th>
-          {% for dataset_lang in dataset_languages %}
-          {% with "annotationidglosstranslation_order_"|add:dataset_lang.language_code_2char as field %}
-          {% with minfield="-"|add:field %}
-           <th>
-             <a href="#" onclick="do_sort_column('{{field}}','asc', 'adminsearch')">
-               {% if searchform.sortOrder and searchform.sortOrder.value == field %}<font color="red">&#x25B2;</font>{% else %}&#x25B2; {% endif %}
-             </a>
-             <a href="#" onclick="do_sort_column('{{field}}','desc', 'adminsearch')">
-               {% if searchform.sortOrder and searchform.sortOrder.value == minfield %}<font color="red">&#x25BC;</font>{% else %}&#x25BC;{% endif %}
-             </a>
-             {% if searchform.sortOrder and searchform.sortOrder.value == minfield or searchform.sortOrder and searchform.sortOrder.value == field  %}
-               <a href="#" onclick="do_sort_column('{{field}}','del', 'adminsearch')">x</a>
-             {% endif %}
-           </th>
-           {% endwith %}
-           {% endwith %}
-          {% endfor %}
-
-           {% with "idgloss translation handedness domhndsh subhndsh locprim" as head_fields %}
-           {% for field in head_fields.split  %}
-           {% with minfield="-"|add:field %}
-           <th>
-             <a href="#" onclick="do_sort_column('{{field}}','asc', 'adminsearch')">
-               {% if searchform.sortOrder and searchform.sortOrder.value == field %}<font color="red">&#x25B2;</font>{% else %}&#x25B2; {% endif %}
-             </a>
-             <a href="#" onclick="do_sort_column('{{field}}','desc', 'adminsearch')">
-               {% if searchform.sortOrder and searchform.sortOrder.value == minfield %}<font color="red">&#x25BC;</font>{% else %}&#x25BC;{% endif %}
-             </a>
-             {% if searchform.sortOrder and searchform.sortOrder.value == minfield or searchform.sortOrder and searchform.sortOrder.value == field  %}
-               <a href="#" onclick="do_sort_column('{{field}}','del', 'adminsearch')">x</a>
-             {% endif %}
-           </th>
-           {% endwith %}
-           {% endfor %}
-           {% endwith %}
-           <th style="width:255px;"></th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for gloss in object_list %}
-            <!-- EK: the color depends on: (1) tag for wrong sign, (2) availability of video, and (3) gloss database value for 'isNew' -->
-            {% tags_for_object gloss as tag_list %}
-            {% if tag_list|wrong_sign %}
-                <tr class="danger">
-            {% elif not gloss.has_video %}
-                <tr class="warning">
-            {% elif gloss.isNew %}
-                <tr class="info">
-            {% else %}
-                <tr>
-            {% endif %}
-
-        {% if SHOW_DATASET_INTERFACE_OPTIONS %}<td>{{ gloss.dataset.name }}</td>{% endif %}
-      <td>{%if gloss.get_image_path != None %}<div class="thumbnail_container">
-          <a href="{{ URL }}/dictionary/gloss/{{gloss.pk}}/"><img class="thumbnail {% if CROP_GLOSS_IMAGES %}cropped_thumbnail{% endif %}" src="{{protected_media_url}}{{gloss.get_image_path}}"></div></a>{% endif %}
-      </td>
-
-      {% for dataset_lang in dataset_languages %}
-        {% with gloss|get_annotation_idgloss_translation:dataset_lang as annotationidglosstranslation %}
-      <td>
-          {% ifnotequal annotationidglosstranslation "" %}
-            {% if request.search_type == "sign_or_morpheme" and gloss.is_morpheme %}
-            <div class="morpheme_gloss"><a href="{{ URL }}/dictionary/morpheme/{{gloss.pk}}/">{{annotationidglosstranslation}}</a></div>
-            {% else %}
-            <div><a href="{{ URL }}/dictionary/gloss/{{gloss.pk}}/">{{annotationidglosstranslation}}</a></div>
-            {% endif %}
-
-            {% if gloss.simultaneous_morphology.count > 0 %}
-              {% if gloss.simultaneous_morphology.count > 3 %}
-                  <span class="morpheme_in_gloss">({{gloss.simultaneous_morphology.all.count}} {% trans "morphemes" %})</span>
-              {% else %}
-                  <!-- Number of morphemes is [1-3] -->
-                  <div class="morpheme_in_gloss">
-                  {% for morphdef in gloss.simultaneous_morphology.all %}
-                  <span><a class="morpheme_style" href="{{ URL }}/dictionary/morpheme/{{morphdef.morpheme.pk}}/">{{ morphdef.morpheme|get_annotation_idgloss_translation:dataset_lang }}</a>{% if not forloop.last %}, {% endif %}</span>
-                  {% endfor %}
-                  </div>
-              {% endif %}
-            {% endif %}
-
-            {% if gloss.parent_glosses.count > 0 %}
-              <div class="component_in_gloss">
-              {% for component in gloss.parent_glosses.all %}
-                  <span><a  class="gloss_detail_component" href="{{ URL }}/dictionary/gloss/{{component.morpheme.pk}}/">{{ component.morpheme|get_annotation_idgloss_translation:dataset_lang }}</a>{% if not forloop.last %} + {% endif %}</span>
-              {% endfor %}
-              </div>
-            {% endif %}
-          {% endifnotequal %}
-      </td>
-        {% endwith %}
-      {% endfor %}
-
-      <td>
-          {% if request.search_type == "sign_or_morpheme" and gloss.is_morpheme %}
-          <div class="morpheme_gloss">{{gloss.idgloss}}</div>
-          {% else %}
-          <div>{{gloss.idgloss}}</div>
-          {% endif %}
-      </td>
-
-      <td>
-      {% for translation in gloss.translation_set.all %}
-                {% if forloop.last %}
-                {{ translation.translation }}
-                {% else%}
-                {{ translation.translation }},
-                {% endif %}
-
-      {% endfor %}
-      </td>
-
-            {% load field_choice %}
-
-            {% if request.LANGUAGE_CODE == 'nl' %}
-                <td>{{ gloss.handedness|translate_to_dutch:"Handedness" }}</td>
-
-                <!--Catch empty/undefined Handshape values in order to create hyperlinks-->
-
-                {% with gloss.domhndsh|translate_to_dutch:"Handshape" as domhndsh_display %}
-                    {% if domhndsh_display == '-' or domhndsh_display == 'N/A' or domhndsh_display == '' %}
-                        <td>{{ domhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.domhndsh}}/">{{ domhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-                {% with gloss.subhndsh|translate_to_dutch:"Handshape" as subhndsh_display %}
-                    {% if subhndsh_display == '-' or subhndsh_display == 'N/A' or subhndsh_display == '' %}
-                        <td>{{ subhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.subhndsh}}/">{{ subhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-
-                <td>{{ gloss.locprim|translate_to_dutch:"Location" }}</td>
-
-            {% elif request.LANGUAGE_CODE == 'zh-hans' %}
-                <td>{{ gloss.handedness|translate_to_chinese:"Handedness" }}</td>
-
-                <!--Catch empty/undefined Handshape values in order to create hyperlinks-->
-
-                {% with gloss.domhndsh|translate_to_chinese:"Handshape" as domhndsh_display %}
-                    {% if domhndsh_display == '-' or domhndsh_display == 'N/A' or domhndsh_display == '' %}
-                        <td>{{ domhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.domhndsh}}/">{{ domhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-                {% with gloss.subhndsh|translate_to_chinese:"Handshape" as subhndsh_display %}
-                    {% if subhndsh_display == '-' or subhndsh_display == 'N/A' or subhndsh_display == '' %}
-                        <td>{{ subhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.subhndsh}}/">{{ subhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-
-                <td>{{ gloss.locprim|translate_to_chinese:"Location" }}</td>
-
-            {% else %}
-
-                <!--Catch empty/undefined Handshape values in order to create hyperlinks-->
-                <!--The translate_to_english function is needed to avoid None values showing up in display-->
-
-                <td>{{ gloss.handedness|translate_to_english:"Handedness" }}</td>
-
-                {% with gloss.domhndsh|translate_to_english:"Handshape" as domhndsh_display %}
-                    {% if domhndsh_display == '-' or domhndsh_display == 'N/A' or domhndsh_display == '' %}
-                        <td>{{ domhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.domhndsh}}/">{{ domhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-                {% with gloss.subhndsh|translate_to_english:"Handshape" as subhndsh_display %}
-                    {% if subhndsh_display == '-' or subhndsh_display == 'N/A' or subhndsh_display == '' %}
-                        <td>{{ subhndsh_display }}</td>
-                    {% else %}
-                        <td><a href="{{ URL }}/dictionary/handshape/{{gloss.subhndsh}}/">{{ subhndsh_display }}</a></td>
-                    {% endif %}
-                {% endwith %}
-
-                <td>{{ gloss.locprim|translate_to_english:"Location" }}</td>
-            {% endif %}
-
-            {% load underscore_to_space %}
-            {% tags_for_object gloss as tag_list %}
-            <td>{% for tag in tag_list %}<span class='tag'>{{tag.name|underscore_to_space}}</span> {% endfor %}</td>
-
-        </tr>
-    {% endfor %}
-  </tbody>
-</table>
-
 <div class="pagination">
     <span class="step-links">
 
@@ -873,15 +664,46 @@ function do_toggle_groups(el) {
     </span>
 </div>
 
-
-
-
+<div class="row">
+    {% for gloss in object_list %}
+        <div class="col-md-3 col-sm-6 col-xs-12 col-public-list">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="{{ URL }}/dictionary/gloss/{{gloss.pk}}/">
+                                <h3 class="panel-title idglosa" style="text-align:center">{{gloss.idgloss}}</h3>
+                                <span class="dataset-1-color label label-default" style="float:right; margin-top:5px">{{ gloss.dataset.name }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body embed-responsive embed-responsive-16by9">
+                    <video class="" id="video-{{gloss.pk}}" preload="metadata" muted=" " poster="{{protected_media_url}}{{gloss.get_image_path}}" onclick="this.paused?this.play():this.pause()" playsinline="">
+                        <source src="{{protected_media_url}}{{gloss.get_video}}" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4> <strong>Traduções equivalentes(PT-BR e Inglês):</strong> </h4>
+                            {% for translation in gloss.translation_set.all %}
+                                      {% if forloop.last %}
+                                      {{ translation.translation }}
+                                      {% else%}
+                                      {{ translation.translation }},
+                                      {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 
 {% endif %}
-
 {% else %}  <!--show lemma groups view-->
-
-
 {% if object_list %}
 
 {% regroup object_list by idgloss as lemma_groups %}

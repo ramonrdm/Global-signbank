@@ -1,9 +1,9 @@
 /* variant style for black - main page style */
 
 
-html { 
-  background-image: url(../../images/global/black_02.gif); 
-} 
+html {
+  background-image: url(../../images/global/black_02.gif);
+}
 
 #leftcontentborder {
   background-image: url(../../images/global/black_03.gif);
@@ -14,7 +14,7 @@ html {
 }
 
  #header {
-		background-image: url(../../images/global/black_02.gif); 
+		background-image: url(../../images/global/black_02.gif);
         padding:0;
         background:#2196F3;
         height:110px;
@@ -56,14 +56,14 @@ html {
 }
 
 /* superfish menu styling - background image is assumed 26px high */
-.sf-navbar  { 
+.sf-navbar  {
    background-image: url(../../images/global/black_08.gif);
    background-position: top right;
    background-repeat: no-repeat;
 }
 
 #pages #mainlinks td {
-  
+
   background-image: url(../../images/global/black_02.gif);
 }
 
@@ -159,4 +159,30 @@ legend
     min-height: 30px;
     border-left-width: 0px;
     border-right-width: 0px;
+}
+
+.embed-responsive{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive-4by3::before {
+    padding-top: 75%;
+}
+
+.embed-responsive-16by9::before {
+    padding-top:56.25%;
+}
+
+.embed-responsive video {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
