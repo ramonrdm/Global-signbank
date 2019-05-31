@@ -75,9 +75,10 @@ DEFAULT_KEYWORDS_LANGUAGE = {'language_code_2char': 'en'}
 
 FIELDS = {}
 
-FIELDS['main'] = ['useInstr','wordClass', 'localizacao', 'domhndsh','subhndsh']
+FIELDS['main'] = ['useInstr','wordClass',]
 
-FIELDS['phonology'] = ['handedness','handCh','relatArtic','locprim','locVirtObj',
+#''' 'locprim' ''' do lado de localizacao foi removido.
+FIELDS['phonology'] = ['handedness','domhndsh','subhndsh','handCh','relatArtic','localizacao','locVirtObj',
           'relOriMov','relOriLoc','oriCh','contType','movSh','movDir','repeat','altern','phonOth', 'mouthG',
           'mouthing', 'phonetVar','domhndsh_letter','domhndsh_number','subhndsh_letter','subhndsh_number','weakdrop','weakprop']
 
