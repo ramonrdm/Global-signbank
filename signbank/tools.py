@@ -19,7 +19,7 @@ from tagging.models import TaggedItem, Tag
 from guardian.shortcuts import get_objects_for_user
 
 def save_media(source_folder,language_code_3char,goal_folder,gloss,extension):
-        
+
     #Add a dot before the extension if needed
     if extension[0] != '.':
         extension = '.' + extension

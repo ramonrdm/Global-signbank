@@ -93,10 +93,10 @@ FIELDS['handshape'] = ['hsNumSel', 'hsFingSel', 'hsFingSel2', 'hsFingConf',
                        'fs2T', 'fs2I', 'fs2M', 'fs2R', 'fs2P',
                        'ufT', 'ufI', 'ufM', 'ufR', 'ufP']
 
-ECV_FILE = WRITABLE_FOLDER+'ecv/ngt.ecv'
+ECV_FILE = WRITABLE_FOLDER+'ecv/libras.ecv'
 ECV_FOLDER = WRITABLE_FOLDER+'ecv'
 ECV_SETTINGS = {
-    'CV_ID': 'CNGT_RU-lexicon',
+    'CV_ID': 'Signbank_Brasil-Lexicon',
     'include_phonology_and_frequencies': True,
 
     # The order of languages matters as the first will
@@ -104,12 +104,12 @@ ECV_SETTINGS = {
     'languages': [
         {
           'id':'ptb',
-          'description':"Os arquivos CV das glosas para o CNGT (RU)",
-          'annottation_idgloss_fieldname': 'annotationidglosstranslation_pt',
+          'description':"Os arquivos CV das glosas para o SignBank (Brasil)",
+          'annotation_idgloss_fieldname': 'annotationidglosstranslation_pt',
           'attributes': {
-            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013504-001",
+            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013503-001",
             "LANG_ID":'ptb',
-            "LANG_LABEL":"Portuguese (pt)"
+            "LANG_LABEL":"Brazilian Portuguese(pt-BR)"
           }
         },
         {
@@ -177,7 +177,7 @@ EMAIL_HOST="smtp.sistemas.ufsc.br"
 EMAIL_PORT=587
 EMAIL_HOST_USER= get_secret('email_libras_user'),
 EMAIL_HOST_PASSWORD= get_secret('email_libras_password'),
-DEFAULT_FROM_EMAIL= EMAIL_HOST_USER+"@sistemas.ufsc.br"
+DEFAULT_FROM_EMAIL= str(EMAIL_HOST_USER)+"@sistemas.ufsc.br"
 EMAIL_USE_SSL=True
 
 
