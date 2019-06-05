@@ -105,11 +105,11 @@ ECV_SETTINGS = {
         {
           'id':'ptb',
           'description':"Os arquivos CV das glosas para o SignBank (Brasil)",
-          'annotation_idgloss_fieldname': 'annotationidglosstranslation_pt',
+          'annotation_idgloss_fieldname': 'annotationidglosstranslation_pt-br',
           'attributes': {
-            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013503-001",
+            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013504-001",
             "LANG_ID":'ptb',
-            "LANG_LABEL":"Brazilian Portuguese(pt-BR)"
+            "LANG_LABEL":"Brazilian Portuguese(ptb)"
           }
         },
         {
@@ -175,8 +175,8 @@ SPEED_UP_RETRIEVING_ALL_SIGNS =	True
 
 EMAIL_HOST="smtp.sistemas.ufsc.br"
 EMAIL_PORT=587
-EMAIL_HOST_USER= get_secret('email_libras_user'),
-EMAIL_HOST_PASSWORD= get_secret('email_libras_password'),
+EMAIL_HOST_USER= get_secret('email_libras_user')
+EMAIL_HOST_PASSWORD= get_secret('email_libras_password')
 DEFAULT_FROM_EMAIL= str(EMAIL_HOST_USER)+"@sistemas.ufsc.br"
 EMAIL_USE_SSL=True
 

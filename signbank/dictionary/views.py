@@ -1,10 +1,11 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import Context, RequestContext, loader
 from django.http import Http404
+from django.template.loader import render_to_string
 from django.shortcuts import render, render_to_response, get_object_or_404, redirect
 from django.core.urlresolvers import reverse
 from django.conf import settings
-from django.db.models import Q
+from django.db.models import Q, Prefetch
 from django.contrib.auth.decorators import login_required
 from tagging.models import Tag, TaggedItem
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -49,7 +50,26 @@ def login_required_config(f):
     else:
         return f
 
+def serialize_glosses(dataset, queryset):
+    for gloss in queryset:
+        # Get English translation equivalents from glosstranslations or from translation_set
+        gloss.trans_eng = [x.translation.text for x in gloss.translation_set.all() if
+                           x.language.language_code_3char == "eng"]
 
+    xml = render_to_string('dictionary/xml_glosslist_template.xml', {'queryset': queryset, 'dataset': dataset})
+    return HttpResponse(xml, content_type="text/xml")
+
+
+
+def ecv_xml(self, dataset_id):
+    dataset = get_object_or_404(Dataset, id=dataset_id, is_public=True)
+
+    return serialize_glosses(dataset, Gloss.objects.filter(
+        dataset=dataset).prefetch_related(
+        Prefetch('translation_set', queryset=Translation.objects.filter()
+                 .select_related('translation', 'language'))
+                 )
+        )
 
 @login_required_config
 def index(request):

@@ -56,6 +56,7 @@ urlpatterns = [
 
     #Hardcoding a number of special urls:
     url(r'^signs/dictionary/$', signbank.dictionary.views.search),
+    url(r'^signs/ecv/(?P<dataset_id>\d+)/$', signbank.dictionary.views.ecv_xml),
     url(r'^signs/search/$', GlossListView.as_view()),
     url(r'^signs/show_all/$', GlossListView.as_view(),{'show_all':True}),
     url(r'^signs/add/$', signbank.dictionary.views.add_new_sign),

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV_RESOURCE AUTHOR="" DATE="{% now "c" %}" VERSION="0.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-0013504-001" LANG_ID="ptb" LANG_LABEL="Brazilian Portuguese (ptb)"/>
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00138502-001" LANG_ID="eng" LANG_LABEL="English (eng)"/>
+    <CONTROLLED_VOCABULARY CV_ID="signbank-dataset-{{dataset.id}}">
+        <DESCRIPTION LANG_REF="ptb"/>
+        <DESCRIPTION LANG_REF="eng"/>
+        {% for gloss in queryset %}
+            <CV_ENTRY_ML CVE_ID="glossid{{gloss.pk}}">
+                <CVE_VALUE DESCRIPTION="{% for g in gloss.trans_eng %}{% if forloop.first %}{{g}}{% else %}, {{g}}{% endif %}{% endfor %}" LANG_REF="ptb">{{gloss.idgloss}}</CVE_VALUE>
+            </CV_ENTRY_ML>
+         {% endfor %}
+    </CONTROLLED_VOCABULARY>
+</CV_RESOURCE>
