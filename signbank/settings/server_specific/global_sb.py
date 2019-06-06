@@ -92,49 +92,7 @@ FIELDS['handshape'] = ['hsNumSel', 'hsFingSel', 'hsFingSel2', 'hsFingConf',
                        'hsSpread', 'hsFingUnsel', 'fsT', 'fsI', 'fsM', 'fsR', 'fsP',
                        'fs2T', 'fs2I', 'fs2M', 'fs2R', 'fs2P',
                        'ufT', 'ufI', 'ufM', 'ufR', 'ufP']
-
-ECV_FILE = WRITABLE_FOLDER+'ecv/libras.ecv'
-ECV_FOLDER = WRITABLE_FOLDER+'ecv'
-ECV_SETTINGS = {
-    'CV_ID': 'Signbank_Brasil-Lexicon',
-    'include_phonology_and_frequencies': True,
-
-    # The order of languages matters as the first will
-    # be treated as default by ELAN
-    'languages': [
-        {
-          'id':'ptb',
-          'description':"Os arquivos CV das glosas para o SignBank (Brasil)",
-          'annotation_idgloss_fieldname': 'annotationidglosstranslation_pt-br',
-          'attributes': {
-            "LANG_DEF": "http://cdb.iso.org/lg/CDB-0013504-001",
-            "LANG_ID":'ptb',
-            "LANG_LABEL":"Brazilian Portuguese(ptb)"
-          }
-        },
-        {
-            'id': 'nld',
-            'description': 'De glossen-CV voor het CNGT (RU)',
-            'annotation_idgloss_fieldname': 'annotationidglosstranslation_nl',
-            'attributes': {
-                'LANG_DEF': 'http://cdb.iso.org/lg/CDB-00138580-001',
-                'LANG_ID': 'nld',
-                'LANG_LABEL': 'Dutch (nld)'
-            }
-        },
-        {
-            'id': 'eng',
-            'description': 'The glosses CV for the CNGT (RU)',
-            'annotation_idgloss_fieldname': 'annotationidglosstranslation_en',
-            'attributes': {
-                'LANG_DEF': 'http://cdb.iso.org/lg/CDB-00138502-001',
-                'LANG_ID': 'eng',
-                'LANG_LABEL': 'English (eng)'
-            }
-        },
-    ]
-}
-
+                       
 GLOSS_VIDEO_DIRECTORY = 'glossvideo'
 GLOSS_IMAGE_DIRECTORY = 'glossimage'
 GLOSS_SIGNWRITING_DIRECTORY = 'glossimage'

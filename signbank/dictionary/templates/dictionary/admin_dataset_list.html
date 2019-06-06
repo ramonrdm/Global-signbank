@@ -21,7 +21,7 @@
           <th style="width:255px;">{% trans "Number of signs or morphemes" %}</th>
           <th style="width:80px;">{% trans "Selected" %}</th>
           <th style="width:120px;">{% trans "Languages" %}</th>
-          <th>{% trans "Export dataset" %}</th>
+          <th>{% trans "Link ECV" %}</th>
       </tr>
     </thead>
     <tbody>
@@ -64,14 +64,7 @@
             <td>
                 {% get_obj_perms request.user for dataset as "dataset_perms" %}
                 {% if "change_dataset" in dataset_perms %}
-                <form name='export_ecv_form' id='export_ecv_form' method='get'>
-                    <div class="hidden">
-                        <input name='dataset_name' id='dataset_name' class='form-control' value='{{dataset.name}}' >
-                    </div>
-                    <div class='btn-group'>
-                        <button id='export_ecv' class='btn btn-primary' type='submit' name='export_ecv' value='ECV'>{% trans "ECV" %}</button>
-                    </div>
-                </form>
+                <a href="{{request.get_host}}/signs/ecv/{{dataset.id}}">http://{{request.get_host}}/signs/ecv/{{dataset.id}}</a>
                 {% endif %}
             </td>
         </tr>
