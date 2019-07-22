@@ -50,6 +50,22 @@ def login_required_config(f):
     else:
         return f
 
+
+@login_required_config
+def ajax_update_gloss(request):
+    data = request.POST
+    gloss = Gloss.objects.get(pk=data["id"])
+
+    if data["idgloss"]:
+        print("mudou idgloss")
+        gloss.idgloss = data["idgloss"]
+        gloss.save()
+    if data["localizacao"]:
+        print("mudou localização")
+        gloss.localizacao = data["localizacao"]
+        gloss.save()
+    return HttpResponse("Got it")
+
 def serialize_glosses(dataset, queryset):
     for gloss in queryset:
         # Get English translation equivalents from glosstranslations or from translation_set

@@ -120,6 +120,13 @@ def order_queryset_by_sort_order(get, qs):
     return ordered
 
 
+class GlossSheetView(ListView):
+    model = Gloss
+    template_name="dictionary/admin_gloss_sheet.html"
+    only_export_ecv = False
+    view_type="spreadsheet"
+    dataset_name = DEFAULT_DATASET
+
 class GlossListView(ListView):
 
     model = Gloss

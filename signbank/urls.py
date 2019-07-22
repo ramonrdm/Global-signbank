@@ -17,7 +17,7 @@ import django.contrib.auth.views
 import django.contrib.admindocs.urls
 import django_summernote.urls
 
-from signbank.dictionary.adminviews import GlossListView, MorphemeListView, DatasetListView, HandshapeListView, HomonymListView, DatasetManagerView, DatasetDetailView
+from signbank.dictionary.adminviews import GlossSheetView, GlossListView, MorphemeListView, DatasetListView, HandshapeListView, HomonymListView, DatasetManagerView, DatasetDetailView
 from signbank.dictionary.views import add_image, delete_image, add_new_morpheme, add_handshape_image, add_signwriting
 
 from registration.backends.simple.views import RegistrationView
@@ -59,6 +59,8 @@ urlpatterns = [
     url(r'^signs/ecv/(?P<dataset_id>\d+)/$', signbank.dictionary.views.ecv_xml),
     url(r'^signs/search/$', GlossListView.as_view()),
     url(r'^signs/show_all/$', GlossListView.as_view(),{'show_all':True}),
+    url(r"^signs/spreadsheet/$", GlossSheetView.as_view()),
+    url(r"^signs/ajax/updategloss", signbank.dictionary.views.ajax_update_gloss),
     url(r'^signs/add/$', signbank.dictionary.views.add_new_sign),
     url(r'^signs/import_csv/$', signbank.dictionary.views.import_csv),
     url(r'^signs/homonyms/$', HomonymListView.as_view(), name='admin_homonyms_list'),

@@ -1,0 +1,54 @@
+{% extends "baselayout.html" %}
+{% load i18n %}
+{% load stylesheet %}
+{% load bootstrap3 %}
+{% load guardian_tags %}
+{% block extrajs %}
+<script src="/static/js/spreadsheet.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<table>
+    <tr>
+        <th>ID Glosa</th>
+        <th>Configuração da dominante</th>
+        <th>Configuração da mão esquerda</th>
+    </tr>
+    {% for g in object_list%}
+    <tr>
+        <td>{{g}}</td>
+        <td id="domhndsh_{{g.id}}">
+            <a href= {% if g.domhndsh %}"{{ URL }}/dictionary/handshape/{{g.domhndsh}}/" {% else %} "#" {% endif %}>
+                <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.domhndsh}}/handshape_{{g.domhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
+            </a>
+            <button id="{{g.id}}" class="btn btn-primary edit">Alterar</button>
+        </td>
+        <td id="subhndsh">
+            <a href= {% if g.subhndsh %}"{{ URL }}/dictionary/handshape/{{g.subhndsh}}/"{% else %} "#" {% endif %}>
+                <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.subhndsh}}/handshape_{{g.subhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
+            </a>
+            <button id="{{g.id}}" class="btn btn-primary edit">Alterar</button>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+{% endblock %}

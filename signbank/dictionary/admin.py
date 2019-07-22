@@ -1,4 +1,4 @@
-from django.contrib import admin 
+from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from signbank.dictionary.models import *
 from reversion.admin import VersionAdmin
@@ -17,8 +17,8 @@ class DatasetAdmin(GuardedModelAdmin):
 
 class KeywordAdmin(VersionAdmin):
     search_fields = ['^text']
-    
-    
+
+
 class TranslationInline(admin.TabularInline):
     model = Translation
     extra = 1
@@ -27,19 +27,19 @@ class TranslationInline(admin.TabularInline):
 class RelationToOtherSignInline(admin.TabularInline):
     model = Relation
     extra = 1
-    
+
 class RelationToForeignSignInline(admin.TabularInline):
     model = RelationToForeignSign
     extra = 1
 #    raw_id_fields = ['other_lang_gloss']
-    
+
 class DefinitionInline(admin.TabularInline):
-    model = Definition  
+    model = Definition
     extra = 1
-    
+
 class RelationInline(admin.TabularInline):
     model = Relation
-    fk_name = 'source' 
+    fk_name = 'source'
     raw_id_fields = ['source', 'target']
     verbose_name_plural = "Relations to other Glosses"
     extra = 1
@@ -82,8 +82,8 @@ class SenseNumberListFilter(SimpleListFilter):
             return queryset.filter(sense__isnull=True)
         if self.value() == 'morethanone':
             return queryset.filter(sense__gte=1)
-        
-        
+
+
 
 class GlossAdmin(VersionAdmin):
 
@@ -100,15 +100,18 @@ class GlossAdmin(VersionAdmin):
     save_on_top = True
     save_as = True
 
-    list_display = ['idgloss','dataset']
-
-    list_display += ['morph', 'sense', 'sn']
+    list_display = ['id', 'idgloss','dataset','localizacao', "domhndsh", "subhndsh", 'get_translations']
     search_fields = ['^idgloss', '=sn']
     list_filter = ['dataset', 'signlanguage', 'dialect', SenseNumberListFilter, 'inWeb', 'domhndsh']
     inlines = [ RelationInline, RelationToForeignSignInline, DefinitionInline, TranslationInline, OtherMediaInline ]
-
+    list_editable = ["idgloss", 'dataset', 'localizacao', "domhndsh", "subhndsh"]
     history_latest_first = True
 
+    class Media:
+        js = ["admin/js/jquery-1.11.0.min.js", "admin/js/spreadsheet.js"]
+
+    def get_translations(self, obj):
+        return Translation.objects.filter(gloss=obj.id).first()
 
 class HandshapeAdmin(VersionAdmin):
 
@@ -117,14 +120,14 @@ class HandshapeAdmin(VersionAdmin):
 class RegistrationProfileAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'activation_key_expired', )
     search_fields = ('user__username', 'user__first_name', )
- 
+
 class DialectInline(admin.TabularInline):
-    
+
     model = Dialect
 
 class DialectAdmin(VersionAdmin):
     model = Dialect
- 
+
 class SignLanguageAdmin(VersionAdmin):
     model = SignLanguage
     inlines = [DialectInline]
@@ -230,7 +233,7 @@ class LanguageAdmin(TranslationAdmin):
 
 admin.site.register(Dialect, DialectAdmin)
 admin.site.register(SignLanguage, SignLanguageAdmin)
-admin.site.register(Gloss, GlossAdmin) 
+admin.site.register(Gloss, GlossAdmin)
 admin.site.register(Morpheme, GlossAdmin)
 admin.site.register(Keyword, KeywordAdmin)
 admin.site.register(FieldChoice,FieldChoiceAdmin)
