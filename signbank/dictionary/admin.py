@@ -100,18 +100,11 @@ class GlossAdmin(VersionAdmin):
     save_on_top = True
     save_as = True
 
-    list_display = ['id', 'idgloss','dataset','localizacao', "domhndsh", "subhndsh", 'get_translations']
+    list_display = ['id', 'idgloss','dataset','localizacao']
     search_fields = ['^idgloss', '=sn']
     list_filter = ['dataset', 'signlanguage', 'dialect', SenseNumberListFilter, 'inWeb', 'domhndsh']
     inlines = [ RelationInline, RelationToForeignSignInline, DefinitionInline, TranslationInline, OtherMediaInline ]
-    list_editable = ["idgloss", 'dataset', 'localizacao', "domhndsh", "subhndsh"]
     history_latest_first = True
-
-    class Media:
-        js = ["admin/js/jquery-1.11.0.min.js", "admin/js/spreadsheet.js"]
-
-    def get_translations(self, obj):
-        return Translation.objects.filter(gloss=obj.id).first()
 
 class HandshapeAdmin(VersionAdmin):
 
