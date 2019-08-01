@@ -127,6 +127,26 @@ class GlossSheetView(ListView):
     view_type="spreadsheet"
     dataset_name = DEFAULT_DATASET
 
+    def get_context_data(self, **kwargs):
+        context = super(GlossSheetView, self).get_context_data(**kwargs)
+        translations = Translation.objects.all()
+        glosses = Gloss.objects.all()
+        gloss_set = []
+        for glosa in glosses:
+            glosa_translat = tuple()
+            trs = []
+            for t in translations:
+                if t.gloss_id == glosa.id:
+                    trs.append(t)
+            glosa_translat = (glosa, trs)
+            gloss_set.append(glosa_translat)
+
+        context["gloss_set"] = gloss_set
+        return context
+
+    def get_translation_text(self, id):
+        return Keyword.objects.get(pk=id)
+
 class GlossListView(ListView):
 
     model = Gloss

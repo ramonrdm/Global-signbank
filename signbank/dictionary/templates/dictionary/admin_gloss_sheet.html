@@ -16,25 +16,74 @@
             <th>ID Glosa</th>
             <th>Configuração da dominante</th>
             <th>Configuração da mão esquerda</th>
+            <th>Localização</th>
+            <th>Traduções(Inglês)</th>
+            <th>Traduções(Português)</th>
         </tr>
-        {% for g in object_list%}
-        <tr id="{{g.id}}">
-            <td><input class="glossid" type="text" name="form-{{g.id}}-idgloss" value={{g}}></td>
-            <td id="domhndsh_{{g.id}}">
-                <a href="#">
-                    <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.domhndsh}}/handshape_{{g.domhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
+        {% for g in gloss_set %}
+        <tr id="{{g.0.id}}">
+            <td>{{g.0}}</td>
+            <td id="domhndsh_{{g.0.id}}">
+                <a class="handshape_select" data-toggle="modal" data-target="#myModal" href="#">
+                    <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.0.domhndsh}}/handshape_{{g.0.domhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
                 </a>
             </td>
             <td id="subhndsh">
-                <a href="#">
-                    <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.subhndsh}}/handshape_{{g.subhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
+                <a class="handshape_select" data-toggle="modal" data-target="#myModal" href="#">
+                    <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.0.subhndsh}}/handshape_{{g.0.subhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
                 </a>
+            </td>
+            <td id="localizacao">
+                <select>
+                    <option value="testa" {% if g.0.localizacao == "testa" %} selected="" {% endif %}>Testa</option>
+                    <option value="olhos_nariz" {% if g.0.localizacao == "olhos_nariz" %} selected="" {% endif %}>Olhos e Nariz</option>
+                    <option value="boca_queixo" {% if g.0.localizacao == "boca_queixo" %} selected="" {% endif %}>Boca e Queixo</option>
+                    <option value="pescoco" {% if g.0.localizacao == "pescoco" %} selected="" {% endif %}>Pescoço</option>
+                    <option value="ombro" {% if g.0.localizacao == "ombro" %} selected="" {% endif %}>Ombro</option>
+                    <option value="bracos" {% if g.0.localizacao == "bracos" %} selected="" {% endif %}>Braços</option>
+                    <option value="pernas" {% if g.0.localizacao == "pernas" %} selected="" {% endif %}>Pernas</option>
+                    <option value="espaco_neutro" {% if g.0.localizacao == "espaco_neutro" %} selected="" {% endif %}>Espaço Neutro</option>
+                    <option value="tronco" {% if g.0.localizacao == "tronco" %} selected="" {% endif %}>Tronco</option>
+                </select>
+            </td>
+
+            <td id="translation_english">
+                {% for t in g.1 %}
+                    {% if t.language_id == 1 %}
+                        {{t.get_translation_text}}
+                    {% endif %}
+                {% endfor %}
+            </td>
+            <td id="translation_portugues">
+                {% for t in g.1 %}
+                    {% if t.language_id == 3 %}
+                        {{t.get_translation_text}}
+                    {% endif %}
+                {% endfor %}
             </td>
         </tr>
         {% endfor %}
     </table>
 </form>
 
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <style>
 table {
   font-family: arial, sans-serif;

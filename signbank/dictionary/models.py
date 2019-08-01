@@ -70,6 +70,10 @@ class Translation(models.Model):
     def __str__(self):
         return self.gloss.idgloss + '-' + self.translation.text
 
+
+    def get_translation_text(self):
+        return Keyword.objects.get(pk=self.translation_id).text
+
     def get_absolute_url(self):
         """Return a URL for a view of this translation."""
 
