@@ -8,7 +8,6 @@
 {% endblock %}
 
 {% block content %}
-
 <form action="" method="post">
     {% csrf_token %}
     <table>
@@ -22,8 +21,8 @@
         </tr>
         {% for g in gloss_set %}
         <tr id="{{g.0.id}}">
-            <td>{{g.0}}</td>
-            <td id="domhndsh_{{g.0.id}}">
+            <td id="glossid">{{g.0}}</td>
+            <td id="domhndsh">
                 <a class="handshape_select" data-toggle="modal" data-target="#myModal" href="#">
                     <img src="{{ URL }}/dictionary/protected_media/handshapeimage/{{g.0.domhndsh}}/handshape_{{g.0.domhndsh}}.jpg" alt="Não preenchido" width="50" height="50"/>
                 </a>
@@ -34,30 +33,30 @@
                 </a>
             </td>
             <td id="localizacao">
-                <select>
-                    <option value="testa" {% if g.0.localizacao == "testa" %} selected="" {% endif %}>Testa</option>
-                    <option value="olhos_nariz" {% if g.0.localizacao == "olhos_nariz" %} selected="" {% endif %}>Olhos e Nariz</option>
-                    <option value="boca_queixo" {% if g.0.localizacao == "boca_queixo" %} selected="" {% endif %}>Boca e Queixo</option>
-                    <option value="pescoco" {% if g.0.localizacao == "pescoco" %} selected="" {% endif %}>Pescoço</option>
-                    <option value="ombro" {% if g.0.localizacao == "ombro" %} selected="" {% endif %}>Ombro</option>
-                    <option value="bracos" {% if g.0.localizacao == "bracos" %} selected="" {% endif %}>Braços</option>
-                    <option value="pernas" {% if g.0.localizacao == "pernas" %} selected="" {% endif %}>Pernas</option>
-                    <option value="espaco_neutro" {% if g.0.localizacao == "espaco_neutro" %} selected="" {% endif %}>Espaço Neutro</option>
-                    <option value="tronco" {% if g.0.localizacao == "tronco" %} selected="" {% endif %}>Tronco</option>
+                <select name="loc">
+                    <option value="testa" {% if g.0.localizacao == "testa" %} selected="selected" {% endif %}>Testa</option>
+                    <option value="olhos_nariz" {% if g.0.localizacao == "olhos_nariz" %} selected="selected" {% endif %}>Olhos e Nariz</option>
+                    <option value="boca_queixo" {% if g.0.localizacao == "boca_queixo" %} selected="selected" {% endif %}>Boca e Queixo</option>
+                    <option value="pescoco" {% if g.0.localizacao == "pescoco" %} selected="selected" {% endif %}>Pescoço</option>
+                    <option value="ombro" {% if g.0.localizacao == "ombro" %} selected="selected" {% endif %}>Ombro</option>
+                    <option value="bracos" {% if g.0.localizacao == "bracos" %} selected="selected" {% endif %}>Braços</option>
+                    <option value="pernas" {% if g.0.localizacao == "pernas" %} selected="selected" {% endif %}>Pernas</option>
+                    <option value="espaco_neutro" {% if g.0.localizacao == "espaco_neutro" %} selected="selected" {% endif %}>Espaço Neutro</option>
+                    <option value="tronco" {% if g.0.localizacao == "tronco" %} selected="selected" {% endif %}>Tronco</option>
                 </select>
             </td>
 
-            <td id="translation_english">
+            <td class="translation" id="traducao_ingles">
                 {% for t in g.1 %}
                     {% if t.language_id == 1 %}
-                        {{t.get_translation_text}}
+                        <input type="text" name="traduc_ing" value="{{t.get_translation_text}}">
                     {% endif %}
                 {% endfor %}
             </td>
-            <td id="translation_portugues">
+            <td class="translation" id="traducao_portugues">
                 {% for t in g.1 %}
                     {% if t.language_id == 3 %}
-                        {{t.get_translation_text}}
+                        <input type="text" name="traduc_ptbr" value="{{t.get_translation_text}}">
                     {% endif %}
                 {% endfor %}
             </td>
@@ -65,8 +64,6 @@
         {% endfor %}
     </table>
 </form>
-
-
 
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -76,7 +73,9 @@
                 <h4 class="modal-title">Modal Header</h4>
             </div>
             <div class="modal-body">
-                <p>Some text in the modal.</p>
+            {% for conf in handshapes %}
+                <a id="{{conf.machine_value}}" href="#"><img src="{{URL}}/dictionary/protected_media/handshapeimage/{{conf.machine_value}}/handshape_{{conf.machine_value}}.jpg" width="50" height="50"/></a>
+            {% endfor %}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -84,6 +83,7 @@
         </div>
     </div>
 </div>
+
 <style>
 table {
   font-family: arial, sans-serif;
@@ -101,4 +101,5 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
+
 {% endblock %}

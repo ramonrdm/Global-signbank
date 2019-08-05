@@ -130,6 +130,7 @@ class GlossSheetView(ListView):
     def get_context_data(self, **kwargs):
         context = super(GlossSheetView, self).get_context_data(**kwargs)
         translations = Translation.objects.all()
+        handshapes = Handshape.objects.all()
         glosses = Gloss.objects.all()
         gloss_set = []
         for glosa in glosses:
@@ -142,6 +143,7 @@ class GlossSheetView(ListView):
             gloss_set.append(glosa_translat)
 
         context["gloss_set"] = gloss_set
+        context["handshapes"] = handshapes
         return context
 
     def get_translation_text(self, id):
