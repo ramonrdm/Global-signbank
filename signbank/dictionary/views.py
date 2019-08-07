@@ -55,7 +55,27 @@ def login_required_config(f):
 def ajax_update_gloss(request):
     data = request.POST
     gloss = Gloss.objects.get(pk=data["id"])
-    
+    ingles = Language.objects.get(pk=1)
+    portugues = Language.objects.get(pk=3)
+    translations_eng = Translation.objects.filter(gloss_id=gloss.id, language_id=1)
+    translations_ptbr = Translation.objects.filter(gloss_id=gloss.id, language_id=3)
+
+    keywords_ptbr = [x.translation.text for x in gloss.translation_set.all() if x.language.language_code_3char == "ptb"]
+
+    if data["traducao_portugues"] not in keywords_ptbr:
+        if not Keyword.objects.filter(text=data["traducao_portugues"]):
+            new_word = Keyword()
+            new_word.text = data["traducao_portugues"]
+            new_word.save()
+        else:
+            new_word = Keyword.objects.filter(text=data["traducao_portugues"])
+        translations_ptbr.delete()
+        new_translate = Translation()
+        new_translate.index = 0
+        new_translate.gloss_id = gloss.id
+        new_translate.translation_id = new_word[0].id
+        new_translate.language_id = portugues.id
+        new_translate.save()
     return HttpResponse("Got it")
 
 def serialize_glosses(dataset, queryset):
