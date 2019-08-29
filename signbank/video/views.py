@@ -29,16 +29,9 @@ def addvideo(request):
 
             gloss_id = form.cleaned_data['gloss_id']
             gloss = get_object_or_404(Gloss, pk=gloss_id)
-            
+
             vfile = form.cleaned_data['videofile']
-            
-            # construct a filename for the video, use sn
-            # if present, otherwise use idgloss+gloss id
-            if gloss.sn != None:
-                vfile.name = str(gloss.sn) + ".mp4"
-            else:
-                vfile.name = gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
-            
+            vfile.name = gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
             redirect_url = form.cleaned_data['redirect']
 
             # deal with any existing video for this sign
@@ -62,7 +55,6 @@ def addvideo(request):
                             os.remove(goal_folder+fname)
 
             # clean up the database entry for an old file, if necessary
-
             video_links_count = GlossVideo.objects.filter(gloss=gloss).count()
             video_links_objects = GlossVideo.objects.filter(gloss=gloss)
 
@@ -83,25 +75,6 @@ def addvideo(request):
             log_entry = GlossVideoHistory(action="upload", gloss=gloss, actor=request.user,
                                           uploadfile=vfile, goal_location=goal_location)
             log_entry.save()
-
-            # Issue #197: convert to thumbnail
-            try:
-                from CNGT_scripts.python.resizeVideos import VideoResizer
-
-                resizer = VideoResizer([goal_location], FFMPEG_PROGRAM, 180, 0, 0)
-                resizer.run()
-            except ImportError as i:
-                print("Error resizing video: ",i)
-
-            # Issue #214: generate still image
-            try:
-                from signbank.tools import generate_still_image
-                generate_still_image(gloss.idgloss[:2], goal_folder, goal_filename)
-            except:
-                print('Error generating still image')
-
-            if os.path.isfile(goal_location_small):
-                os.chmod(goal_location_small,0o660)
 
             # TODO: provide some feedback that it worked (if
             # immediate display of video isn't working)
@@ -175,13 +148,13 @@ def video(request, videoid):
 
 def iframe(request, videoid):
     """Generate an iframe with a player for this video"""
-    
+
     try:
         gloss = Gloss.objects.get(pk=videoid)
         glossvideo = gloss.get_video()
-        
+
         videourl = glossvideo.get_absolute_url()
-                
+
         posterurl = glossvideo.poster_url()
     except:
         gloss = None

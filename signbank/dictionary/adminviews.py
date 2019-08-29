@@ -126,6 +126,7 @@ class GlossSheetView(ListView):
     only_export_ecv = False
     view_type="spreadsheet"
     dataset_name = DEFAULT_DATASET
+    paginate_by = 50
 
     def get_context_data(self, **kwargs):
         context = super(GlossSheetView, self).get_context_data(**kwargs)
@@ -3155,18 +3156,18 @@ class MorphemeDetailView(DetailView):
 def gloss_ajax_search_results(request):
     """Returns a JSON list of glosses that match the previous search stored in sessions"""
 
-    if request.session['search_type'] == 'sign' or request.session['search_type'] == 'morpheme' or request.session['search_type'] == 'sign_or_morpheme':
-        return HttpResponse(json.dumps(request.session['search_results']))
-    else:
-        return HttpResponse(json.dumps(None))
+    # if request.session['search_type'] == 'sign' or request.session['search_type'] == 'morpheme' or request.session['search_type'] == 'sign_or_morpheme':
+    #     return HttpResponse(json.dumps(request.session['search_results']))
+    # else:
+    return HttpResponse(json.dumps(None))
 
 def handshape_ajax_search_results(request):
     """Returns a JSON list of handshapes that match the previous search stored in sessions"""
 
-    if request.session['search_type'] == 'handshape':
-        return HttpResponse(json.dumps(request.session['search_results']))
-    else:
-        return HttpResponse(json.dumps(None))
+    # if request.session['search_type'] == 'handshape':
+    #     return HttpResponse(json.dumps(request.session['search_results']))
+    # else:
+    return HttpResponse(json.dumps(None))
 
 def gloss_ajax_complete(request, prefix):
     """Return a list of glosses matching the search term

@@ -1,6 +1,0 @@
-version: '3'
-services:
-    web:
-        image: gstvob/signbank:latest
-        ports:
-            - 40120:8000
