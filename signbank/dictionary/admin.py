@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from signbank.dictionary.models import *
-from reversion.admin import VersionAdmin
 from signbank.settings import server_specific
 from signbank.settings.server_specific import FIELDS, SEPARATE_ENGLISH_IDGLOSS_FIELD
 from modeltranslation.admin import TranslationAdmin
@@ -15,7 +14,7 @@ class DatasetAdmin(GuardedModelAdmin):
     list_display = ('name', 'is_public', 'signlanguage',)
 
 
-class KeywordAdmin(VersionAdmin):
+class KeywordAdmin(admin.ModelAdmin):
     search_fields = ['^text']
 
 
@@ -85,7 +84,7 @@ class SenseNumberListFilter(SimpleListFilter):
 
 
 
-class GlossAdmin(VersionAdmin):
+class GlossAdmin(admin.ModelAdmin):
 
     idgloss_fields = ['idgloss']
 
@@ -106,7 +105,7 @@ class GlossAdmin(VersionAdmin):
     inlines = [ RelationInline, RelationToForeignSignInline, DefinitionInline, TranslationInline, OtherMediaInline ]
     history_latest_first = True
 
-class HandshapeAdmin(VersionAdmin):
+class HandshapeAdmin(admin.ModelAdmin):
 
     list_display = ['machine_value', 'english_name', 'dutch_name']
 
@@ -118,10 +117,10 @@ class DialectInline(admin.TabularInline):
 
     model = Dialect
 
-class DialectAdmin(VersionAdmin):
+class DialectAdmin(admin.ModelAdmin):
     model = Dialect
 
-class SignLanguageAdmin(VersionAdmin):
+class SignLanguageAdmin(admin.ModelAdmin):
     model = SignLanguage
     inlines = [DialectInline]
 
@@ -136,7 +135,7 @@ class UserProfileInline(admin.StackedInline):
 class UserAdmin(UserAdmin):
     inlines = (UserProfileInline, )
 
-class FieldChoiceAdmin(VersionAdmin):
+class FieldChoiceAdmin(admin.ModelAdmin):
     readonly_fields=['machine_value']
     actions=['delete_selected']
 

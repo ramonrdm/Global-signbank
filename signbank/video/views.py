@@ -38,14 +38,10 @@ def addvideo(request):
             goal_folder = WRITABLE_FOLDER+GLOSS_VIDEO_DIRECTORY + '/' + gloss.idgloss[:2] + '/'
             goal_filename = gloss.idgloss + '-' + str(gloss.pk) + '.mp4'
             goal_location = goal_folder + goal_filename
-            goal_filename_small = gloss.idgloss + '-' + str(gloss.pk) + '_small' + '.mp4'
-            goal_location_small = goal_folder + goal_filename_small
 
             if os.path.isfile(goal_location):
                 os.remove(goal_location)
-            if os.path.isfile(goal_location_small):
-                os.remove(goal_location_small)
-
+            
             # test for other video files for this gloss.pk with a different filename, such as version or old idgloss
             if os.path.isfile(goal_folder):
                 file_listing = os.listdir(goal_folder)
@@ -98,11 +94,6 @@ def deletevideo(request, videoid):
     if request.method == "POST":
         # deal with any existing video for this sign
         gloss = get_object_or_404(Gloss, pk=videoid)
-        vids = GlossVideo.objects.filter(gloss=gloss).order_by('version')
-        for v in vids:
-            # this will remove the most recent video, ie it's equivalent
-            # to delete if version=0
-            v.reversion(revert=True)
 
         # Issue #162: log the deletion history
         log_entry = GlossVideoHistory(action="delete", gloss=gloss, actor=request.user)

@@ -63,7 +63,6 @@ MIDDLEWARE_CLASSES = (
 #    'django_mobile.middleware.MobileDetectionMiddleware',
 #    'django_mobile.middleware.SetFlavourMiddleware',
 #    'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'reversion.middleware.RevisionMiddleware',
 )
 
 TEMPLATES = [
@@ -125,7 +124,6 @@ INSTALLED_APPS = (
     'signbank.pages',
     'signbank.attachments',
     'signbank.video',
-    'reversion',
     #'django_mobile',
     'tagging',
     'guardian',
@@ -243,7 +241,7 @@ LOGIN_REDIRECT_URL = "/"
 
 
 # location of ffmpeg, used to convert uploaded videos
-FFMPEG_PROGRAM = "/Applications/ffmpegX.app/Contents/Resources/ffmpeg"
+FFMPEG_PROGRAM = "/usr/bin/ffmpeg"
 FFMPEG_TIMEOUT = 60
 FFMPEG_OPTIONS = ["-vcodec", "h264", "-an"]
 
