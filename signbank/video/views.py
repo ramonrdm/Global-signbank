@@ -36,12 +36,11 @@ def addvideo(request):
             goal_location = goal_folder + goal_filename
 
             vfile = form.cleaned_data['videofile']
-            vfile.name =  '/' + gloss.idgloss[:2] + '/' + gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
+            vfile.name = gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
             redirect_url = form.cleaned_data['redirect']
 
-            curr_vid = GlossVideo.objects.filter(gloss=gloss).first()
-            if curr_vid is not None:
-                curr_vid.delete()
+            old_vid = GlossVideo.objects.filter(gloss_id=gloss_id)
+            old_vid.first().delete()
             
             # make a new GlossVideo object for the new file
             video = GlossVideo(videofile=vfile, gloss=gloss)

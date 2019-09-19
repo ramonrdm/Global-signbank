@@ -164,10 +164,14 @@ class GlossVideoHistory(models.Model):
         ordering = ['datestamp']
 
 
+def sinal_upload_path(instance, filename):
+    # o arquivo será salvo em MEDIA_ROOT/sinal_videos/originais/<filename>
+    return settings.GLOSS_VIDEO_DIRECTORY+'/%s/%s' %(instance.gloss.idgloss[:2], filename)
+
 class GlossVideo(models.Model):
     """A video that represents a particular idgloss"""
 
-    videofile = models.FileField("video file", upload_to=settings.GLOSS_VIDEO_DIRECTORY, storage=storage)
+    videofile = models.FileField("video file", upload_to=sinal_upload_path)
     gloss = models.ForeignKey(Gloss)
 
     def process(self):
