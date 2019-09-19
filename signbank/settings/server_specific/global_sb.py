@@ -33,7 +33,7 @@ else:
                       "NAME":"signbank_new",
                       "USER":"root",
                       "PASSWORD":"SenhaBoaMilGrau@@007",
-                      "HOST": "150.162.49.195",
+                      "HOST": "database",
                       "PORT": "3306"
                   }
               }
@@ -112,7 +112,7 @@ DEFAULT_DATASET = ''
 CNGT_EAF_FILES_LOCATION = WRITABLE_FOLDER+'corpus-ngt/eaf/'
 CNGT_METADATA_LOCATION = ROOT+'CNGT_MetadataEnglish_OtherResearchers.csv'
 
-FFMPEG_PROGRAM = "avconv"
+FFMPEG_PROGRAM = "ffmpeg"
 TMP_DIR = "/tmp"
 
 API_FIELDS = [

@@ -29,43 +29,23 @@ def addvideo(request):
 
             gloss_id = form.cleaned_data['gloss_id']
             gloss = get_object_or_404(Gloss, pk=gloss_id)
-
-            vfile = form.cleaned_data['videofile']
-            vfile.name = gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
-            redirect_url = form.cleaned_data['redirect']
-
+            
             # deal with any existing video for this sign
             goal_folder = WRITABLE_FOLDER+GLOSS_VIDEO_DIRECTORY + '/' + gloss.idgloss[:2] + '/'
             goal_filename = gloss.idgloss + '-' + str(gloss.pk) + '.mp4'
             goal_location = goal_folder + goal_filename
 
-            if os.path.isfile(goal_location):
-                os.remove(goal_location)
+            vfile = form.cleaned_data['videofile']
+            vfile.name =  '/' + gloss.idgloss[:2] + '/' + gloss.idgloss + "-" + str(gloss.pk) + ".mp4"
+            redirect_url = form.cleaned_data['redirect']
+
+            curr_vid = GlossVideo.objects.filter(gloss=gloss).first()
+            if curr_vid is not None:
+                curr_vid.delete()
             
-            # test for other video files for this gloss.pk with a different filename, such as version or old idgloss
-            if os.path.isfile(goal_folder):
-                file_listing = os.listdir(goal_folder)
-                for fname in file_listing:
-                    if re.match('.*\-'+str(gloss.pk)+'\..*', fname):
-                        if os.path.isfile(goal_folder+fname):
-                            os.remove(goal_folder+fname)
-
-            # clean up the database entry for an old file, if necessary
-            video_links_count = GlossVideo.objects.filter(gloss=gloss).count()
-            video_links_objects = GlossVideo.objects.filter(gloss=gloss)
-
-            if video_links_count > 0:
-                # delete the old video object links stored in the database
-                for video_object in video_links_objects:
-                    video_object.delete()
-
             # make a new GlossVideo object for the new file
             video = GlossVideo(videofile=vfile, gloss=gloss)
             video.save()
-
-            #Make sure the rights of the new file are okay
-            if os.path.isfile(goal_location):
-                os.chmod(goal_location,0o660)
 
             # Issue #162: log the upload history
             log_entry = GlossVideoHistory(action="upload", gloss=gloss, actor=request.user,

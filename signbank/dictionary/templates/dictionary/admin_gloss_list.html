@@ -678,8 +678,8 @@ function do_toggle_groups(el) {
                         </div>
                     </div>
                 </div>
-                <div class="panel-body embed-responsive embed-responsive-16by9">
-                    <video class="" id="video-{{gloss.pk}}" preload="metadata" muted=" " poster="{{protected_media_url}}{{gloss.get_image_path}}" onclick="this.paused?this.play():this.pause()" playsinline="">
+                <div class="panel-body embed-responsive embed-responsive-16by9">             
+                    <video class="" style="cursor: pointer;" id="video-{{gloss.pk}}" preload="metadata" muted=" " poster="{{protected_media_url}}{{gloss.get_image_path}}" onclick="this.paused?this.play():this.pause()" playsinline="">
                         <source src="{{protected_media_url}}{{gloss.get_video}}" type="video/mp4"/>
                     </video>
                 </div>

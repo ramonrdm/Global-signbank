@@ -168,13 +168,7 @@ class GlossVideo(models.Model):
     """A video that represents a particular idgloss"""
 
     videofile = models.FileField("video file", upload_to=settings.GLOSS_VIDEO_DIRECTORY, storage=storage)
-
     gloss = models.ForeignKey(Gloss)
-
-    ## video version, version = 0 is always the one that will be displayed
-    # we will increment the version (via reversion) if a new video is added
-    # for this gloss
-    version = models.IntegerField("Version", default=0)
 
     def process(self):
         """The clean method will try to validate the video
@@ -251,49 +245,6 @@ class GlossVideo(models.Model):
 
         url = self.get_absolute_url()
         return url.replace(settings.MEDIA_URL, settings.MEDIA_MOBILE_URL)
-
-
-    # def reversion(self, revert=False):
-    #     """We have a new version of this video so increase
-    #     the version count here and rename the video
-    #     to video.mp4.bak.V where V is the version number
-    #
-    #     unless revert=True, in which case we go the other
-    #     way and decrease the version number, if version=0
-    #     we delete ourselves"""
-    #
-    #
-    #     if revert:
-    #         print("REVERT VIDEO", self.videofile.name, self.version)
-    #         if self.version==0:
-    #             print("DELETE VIDEO VIA REVERSION", self.videofile.name)
-    #             self.delete_files()
-    #             self.delete()
-    #             return
-    #         else:
-    #             # remove .bak from filename and decrement the version
-    #             (newname, bak) = os.path.splitext(self.videofile.name)
-    #             if bak != '.bak':
-    #                 # hmm, something bad happened
-    #                 raise Http500()
-    #             self.version -= 1
-    #     else:
-    #         # find a name for the backup, a filename that isn't used already
-    #         newname = self.videofile.name
-    #         while os.path.exists(os.path.join(storage.location, newname)):
-    #             self.version += 1
-    #             newname = newname + ".bak"
-    #
-    #     # now do the renaming
-    #
-    #     os.rename(os.path.join(storage.location, self.videofile.name), os.path.join(storage.location, newname))
-    #     # also remove the post image if present, it will be regenerated
-    #     poster = self.poster_path(create=False)
-    #     if poster != None:
-    #         os.unlink(poster)
-    #     self.videofile.name = newname
-    #     self.save()
-
 
     def __str__(self):
         return self.videofile.name

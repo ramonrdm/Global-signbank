@@ -46,8 +46,9 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
+
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '^g=q21r_nnmbz49d!vs*2gvpll-y9b@&amp;t3k2r3c$*u&amp;2la5!%s'
+SECRET_KEY = "^g=q21r_nnmbz49d!vs*2gvpll-y9b@&amp;t3k2r3c$*u&amp;2la5!%s"
 
 MIDDLEWARE_CLASSES = (
 #    'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -161,7 +162,7 @@ LOGGING = {
 
 
 # turn on lots of logging or not
-DO_LOGGING = False
+DO_LOGGING = True
 LOG_FILENAME = "debug.log"
 
 

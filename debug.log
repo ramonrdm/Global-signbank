@@ -1,2040 +1,372 @@
-Internal Server Error: /
+2019-09-17 22:12:09,315 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,320 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,331 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,336 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,345 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,391 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,562 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,578 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,580 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,586 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,589 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,634 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,803 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,813 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,815 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,816 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,818 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,869 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,907 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:12:09,917 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 22:13:51,743 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 22:13:55,113 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 22:55:42,410 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,414 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,418 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,447 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,458 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,490 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,627 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,648 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,675 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,676 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,711 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,745 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,873 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,907 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,959 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:42,974 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:43,020 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:43,050 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:43,088 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 22:55:43,091 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:12:21,004 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:12:21,355 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,362 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,378 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,391 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,400 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,440 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,567 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,618 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,628 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,629 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,647 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,671 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,834 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,856 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,857 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,865 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,879 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,882 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:12:21,923 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:00,994 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,012 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,024 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,028 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,067 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,081 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,214 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,219 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,281 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,297 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,315 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,357 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,454 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,456 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,514 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,537 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,564 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,568 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,613 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:01,619 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:16:36,201 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:16:36,546 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,569 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,593 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,594 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,612 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,614 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,766 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,790 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,826 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,848 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,850 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,851 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:36,975 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,058 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,058 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,059 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,075 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,094 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:37,111 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:47,976 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:16:48,300 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,310 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,353 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,356 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,366 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,368 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,538 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,539 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,563 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,564 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,588 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,597 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,745 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,780 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,798 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,798 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,819 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,819 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:16:48,849 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,525 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:17:01,882 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,903 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,921 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,923 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,925 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:01,927 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,119 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,120 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,143 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,151 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,151 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,169 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,334 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,336 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,368 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,377 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,390 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,392 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:17:02,429 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,471 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:18:06,809 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,810 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,812 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,819 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,838 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:06,841 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,011 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,048 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,054 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,055 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,070 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,071 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,266 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,271 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,276 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,294 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,335 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,341 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:07,395 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:21,660 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:18:22,041 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,042 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,044 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,054 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,055 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,056 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,306 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,321 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,343 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,349 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,364 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,375 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,615 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,636 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,639 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,639 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,660 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,663 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:22,707 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:33,899 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:18:34,284 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,294 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,322 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,323 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,324 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,339 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,542 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,555 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,570 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,574 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,583 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,597 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,781 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,799 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,799 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,809 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,814 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,815 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:34,860 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:41,691 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:18:42,014 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,037 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,067 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,095 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,119 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,134 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,249 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,251 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,313 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,319 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,327 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,363 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,461 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,529 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,541 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,559 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,599 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,623 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:18:42,634 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,018 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:19:32,341 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,361 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,377 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,386 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,397 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,405 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,570 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,570 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,596 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,597 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,638 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,665 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,773 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,817 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,820 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,824 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,850 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,860 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:32,890 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,523 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-17 23:19:53,884 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,889 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,889 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,902 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,909 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:53,913 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,076 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,108 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,145 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,150 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,152 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,157 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,276 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,342 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,354 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,367 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,396 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,399 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-17 23:19:54,424 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,224 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,268 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,270 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,280 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,302 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,303 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,453 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,476 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,505 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,511 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,525 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,534 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,686 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,712 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,715 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,730 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,745 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,771 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,815 - WARNING - Not Found: /dictionary/protected_media/
+2019-09-19 22:21:20,816 - WARNING - Not Found: /dictionary/protected_media/None/
+2019-09-19 22:21:23,537 - WARNING - Not Found: /dictionary/protected_media/glossimage/sw3447.jpg/
+2019-09-19 22:21:34,674 - WARNING - Not Found: /dictionary/protected_media/glossimage/sw3447.jpg/
+2019-09-19 22:21:40,575 - ERROR - Internal Server Error: /video/upload/
 Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.IntegrityError: (1364, "Field 'version' doesn't have a default value")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/pages/views.py", line 62, in page
-    'page': f,
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+  File "/var/www/signbank/repo/signbank/video/views.py", line 50, in addvideo
+    video.save()
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/base.py", line 836, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/base.py", line 922, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/base.py", line 961, in _do_insert
+    using=using, raw=raw)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/query.py", line 1060, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1099, in execute_sql
     cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/utils.py", line 80, in execute
     return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
     return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
     six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
+  File "/var/www/signbank/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
     return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Internal Server Error: /favicon.ico/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 199, in get_response
-    response = middleware_method(request, response)
-  File "/home/wessel/signbank/signbank/pages/middleware.py", line 11, in process_response
-    return page(request, request.path_info)
-  File "/home/wessel/signbank/signbank/pages/views.py", line 40, in page
-    return HttpResponseNotFound(t.render(RequestContext(request)))
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /publisher/pages/page/None/
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /publisher/pages/page/None/
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Internal Server Error: /dictionary/gloss/204
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 110, in get
-    self.object = self.get_object()
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 52, in get_object
-    obj = queryset.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/gloss/204
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 110, in get
-    self.object = self.get_object()
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 52, in get_object
-    obj = queryset.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/gloss/204
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 110, in get
-    self.object = self.get_object()
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 52, in get_object
-    obj = queryset.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/gloss/204
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 110, in get
-    self.object = self.get_object()
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 52, in get_object
-    obj = queryset.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/words/eerlijk-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/words/eerlijk-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/words/eerlijk-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/words/handtekening-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /dictionary/words/handtekening-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 115, in word
-    word = get_object_or_404(Keyword, text=keyword)
-  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 113, in get_object_or_404
-    return queryset.get(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: dictionary_keyword
-Internal Server Error: /dictionary/words/handtekening-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 115, in word
-    word = get_object_or_404(Keyword, text=keyword)
-  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 113, in get_object_or_404
-    return queryset.get(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: dictionary_keyword
-Not Found: /dictionary/words/
-Internal Server Error: /dictionary/words/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 199, in get_response
-    response = middleware_method(request, response)
-  File "/home/wessel/signbank/signbank/pages/middleware.py", line 11, in process_response
-    return page(request, request.path_info)
-  File "/home/wessel/signbank/signbank/pages/views.py", line 40, in page
-    return HttpResponseNotFound(t.render(RequestContext(request)))
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Internal Server Error: /dictionary/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 377, in search
-    context_instance=RequestContext(request))
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Internal Server Error: /
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/pages/views.py", line 62, in page
-    'page': f,
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Internal Server Error: /
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/pages/views.py", line 62, in page
-    'page': f,
-  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 169, in __init__
-    self.update(processor(request))
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 14, in menu
-    (menu, ignore) = find_children(None, request.META['PATH_INFO'])
-  File "/home/wessel/signbank/signbank/pages/context_processors.py", line 27, in find_children
-    for page in Page.objects.filter(parent=page, publish=True).order_by('index'):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 96, in __iter__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: pages_page
-Internal Server Error: /dictionary/words/heerlijk-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.annotation_idgloss_en
-Internal Server Error: /admin/dictionary/gloss/3/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 198, in inner
-    return view(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/revisions.py", line 296, in do_revision_context
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 29, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 25, in bound_func
-    return func(self, *args2, **kwargs2)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/transaction.py", line 371, in inner
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1206, in change_view
-    ModelForm = self.get_form(request, obj)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 531, in get_form
-    % (e, self.__class__.__name__))
-FieldError: Unknown field(s) (absOriFig, TokNoGe) specified for Gloss. Check fields/fieldsets/exclude attributes of class GlossAdmin.
-Not Found: /favicon.ico
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /favicon.ico/
-Internal Server Error: /dictionary/gloss/AANPAKKEN.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 130, in get_response
-    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
-ValueError: The view signbank.dictionary.views.gloss didn't return an HttpResponse object.
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 137, in get_response
-    response = response.render()
-  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 80, in rendered_content
-    template = self.resolve_template(self.template_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 56, in resolve_template
-    return loader.select_template(template)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 180, in select_template
-    return get_template(template_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in get_template
-    template, origin = find_template(template_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 127, in find_template
-    source, display_name = loader(name, dirs)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 43, in __call__
-    return self.load_template(template_name, template_dirs)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 49, in load_template
-    template = get_template_from_string(source, origin, template_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 149, in get_template_from_string
-    return Template(source, origin, name)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
-    self.nodelist = compile_string(template_string, origin)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
-    return parser.parse()
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 278, in parse
-    compiled_result = compile_func(self, token)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 215, in do_extends
-    nodelist = parser.parse()
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 278, in parse
-    compiled_result = compile_func(self, token)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 190, in do_block
-    nodelist = parser.parse(('endblock',))
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 278, in parse
-    compiled_result = compile_func(self, token)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 805, in do_for
-    sequence = parser.compile_filter(bits[in_index+1])
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 360, in compile_filter
-    return FilterExpression(token, self)
-  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 577, in __init__
-    "from '%s'" % (token[upto:], token))
-TemplateSyntaxError: Could not parse the remainder: '[1,2,3]' from '[1,2,3]'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [Gloss.field_labels.contType,2,3];
-AttributeError: 'function' object has no attribute 'contType'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].field_labels.contType,2,3];
-AttributeError: 'function' object has no attribute 'contType'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels().get_domhndsh,3];
-AttributeError: 'dict' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels['get_domhndsh'],3];
-TypeError: 'instancemethod' object has no attribute '__getitem__'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels['get_domhndsh'],3];
-TypeError: 'instancemethod' object has no attribute '__getitem__'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels.get_domhndsh,3];
-AttributeError: 'function' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels.get_domhndsh,3];
-AttributeError: 'function' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels().get_domhndsh,3];
-AttributeError: 'dict' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels().get_domhndsh,3];
-AttributeError: 'dict' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels().get_domhndsh,3];
-AttributeError: 'dict' object has no attribute 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 286, in get_context_data
-    context['wesseltest'] = [context['gloss'].get_domhndsh_display,context['gloss'].field_labels()['get_domhndsh'],3];
-KeyError: 'get_domhndsh'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 287, in get_context_data
-    labels = gl.fields_labels();
-AttributeError: 'Gloss' object has no attribute 'fields_labels'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 287, in get_context_data
-    labels = gl.fields_labels();
-AttributeError: 'Gloss' object has no attribute 'fields_labels'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 289, in get_context_data
-    context['fields'] = [(gl.getattr('get_domhndsh_display'),'domhndsh',labels['domhndsh']),];
-AttributeError: 'Gloss' object has no attribute 'getattr'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 289, in get_context_data
-    context['fields'] = [(gl.__getattr__('get_domhndsh_display'),'domhndsh',labels['domhndsh']),];
-AttributeError: 'Gloss' object has no attribute '__getattr__'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 289, in get_context_data
-    context['fields'] = [(gl.__getattr__('get_domhndsh_display'),'domhndsh',labels['domhndsh']),];
-AttributeError: 'Gloss' object has no attribute '__getattr__'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 288
-    fields = ['domhndsh,];
-                         ^
-SyntaxError: EOL while scanning string literal
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 292, in get_context_data
-    context['fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in fields];
-AttributeError: 'Gloss' object has no attribute 'get_absOriPalm_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 292, in get_context_data
-    context['fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in fields];
-AttributeError: 'Gloss' object has no attribute 'get_absOriFing_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 292, in get_context_data
-    context['fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in fields];
-AttributeError: 'Gloss' object has no attribute 'get_repeat_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 292, in get_context_data
-    context['fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in fields];
-AttributeError: 'Gloss' object has no attribute 'get_altern_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 292, in get_context_data
-    context['fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in fields];
-AttributeError: 'Gloss' object has no attribute 'get_movShape_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 295
-    frequency_fields = ['tokNo','tokNoSgnr','tokNoA','tokNoSgnrA','tokNoV','tokNoSgnrV','tokNoR','tokNoSgnrR];
-                                                                                                              ^
-SyntaxError: EOL while scanning string literal
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 297, in get_context_data
-    context['phonology_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in phonology_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonOth_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 291
-    'relOriMov','relOriLoc','handCh','movDir','movMan','contType',,'mouthG','mouthing','phonetVar',];
-                                                                  ^
-SyntaxError: invalid syntax
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 291
-    'relOriMov','relOriLoc','handCh','movDir','movMan','contType',,'mouthG','mouthing','phonetVar',];
-                                                                  ^
-SyntaxError: invalid syntax
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 297, in get_context_data
-    context['phonology_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in phonology_fields];
-AttributeError: 'Gloss' object has no attribute 'get_mouthG_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 297, in get_context_data
-    context['phonology_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in phonology_fields];
-AttributeError: 'Gloss' object has no attribute 'get_mouthing_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 297, in get_context_data
-    context['phonology_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in phonology_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_iconImg_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 299, in get_context_data
-    context['frequency_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in frequency_fields];
-AttributeError: 'Gloss' object has no attribute 'get_tokNo_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 299, in get_context_data
-    context['frequency_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in frequency_fields];
-AttributeError: 'Gloss' object has no attribute 'get_tokNo_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 299, in get_context_data
-    context['frequency_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in frequency_fields];
-AttributeError: 'Gloss' object has no attribute 'get_tokNoSgnr_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 295
-    frequency_fields = [,'tokNoA','tokNoSgnrA','tokNoV','tokNoSgnrV','tokNoR','tokNoSgnrR']; #'tokNo',tokNoSgnr
-                        ^
-SyntaxError: invalid syntax
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 24, in <module>
-    url(r'^dictionary/', include('signbank.dictionary.urls', namespace='dictionary')),
-  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 26, in include
-    urlconf_module = import_module(urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/urls.py", line 7, in <module>
-    from signbank.dictionary.adminviews import GlossListView, GlossDetailView
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 295
-    frequency_fields = [,'tokNoA','tokNoSgnrA','tokNoV','tokNoSgnrV','tokNoR','tokNoSgnrR']; #'tokNo',tokNoSgnr
-                        ^
-SyntaxError: invalid syntax
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 299, in get_context_data
-    context['frequency_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in frequency_fields];
-AttributeError: 'Gloss' object has no attribute 'get_tokNoA_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 298, in get_context_data
-    context['semantics_fields'] = [(getattr(gl,'get_'+field+'_display'),field,labels[field]) for field in semantics_fields];
-AttributeError: 'Gloss' object has no attribute 'get_phonetVar_display'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 300, in get_context_data
-    for field in fields['topic']:
-KeyError: 'topic'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    context[topic+'_fields'].append([value,field,labels[field]]);
-KeyError: 'phonology_fields'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    context[topic+'_fields'].append([value,field,labels[field]]);
-KeyError: 'phonology_fields'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    value = field.value;
-AttributeError: 'str' object has no attribute 'value'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    value = gl.field;
-AttributeError: 'Gloss' object has no attribute 'field'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    value = getattr(gl,field);
-AttributeError: 'Gloss' object has no attribute 'movShape'
-Internal Server Error: /dictionary/gloss/162
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
-    return view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 87, in dispatch
-    return handler(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/detail.py", line 111, in get
-    context = self.get_context_data(object=self.object)
-  File "/home/wessel/signbank/signbank/dictionary/adminviews.py", line 307, in get_context_data
-    value = getattr(gl,field);
-AttributeError: 'Gloss' object has no attribute 'movShape'
-Internal Server Error: /dictionary/words/eerlijk-1.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 121, in word
-    allkwds = trans.gloss.translation_set.all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 320, in __get__
-    rel_obj = qs.get()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.useInstr
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Internal Server Error: /admin/dictionary/gloss/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 198, in inner
-    return view(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/revisions.py", line 296, in do_revision_context
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/admin.py", line 422, in changelist_view
-    return super(VersionAdmin, self).changelist_view(request, context)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 29, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 25, in bound_func
-    return func(self, *args2, **kwargs2)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1411, in changelist_view
-    'selection_note': _('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such column: dictionary_gloss.handedness
-Internal Server Error: /admin/dictionary/gloss/71/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
-    resolver_match = resolver.resolve(request.path_info)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 109, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 220, in validate_inlines
-    "from BaseModelAdmin." % (cls.__name__, idx))
-ImproperlyConfigured: 'GlossAdmin.inlines[3]' does not inherit from BaseModelAdmin.
-Internal Server Error: /admin/dictionary/gloss/71/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 99, in get_response
-    resolver_match = resolver.resolve(request.path_info)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 109, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 220, in validate_inlines
-    "from BaseModelAdmin." % (cls.__name__, idx))
-ImproperlyConfigured: 'GlossAdmin.inlines[3]' does not inherit from BaseModelAdmin.
-Internal Server Error: /dictionary/gloss/1572
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 109, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 220, in validate_inlines
-    "from BaseModelAdmin." % (cls.__name__, idx))
-ImproperlyConfigured: 'GlossAdmin.inlines[3]' does not inherit from BaseModelAdmin.
-Internal Server Error: /dictionary/gloss/1572
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 113, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 227, in validate_inlines
-    inline.validate(inline.model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 64, in validate_raw_id_fields
-    f = get_field(cls, model, 'raw_id_fields', field)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 418, in get_field
-    % (cls.__name__, label, field, model._meta.app_label, model.__name__))
-ImproperlyConfigured: 'RelationToForeignSignInline.raw_id_fields' refers to field 'relation' that is missing from model 'dictionary.RelationToForeignSign'.
-Internal Server Error: /dictionary/gloss/1572
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 113, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 227, in validate_inlines
-    inline.validate(inline.model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 64, in validate_raw_id_fields
-    f = get_field(cls, model, 'raw_id_fields', field)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 418, in get_field
-    % (cls.__name__, label, field, model._meta.app_label, model.__name__))
-ImproperlyConfigured: 'RelationToForeignSignInline.raw_id_fields' refers to field 'relation' that is missing from model 'dictionary.RelationToForeignSign'.
-Internal Server Error: /dictionary/gloss/1572
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 88, in get_response
-    response = middleware_method(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 71, in process_request
-    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 596, in is_valid_path
-    resolve(path, urlconf)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 476, in resolve
-    return get_resolver(urlconf).resolve(path)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 337, in resolve
-    for pattern in self.url_patterns:
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 365, in url_patterns
-    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
-  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 360, in urlconf_module
-    self._urlconf_module = import_module(self.urlconf_name)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/urls.py", line 10, in <module>
-    admin.autodiscover()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
-    import_module('%s.admin' % app)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 40, in import_module
-    __import__(name)
-  File "/home/wessel/signbank/signbank/dictionary/admin.py", line 113, in <module>
-    admin.site.register(Gloss, GlossAdmin)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 92, in register
-    admin_class.validate(model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 227, in validate_inlines
-    inline.validate(inline.model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 106, in validate
-    validator.validate(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 25, in validate
-    getattr(self, m)(cls, model)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/validation.py", line 68, in validate_raw_id_fields
-    % (cls.__name__, idx, field))
-ImproperlyConfigured: 'RelationToForeignSignInline.raw_id_fields[0]', 'other_lang_gloss' must be either a ForeignKey or ManyToManyField.
-Internal Server Error: /admin/dictionary/gloss/71/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 198, in inner
-    return view(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/revisions.py", line 296, in do_revision_context
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 29, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 25, in bound_func
-    return func(self, *args2, **kwargs2)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/transaction.py", line 371, in inner
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1232, in change_view
-    change_message = self.construct_change_message(request, form, formsets)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 811, in construct_change_message
-    'object': force_text(added_object)})
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/encoding.py", line 108, in force_text
-    s = six.text_type(bytes(s), encoding, errors)
-  File "/home/wessel/signbank/signbank/dictionary/models.py", line 177, in __str__
-    return str(self.gloss)+"/"+self.role
-AttributeError: 'RelationToForeignSign' object has no attribute 'role'
-Not Found: /favicon.ico
-Not Found: /favicon.ico/
-Not Found: /dictionary/admin
-Not Found: /dictionary/admin/
-Internal Server Error: /admin/dictionary/keyword/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 198, in inner
-    return view(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/revisions.py", line 296, in do_revision_context
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/admin.py", line 422, in changelist_view
-    return super(VersionAdmin, self).changelist_view(request, context)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 29, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 25, in bound_func
-    return func(self, *args2, **kwargs2)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1331, in changelist_view
-    response = self.response_action(request, queryset=cl.get_queryset(request))
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1084, in response_action
-    response = func(self, request, queryset)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/actions.py", line 36, in delete_selected
-    queryset, opts, request.user, modeladmin.admin_site, using)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/util.py", line 109, in get_deleted_objects
-    collector.collect(objs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/util.py", line 160, in collect
-    return super(NestedObjects, self).collect(objs, source_attr=source_attr, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 196, in collect
-    elif sub_objs:
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 100, in __nonzero__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: too many SQL variables
-Internal Server Error: /admin/dictionary/keyword/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 198, in inner
-    return view(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/revisions.py", line 296, in do_revision_context
-    return func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/admin.py", line 422, in changelist_view
-    return super(VersionAdmin, self).changelist_view(request, context)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 29, in _wrapper
-    return bound_func(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 25, in bound_func
-    return func(self, *args2, **kwargs2)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1331, in changelist_view
-    response = self.response_action(request, queryset=cl.get_queryset(request))
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 1084, in response_action
-    response = func(self, request, queryset)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/actions.py", line 36, in delete_selected
-    queryset, opts, request.user, modeladmin.admin_site, using)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/util.py", line 109, in get_deleted_objects
-    collector.collect(objs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/util.py", line 160, in collect
-    return super(NestedObjects, self).collect(objs, source_attr=source_attr, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/deletion.py", line 196, in collect
-    elif sub_objs:
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 100, in __nonzero__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: too many SQL variables
-Internal Server Error: /admin/dictionary/keyword/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/options.py", line 432, in wrapper
-    return self.admin_site.admin_view(view)(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 99, in _wrapped_view
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
-    response = view_func(request, *args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 192, in inner
-    if not self.has_permission(request):
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 143, in has_permission
-    return request.user.is_active and request.user.is_staff
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 213, in inner
-    self._setup()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 298, in _setup
-    self._wrapped = self._setupfunc()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
-    request.user = SimpleLazyObject(lambda: get_user(request))
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/middleware.py", line 10, in get_user
-    request._cached_user = auth.get_user(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 140, in get_user
-    user_id = request.session[SESSION_KEY]
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
-    return self._session[key]
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
-    self._session_cache = self.load()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/db.py", line 20, in load
-    expire_date__gt=timezone.now()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 151, in get
-    return self.get_queryset().get(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: database is locked
-Internal Server Error: /admin/dictionary/keyword/
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 199, in get_response
-    response = middleware_method(request, response)
-  File "/usr/local/lib/python2.7/dist-packages/reversion/middleware.py", line 34, in process_response
-    and hasattr(request, "user") and request.user.is_authenticated() \
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 213, in inner
-    self._setup()
-  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 298, in _setup
-    self._wrapped = self._setupfunc()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/middleware.py", line 18, in <lambda>
-    request.user = SimpleLazyObject(lambda: get_user(request))
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/middleware.py", line 10, in get_user
-    request._cached_user = auth.get_user(request)
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 140, in get_user
-    user_id = request.session[SESSION_KEY]
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/base.py", line 47, in __getitem__
-    return self._session[key]
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/base.py", line 173, in _get_session
-    self._session_cache = self.load()
-  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sessions/backends/db.py", line 20, in load
-    expire_date__gt=timezone.now()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 151, in get
-    return self.get_queryset().get(*args, **kwargs)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 304, in get
-    num = len(clone)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 77, in __len__
-    self._fetch_all()
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 857, in _fetch_all
-    self._result_cache = list(self.iterator())
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 220, in iterator
-    for row in compiler.results_iter():
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 713, in results_iter
-    for rows in self.execute_sql(MULTI):
-  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
-    cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 69, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 99, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 53, in execute
-    return self.cursor.execute(sql, params)
-  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 451, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: database is locked
-Not Found: /dictionary/admin
-Not Found: /dictionary/admin/
-Not Found: /dictionary/admin/
-Not Found: /dictionary/admin/
-Not Found: /dictionary/admin/
-Internal Server Error: /dictionary/gloss/AANBELLEN.html
-Traceback (most recent call last):
-  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 112, in get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/wessel/signbank/signbank/dictionary/views.py", line 211, in gloss
-    videourl = gloss.get_video_url()
-  File "/home/wessel/signbank/signbank/dictionary/models.py", line 999, in get_video_url
-    return video.get_absolute_url()
-AttributeError: 'str' object has no attribute 'get_absolute_url'
-Not Found: /home/wessel/signbank/signbank/video/testmedia/AANBELLEN-230bits.mp4
-Not Found: /home/wessel/signbank/signbank/video/testmedia/AANBELLEN-230bits.mp4/
-Not Found: /home/wessel/signbank/signbank/video/testmedia/AANBELLEN-320kbits.mp4
-Not Found: /home/wessel/signbank/signbank/video/testmedia/AANBELLEN-320kbits.mp4/
-Not Found: /dictionary/video/
-Not Found: /video/
-Not Found: /video/
-Not Found: /video/1/
-Not Found: /video/230
-Not Found: /video/230/
+  File "/var/www/signbank/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/var/www/signbank/lib/python3.5/site-packages/MySQLdb/connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+django.db.utils.IntegrityError: (1364, "Field 'version' doesn't have a default value")
+2019-09-19 22:21:40,878 - WARNING - Not Found: /favicon.ico/
+2019-09-19 22:22:15,371 - ERROR - Internal Server Error: /video/upload/
+Traceback (most recent call last):
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/var/www/signbank/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/signbank/repo/signbank/video/views.py", line 46, in addvideo
+    GlossVideo.objects.filter(gloss=gloss).first().delete()
+AttributeError: 'NoneType' object has no attribute 'delete'
+2019-09-19 22:25:37,889 - WARNING - Not Found: /dictionary/protected_media/glossimage/sw3447.jpg/
+2019-09-19 22:26:22,905 - WARNING - Not Found: /dictionary/protected_media/glossimage/sw3447.jpg/
