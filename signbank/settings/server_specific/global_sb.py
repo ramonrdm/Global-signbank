@@ -33,7 +33,7 @@ else:
                       "NAME":"signbank_new",
                       "USER":"root",
                       "PASSWORD":"SenhaBoaMilGrau@@007",
-                      "HOST": "150.162.49.195",
+                      "HOST": "database",
                       "PORT": "3306"
                   }
               }
