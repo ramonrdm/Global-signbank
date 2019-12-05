@@ -1,16 +1,16 @@
-version: '3.1'
+version: '3.5'
 
 services:
     web:
         image: gstvob/signbank
-        command: python3 repo/bin/develop.py runserver 0.0.0.0:8000
+        command: bash -c 'python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
         volumes:
-            - '../django/:code/'
+            - '../django/:/code/'
         ports:
             - 8000:8000
 
-    database:
-        image: mysql:5.6
-        environment:
-            MYSQL_ROOT_PASSWORD: placeholder_pw
-            MYSQL_DATABASE: signbank_new
+    # database:
+    #     image: mysql:5.6
+    #     environment:
+    #         MYSQL_ROOT_PASSWORD: placeholder_pw
+    #         MYSQL_DATABASE: signbank_new

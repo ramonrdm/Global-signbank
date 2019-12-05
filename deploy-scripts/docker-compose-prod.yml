@@ -13,7 +13,7 @@ volumes:
 services:
     web:
         image: gstvob/signbank:latest
-        command: python3 repo/bin/develop.py runserver 0.0.0.0:8000
+        command: bin -c 'python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
         volumes:
             - imagens:code/media/writable/glossimage
             - videos:code/glossvideo

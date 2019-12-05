@@ -1,7 +1,7 @@
 import socket
 hostname = socket.gethostname()
 
-ROOT = '../../../'
+ROOT = '../../../../'
 
 def get_secret(secret_name):
   try:
@@ -10,8 +10,8 @@ def get_secret(secret_name):
   except IOError:
     return None
 
-BASE_DIR = ROOT
-WRITABLE_FOLDER = ROOT+'media/writable/'
+BASE_DIR = ROOT+"code/"
+WRITABLE_FOLDER = BASE_DIR+'media/writable/'
 
 # Added test database, to run unit tests using this copy of the database, use -k argument to keep test database
 #      python bin/develop.py test -k
