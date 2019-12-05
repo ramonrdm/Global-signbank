@@ -1,0 +1,27 @@
+version: '3.1'
+
+volumes:
+    imagens:
+        driver: local
+        driver_opts:
+            type: ceph
+    videos:
+        driver: local
+        driver_opts:
+            type: ceph
+
+services:
+    web:
+        image: gstvob/signbank:latest
+        command: python3 repo/bin/develop.py runserver 0.0.0.0:8000
+        volumes:
+            - imagens:code/media/writable/glossimage
+            - videos:code/glossvideo
+        ports:
+            - 40120:8000
+
+    database:
+        image: mysql:5.6
+        environment:
+            MYSQL_ROOT_PASSWORD: placeholder_pw
+            MYSQL_DATABASE: signbank_new
