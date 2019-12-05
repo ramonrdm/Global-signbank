@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+    web:
+        image: gstvob/signbank
+        command: python3 repo/bin/develop.py runserver 0.0.0.0:8000
+        volumes:
+            - '.:/var/www/repo/'
+        ports:
+            - 8000:8000
+
+    database:
+        image: mysql:5.6
+        environment:
+            MYSQL_ROOT_PASSWORD: SenhaBoaMilGrau@@007
+            MYSQL_DATABASE: signbank_new
