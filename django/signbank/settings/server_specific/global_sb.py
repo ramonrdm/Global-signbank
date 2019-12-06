@@ -32,18 +32,11 @@ else:
                       'ENGINE': 'django.db.backends.mysql',
                       "NAME":"signbank_new",
                       "USER":"root",
-                      "PASSWORD":"placeholder_pw",
-                      "HOST": "database",
+                      "PASSWORD":"SenhaBoaMilGrau@@007",
+                      "HOST": "150.162.49.195",
                       "PORT": "3306"
                   }
               }
-    #
-    # DATABASES = {'default':
-    #             {
-    #                 'ENGINE': 'django.db.backends.sqlite3',
-    #                 'NAME': WRITABLE_FOLDER+'database/signbank.db',
-    #             }
-    #         }
 
 
 ADMINS = (('Admin', 'gustavo.borgesfr@gmail.com'))
