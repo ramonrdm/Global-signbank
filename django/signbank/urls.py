@@ -36,6 +36,8 @@ import debug_toolbar
 urlpatterns = [
     url(r'^$', signbank.pages.views.page, name='root_page'),
 
+    url(r'^api/$', api),
+
     url(r'^dictionary/', include(signbank.dictionary.urls, namespace='dictionary')),
     url(r'^feedback/', include(signbank.feedback.urls)),
     url(r'^attachments/', include(signbank.attachments.urls)),
