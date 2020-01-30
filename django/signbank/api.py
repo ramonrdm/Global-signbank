@@ -5,15 +5,28 @@ from django.apps import apps
 from django.core.serializers.python import Serializer
 from django.core.serializers.json import DjangoJSONEncoder
 
+def get_secret(secret_name):
+  try:
+    with open('/run/secrets/{0}'.format(secret_name), 'r') as secret_file:
+        return secret_file.read()
+  except IOError:
+    return None
 
 def api(request):
     table = request.GET.get('table')
+    token = request.GET.get("token")
     model = get_model_from_db_table(table)
 
-    if not model:
-        return JsonResponse(
-            {'error': 'A tabela não possui um model associado'}, status=400
-        )
+    if not get_secret('signbank_api_token'):
+        return JsonResponse('error':"Api token invalido")
+    else:
+        api_token = get_secret("signbank_api_token")
+        if api_token != token:
+            return JsonResponse('error':"Api token invalido")
+        elif not model: 
+            return JsonResponse(
+                {'error': 'A tabela não possui um model associado'}, status=400
+            )
 
     qs = model.objects.all()
     serializer = FlatJsonSerializer()
