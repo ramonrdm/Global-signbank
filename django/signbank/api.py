@@ -18,11 +18,15 @@ def api(request):
     model = get_model_from_db_table(table)
 
     if not get_secret('signbank_api_token'):
-        return JsonResponse('error':"Api token invalido")
+            return JsonResponse(
+                {'error':"Api secret inexistente"}, status=400
+            )   
     else:
         api_token = get_secret("signbank_api_token")
         if api_token != token:
-            return JsonResponse('error':"Api token invalido")
+            return JsonResponse(
+                {'error':"Api token invalido"}, status=400
+            )       
         elif not model: 
             return JsonResponse(
                 {'error': 'A tabela não possui um model associado'}, status=400
