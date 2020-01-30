@@ -25,6 +25,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 from signbank.adminsite import publisher_admin
+from signbank.api import api
 
 if settings.SHOW_NUMBERSIGNS:
     numbersigns_view = TemplateView.as_view(template_name='numbersigns/numbersigns.html')

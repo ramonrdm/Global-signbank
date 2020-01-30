@@ -16,6 +16,6 @@ services:
         command: bin -c 'python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
         volumes:
             - imagens:code/media/writable/glossimage
-            - videos:code/glossvideo
+            - videos:code/media/writable/glossvideo
         ports:
             - 40120:8000
