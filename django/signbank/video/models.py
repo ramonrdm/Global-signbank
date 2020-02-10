@@ -15,12 +15,6 @@ from datetime import datetime
 
 from signbank.dictionary.models import *
 
-if sys.argv[0] == 'mod_wsgi':
-    from signbank.dictionary.models import *
-else:
-    from signbank.dictionary.models import Gloss
-
-
 class Video(models.Model):
     """A video file stored on the site"""
 
