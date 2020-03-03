@@ -43,7 +43,7 @@ def addvideo(request):
                 old_vid = GlossVideo.objects.filter(gloss_id=gloss_id)
                 old_vid.first().delete()
             except:
-                continue
+                pass
             # make a new GlossVideo object for the new file
             video = GlossVideo(videofile=vfile, gloss=gloss)
             video.save()

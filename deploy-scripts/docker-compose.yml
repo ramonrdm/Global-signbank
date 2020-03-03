@@ -2,8 +2,8 @@ version: '3.5'
 
 services:
     web:
-        image: gstvob/signbank
-        command: bash -c 'python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
+        build: ../django/
+        command: bash -c 'python3 code/bin/develop.py makemigrations && python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
         volumes:
             - '../django/:/code/'
         ports:
