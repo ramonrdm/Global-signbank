@@ -9,6 +9,7 @@ django-modeltranslation==0.12.1
 django-reversion==2.0.8
 django-summernote==0.8.6
 django-tagging==0.4.5
+Pillow==2.2.2
 py==1.5.2
 pytz==2017.2
 six==1.10.0

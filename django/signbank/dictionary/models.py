@@ -232,6 +232,25 @@ class FieldChoice(models.Model):
     class Meta:
         ordering = ['field','machine_value']
 
+
+class CM(models.Model):
+    class Meta:
+        verbose_name = "Configuração de Mão"
+        verbose_name_plural = "Configurações de Mão"
+
+    name = models.CharField(verbose_name="Nome da Configuração", max_length=255)
+    image = models.ImageField(verbose_name="Imagem")
+    group = models.CharField(verbose_name="Grupo de CM", max_length=255)
+
+class Localization(models.Model):
+    class Meta:
+        verbose_name = "Localização"
+        verbose_name_plural = "Localizações"
+
+    name = models.CharField(verbose_name = "Localização", max_length=50)
+    parent = models.ForeignKey('self', verbose_name="Localização Pai", on_delete=models.CASCADE)
+    image = models.ImageField(verbose_name="Imagem")
+
 class Handshape(models.Model):
     machine_value = models.IntegerField(_("Machine value"), primary_key=True)
     english_name = models.CharField(_("English name"), max_length=50)

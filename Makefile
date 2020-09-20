@@ -40,11 +40,11 @@ rl:
 	$(MAKE) logs
 
 admin:
-	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec django python manage.py createsuperuser
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py createsuperuser
 
 collectstatic:
-	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec django python manage.py collectstatic --noinput
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py collectstatic --noinput
 
 update-models:
-	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec django python manage.py makemigrations
-	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec django python manage.py migrate
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py makemigrations
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py migrate

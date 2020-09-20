@@ -223,6 +223,15 @@ class LanguageAdmin(TranslationAdmin):
     pass
 
 
+class CMAdmin(admin.ModelAdmin):
+    list_display = ["name", "group", "image"]
+    search_fields = ["name", 'group']
+
+
+class LocalizationAdmin(admin.ModelAdmin):
+    list_display = ["name", "parent", "image"]
+    search_fields = ["name"]
+
 admin.site.register(Dialect, DialectAdmin)
 admin.site.register(SignLanguage, SignLanguageAdmin)
 admin.site.register(Gloss, GlossAdmin)
@@ -234,7 +243,8 @@ admin.site.register(SimultaneousMorphologyDefinition)
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 admin.site.register(Handshape, HandshapeAdmin)
-
+admin.site.register(CM, CMAdmin)
+admin.site.register(Localization, LocalizationAdmin)
 admin.site.register(UserProfile)
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(Dataset, DatasetAdmin)
