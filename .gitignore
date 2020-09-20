@@ -12,4 +12,6 @@ media/css/.DS_Store
 media/glossimage
 media/admin
 
+.env
+deploy/
 signbank/settings/server_specific/__init__.py

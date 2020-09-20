@@ -3,7 +3,7 @@ import os
 from signbank.settings.server_specific import *
 from datetime import datetime
 
-DEBUG = True
+DEBUG = os.getenv('DEBUG', False) in ['True', 'true', '1']
 
 PROJECT_DIR = os.path.dirname(BASE_DIR)
 
@@ -48,7 +48,8 @@ STATICFILES_FINDERS = (
 
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = "^g=q21r_nnmbz49d!vs*2gvpll-y9b@&amp;t3k2r3c$*u&amp;2la5!%s"
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+
 
 MIDDLEWARE_CLASSES = (
 #    'debug_toolbar.middleware.DebugToolbarMiddleware',

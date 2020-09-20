@@ -1,16 +1,35 @@
-version: '3.5'
+version: '3.7'
 
 services:
     web:
         build: ../django/
         command: bash -c 'python3 code/bin/develop.py makemigrations && python3 code/bin/develop.py migrate && python3 code/bin/develop.py runserver 0.0.0.0:8000'
+        environment:
+            - DEBUG
+            - FRONTEND_HOST
+            - DJANGO_SECRET_KEY
+            - DJANGO_ADMINS
+            - DJANGO_DB_NAME
+            - DJANGO_DB_USER
+            - DJANGO_DB_PASSWORD
+            - DJANGO_DB_HOST
+            - DJANGO_DB_PORT
         volumes:
             - '../django/:/code/'
         ports:
             - 8000:8000
+        restart: unless-stopped
 
-    # database:
-    #     image: mysql:5.6
-    #     environment:
-    #         MYSQL_ROOT_PASSWORD: placeholder_pw
-    #         MYSQL_DATABASE: signbank_new
+    django_db:
+        image: mysql:5.6
+        ports: 
+            - '3306:3306'
+        volumes: 
+            - ../deploy/django_db/:/var/lib/mysql
+        environment:
+            - MYSQL_DATABASE=${DJANGO_DB_NAME}
+            - MYSQL_USER=${DJANGO_DB_USER}
+            - MYSQL_PASSWORD=${DJANGO_DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DJANGO_DB_PASSWORD}
+
+        restart: unless-stopped

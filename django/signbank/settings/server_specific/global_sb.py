@@ -1,4 +1,5 @@
 import socket
+import os
 hostname = socket.gethostname()
 
 ROOT = '../../../../'
@@ -30,11 +31,11 @@ else:
   DATABASES = {'default':
                   {
                       'ENGINE': 'django.db.backends.mysql',
-                      "NAME":"signbank_new",
-                      "USER":"root",
-                      "PASSWORD":"SenhaBoaMilGrau@@007",
-                      "HOST": "150.162.49.195",
-                      "PORT": "3306"
+                      'NAME': os.getenv('DJANGO_DB_NAME'),
+                      'USER': os.getenv('DJANGO_DB_USER'),
+                      'PASSWORD': os.getenv('DJANGO_DB_PASSWORD'),
+                      'HOST': os.getenv('DJANGO_DB_HOST'),
+                      'PORT': os.getenv('DJANGO_DB_PORT')
                   }
               }
 
@@ -50,7 +51,7 @@ SIGNBANK_VERSION_CODE = 'global'
 
 URL = ''
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br", "150.162.49.195"]
+ALLOWED_HOSTS = ['localhost','127.0.0.1', "172.17.0.2", "signbank.libras.ufsc.br", "150.162.49.195", os.getenv('FRONTEND_HOST')]
 
 gettext = lambda s: s
 LANGUAGES = (
