@@ -106,8 +106,7 @@ class GlossAdmin(admin.ModelAdmin):
     history_latest_first = True
 
 class HandshapeAdmin(admin.ModelAdmin):
-
-    list_display = ['machine_value', 'english_name', 'dutch_name']
+    list_display = ['english_name', 'dutch_name', "group"]
 
 class RegistrationProfileAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'activation_key_expired', )
@@ -223,14 +222,20 @@ class LanguageAdmin(TranslationAdmin):
     pass
 
 
-class CMAdmin(admin.ModelAdmin):
-    list_display = ["name", "group", "image"]
-    search_fields = ["name", 'group']
+class HandshapeGroupAdmin(admin.ModelAdmin):
+    list_display=["name"]
+    search_fields=["name"]
 
 
 class LocalizationAdmin(admin.ModelAdmin):
     list_display = ["name", "parent", "image"]
     search_fields = ["name"]
+
+class HandednessAdmin(admin.ModelAdmin):
+    list_display = ["name", "group"]
+
+class HandednessGroupAdmin(admin.ModelAdmin):
+    list_display = ["name"]
 
 admin.site.register(Dialect, DialectAdmin)
 admin.site.register(SignLanguage, SignLanguageAdmin)
@@ -242,9 +247,11 @@ admin.site.register(MorphologyDefinition)
 admin.site.register(SimultaneousMorphologyDefinition)
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
+admin.site.register(HandshapeGroup, HandshapeGroupAdmin)
 admin.site.register(Handshape, HandshapeAdmin)
-admin.site.register(CM, CMAdmin)
 admin.site.register(Localization, LocalizationAdmin)
+admin.site.register(Handedness, HandednessAdmin)
+admin.site.register(HandednessGroup, HandednessGroupAdmin)
 admin.site.register(UserProfile)
 admin.site.register(Language, LanguageAdmin)
 admin.site.register(Dataset, DatasetAdmin)

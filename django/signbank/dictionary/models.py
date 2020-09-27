@@ -233,14 +233,15 @@ class FieldChoice(models.Model):
         ordering = ['field','machine_value']
 
 
-class CM(models.Model):
+class HandshapeGroup(models.Model):
     class Meta:
-        verbose_name = "Configuração de Mão"
-        verbose_name_plural = "Configurações de Mão"
+        verbose_name = "Grupo de configuração de Mão"
+        verbose_name_plural = "Grupos de configurações de Mão"
 
     name = models.CharField(verbose_name="Nome da Configuração", max_length=255)
-    image = models.ImageField(verbose_name="Imagem")
-    group = models.CharField(verbose_name="Grupo de CM", max_length=255)
+
+    def __str__(self):
+        return name
 
 class Localization(models.Model):
     class Meta:
@@ -251,11 +252,39 @@ class Localization(models.Model):
     parent = models.ForeignKey('self', verbose_name="Localização Pai", on_delete=models.CASCADE)
     image = models.ImageField(verbose_name="Imagem")
 
+
+class HandednessGroup(models.Model):
+    class Meta:
+        verbose_name = "Grupo de número de mão"
+        verbose_name_plural = "Grupos de números de mão"
+
+    name = models.CharField(verbose_name="Grupo de número de mão", max_length=50)
+    image = models.ImageField(verbose_name="Imagem grupo número de mãos", null=True, blank=True)
+
+
+    def __str__(self):
+        return name
+
+class Handedness(models.Model):
+    class Meta:
+        verbose_name = "Número de mãos"
+        verbose_name_plural = "Número de mãos"
+
+    name = models.CharField(verbose_name="Número de mãos", max_length=10)
+    group = models.ForeignKey(HandednessGroup, verbose_name="Grupo", on_delete=models.CASCADE, null=True, blank=True)
+
+
 class Handshape(models.Model):
+    class Meta:
+        verbose_name = "Configuração de mão"
+        verbose_name_plural = "Configurações de Mão"
+
     machine_value = models.IntegerField(_("Machine value"), primary_key=True)
     english_name = models.CharField(_("English name"), max_length=50)
     dutch_name = models.CharField(_("Dutch name"), max_length=50)
     chinese_name = models.CharField(_("Chinese name"), max_length=50, blank=True)
+    group = models.ForeignKey(HandshapeGroup, verbose_name="Grupo", on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField(verbose_name="Imagem", null=True)
     hsNumSel = models.CharField(_("Quantity"), null=True, blank=True, choices=build_choice_list("Quantity"), max_length=5)
     hsFingSel = models.CharField(_("Finger selection"), blank=True, null=True, choices=build_choice_list("FingerSelection"), max_length=5)
     hsFingSel2 = models.CharField(_("Finger selection 2"), blank=True, null=True, choices=build_choice_list("FingerSelection"), max_length=5)
@@ -390,7 +419,8 @@ LOCALIZACAO_CHOICES = (
 class Gloss(models.Model):
 
     class Meta:
-        verbose_name_plural = "Glosses"
+        verbose_name = "Glosa"
+        verbose_name_plural = "Glosas"
         # ordering: for Lemma View in the Gloss List View, we need to have glosses in the same Lemma Group sorted
         ordering = ['idgloss']
         permissions = (('update_video', "Can Update Video"),
@@ -434,6 +464,9 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
     # localization field equivalent to idsinais's localization field
     localizacao = models.CharField(_("Localização"), max_length=15 ,null=True, choices=LOCALIZACAO_CHOICES)
 
+
+    localization = models.ForeignKey(Localization, verbose_name="Localização", on_delete=models.CASCADE, null=True, blank=True)
+
     #imagem do sinal
     imagem = models.FileField(max_length=200, null=True, blank=True)
 
@@ -467,11 +500,15 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     # Phonology fields
     handedness = models.CharField(_("Handedness"), blank=True,  null=True, choices=build_choice_list("Handedness"), max_length=5)
+    hands_number = models.ForeignKey(Handedness, verbose_name="", on_delete=models.CASCADE, null=True, blank=True)
     weakdrop = models.NullBooleanField(_("Weak Drop"), null=True, blank=True)
     weakprop = models.NullBooleanField(_("Weak Prop"), null=True, blank=True)
 
     domhndsh = models.CharField(_("Strong Hand"), blank=True,  null=True, choices=build_choice_list("Handshape"), max_length=5)
     subhndsh = models.CharField(_("Weak Hand"), null=True, choices=build_choice_list("Handshape"), blank=True, max_length=5)
+
+    mainhndsh = models.ForeignKey(Handshape, related_name="dominant_handshape", verbose_name="Configuração de mão - Mão dominante", on_delete=models.CASCADE, null=True, blank=True)
+    basehndsh = models.ForeignKey(Handshape, related_name="base_handshape", verbose_name="Configuração de mão - Mão base", on_delete=models.CASCADE, null=True, blank=True)
 
     # Support for handshape etymology
     domhndsh_number = models.NullBooleanField(_("Strong hand number"), null=True, blank=True)
