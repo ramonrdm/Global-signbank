@@ -5,6 +5,7 @@ from django.http import Http404
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save, pre_delete
+from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
 from django.forms.utils import ValidationError
@@ -241,7 +242,7 @@ class HandshapeGroup(models.Model):
     name = models.CharField(verbose_name="Nome da Configuração", max_length=255)
 
     def __str__(self):
-        return name
+        return self.name
 
 class Localization(models.Model):
     class Meta:
@@ -249,9 +250,17 @@ class Localization(models.Model):
         verbose_name_plural = "Localizações"
 
     name = models.CharField(verbose_name = "Localização", max_length=50)
-    parent = models.ForeignKey('self', verbose_name="Localização Pai", on_delete=models.CASCADE)
-    image = models.ImageField(verbose_name="Imagem")
+    slug = models.CharField(verbose_name="Localização Slug Name", max_length=50, blank=True, null=True)
+    parent = models.ForeignKey('self', verbose_name="Localização Pai", on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField(verbose_name="Imagem", null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.name)
+        return super(Localization, self).save(*args, **kwargs)
 
 class HandednessGroup(models.Model):
     class Meta:
@@ -263,7 +272,7 @@ class HandednessGroup(models.Model):
 
 
     def __str__(self):
-        return name
+        return self.name
 
 class Handedness(models.Model):
     class Meta:

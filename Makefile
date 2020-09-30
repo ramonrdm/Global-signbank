@@ -48,3 +48,9 @@ collectstatic:
 update-models:
 	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py makemigrations
 	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py migrate
+
+dump-data:
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py dumpdata dictionary.Localization dictionary.HandednessGroup dictionary.Handedness > data.json
+
+load-data:
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py loaddata /code/signbank/dictionary/fixtures/data.json
