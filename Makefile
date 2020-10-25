@@ -54,3 +54,9 @@ dump-data:
 
 load-data:
 	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py loaddata /code/signbank/dictionary/fixtures/data.json
+
+dump-cm:
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py dumpdata dictionary.Handshape > cm.json
+
+load-cm:
+	@docker-compose -f $(_DOCKER_COMPOSE_FILE) -p $(DOCKER_PROJECT_NAME) exec web python /code/bin/develop.py loaddata /code/signbank/dictionary/fixtures/cm.json
