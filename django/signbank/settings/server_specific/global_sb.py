@@ -72,7 +72,7 @@ FIELDS = {}
 FIELDS['main'] = ['useInstr','wordClass',]
 
 #''' 'locprim' ''' do lado de localizacao foi removido.
-FIELDS['phonology'] = ['handedness','domhndsh','subhndsh','handCh','relatArtic','localizacao','locVirtObj',
+FIELDS['phonology'] = ['handedness', 'hands_number','domhndsh','subhndsh','mainhndsh','basehndsh','handCh','relatArtic','localizacao','localization','locVirtObj',
           'relOriMov','relOriLoc','oriCh','contType','movSh','movDir','repeat','altern','phonOth', 'mouthG',
           'mouthing', 'phonetVar','domhndsh_letter','domhndsh_number','subhndsh_letter','subhndsh_number','weakdrop','weakprop']
 

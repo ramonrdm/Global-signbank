@@ -282,6 +282,9 @@ class Handedness(models.Model):
     name = models.CharField(verbose_name="Número de mãos", max_length=10)
     group = models.ForeignKey(HandednessGroup, verbose_name="Grupo", on_delete=models.CASCADE, null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Handshape(models.Model):
     class Meta:
@@ -509,7 +512,7 @@ Entry Name" can be (and often is) the same as the Annotation Idgloss.""")
 
     # Phonology fields
     handedness = models.CharField(_("Handedness"), blank=True,  null=True, choices=build_choice_list("Handedness"), max_length=5)
-    hands_number = models.ForeignKey(Handedness, verbose_name="", on_delete=models.CASCADE, null=True, blank=True)
+    hands_number = models.ForeignKey(Handedness, verbose_name="Número de Mãos", on_delete=models.CASCADE, null=True, blank=True)
     weakdrop = models.NullBooleanField(_("Weak Drop"), null=True, blank=True)
     weakprop = models.NullBooleanField(_("Weak Prop"), null=True, blank=True)
 
