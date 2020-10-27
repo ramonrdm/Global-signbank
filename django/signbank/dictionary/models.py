@@ -322,6 +322,9 @@ class Handshape(models.Model):
     ufR = models.NullBooleanField(_("Ru"), null=True, default=False)
     ufP = models.NullBooleanField(_("Pu"), null=True, default=False)
 
+    def __str__(self):
+        return self.english_name
+
     def field_labels(self):
         """Return the dictionary of field labels for use in a template"""
 
