@@ -253,18 +253,18 @@ class GlossSearchForm(forms.ModelForm):
         ATTRS_FOR_FORMS = {'class':'form-control'}
 
         model = Gloss
-        fields = ('idgloss', 'morph', 'sense', 'localizacao',
+        fields = ('idgloss', 'morph', 'sense', 'localizacao', 'localization',
                    'sn', 'StemSN', 'comptf', 'compound', 'signlanguage', 'dialect',
                    'inWeb', 'isNew',
                    'initial_relative_orientation', 'final_relative_orientation',
                    'initial_palm_orientation', 'final_palm_orientation',
                    'initial_secondary_loc', 'final_secondary_loc',
-                   'domhndsh', 'subhndsh', 'locprim', 'locVirtObj', 'locsecond',
+                   'domhndsh', 'subhndsh', 'mainhndsh', 'basehndsh', 'locprim', 'locVirtObj', 'locsecond',
                    'final_domhndsh', 'final_subhndsh', 'final_loc',
 
                     'locPrimLH','locFocSite','locFocSiteLH','initArtOri','finArtOri','initArtOriLH','finArtOriLH',
 
-                   'handedness', 'useInstr','rmrks', 'relatArtic','absOriPalm','absOriFing',
+                   'handedness', 'hands_number', 'useInstr','rmrks', 'relatArtic','absOriPalm','absOriFing',
                    'relOriMov','relOriLoc','oriCh','handCh','repeat', 'altern', 'movSh','movDir','movMan','contType', 'mouthG',
                    'mouthing', 'phonetVar', 'domSF', 'domFlex', 'oriChAbd', 'oriChFlex',
 
