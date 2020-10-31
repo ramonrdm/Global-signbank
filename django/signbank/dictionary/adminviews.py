@@ -903,7 +903,10 @@ class GlossDetailView(DetailView):
         context['tokNo'] = self.object.tokNo                 # Number of occurrences of Sign, used to display Stars
         context['StrongHand'] = self.object.domhndsh
         context['WeakHand'] = self.object.subhndsh
-        context['hands_number'] = self.object.hands_number.name
+        if self.object.hands_number:
+            context['hands_number'] = self.object.hands_number.name
+        else:
+            context['hands_number'] = ''
         # context['NamedEntityDefined'] = (int(self.object.namEnt) > 1) if self.object.namEnt else 0        # minimal machine value is 2
         context['SemanticFieldDefined'] = (int(self.object.semField) > 1) if self.object.semField else 0  # minimal machine value is 2
         # context['ValenceDefined'] = (int(self.object.valence) > 1) if self.object.valence else 0          # minimal machine value is 2
